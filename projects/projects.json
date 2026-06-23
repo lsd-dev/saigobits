@@ -1,0 +1,91 @@
+{
+  "categories": {
+    "ui-ux": {
+      "title": "Interactive Frontend Dashboards",
+      "subtitle": "UI/UX & Frontend Development Projects",
+      "description": "Custom, responsive interfaces and dashboards designed for optimal user experience, fast data rendering, and conversion."
+    },
+    "backend": {
+      "title": "API & Database Integrations",
+      "subtitle": "Backend Engineering & Integration Projects",
+      "description": "Scalable RESTful APIs, database synchronizations, and data pipeline solutions built to optimize corporate operations."
+    },
+    "consulting": {
+      "title": "Workflow Transformation & Consulting",
+      "subtitle": "Technical Consulting & Mentorship Projects",
+      "description": "Strategic advisory, system audits, digital transformation plans, and career/technical mentorship for rising engineers."
+    }
+  },
+  "projects": [
+    {
+      "category": "ui-ux",
+      "id": "frontend-dashboard",
+      "title": "Interactive Frontend Dashboard",
+      "challenge": "A client required a clean, real-time interface to track operations metrics, client statistics, and visualize complex data streams in a single dashboard.",
+      "solution": "Designed and built a highly responsive, custom modular layout with chart integrations (using SVG and CSS), optimizing rendering performance and mobile layouts.",
+      "outcome": "Shaved hours off daily status checks, leading to a 35% improvement in daily tracking efficiency.",
+      "client": {
+        "name": "Analytics Partner",
+        "title": "Operations Lead",
+        "linkedin": "#"
+      },
+      "feedback": "The dashboard is incredibly fast and intuitive. Our team can track metrics at a single glance now."
+    },
+    {
+      "category": "backend",
+      "id": "api-database",
+      "title": "Scalable RESTful API & Database Integration",
+      "challenge": "A local vendor needed to consolidate multiple inventory data streams and vendor order formats into a single, unified database schema.",
+      "solution": "Engineered a scalable RESTful API with automated database synchronization schedules to ensure inventory updates are processed with sub-second latencies.",
+      "outcome": "Successfully unified order entries, reducing order synchronization delays to near-zero.",
+      "client": {
+        "name": "Logistics Distributor",
+        "title": "CTO",
+        "linkedin": "#"
+      },
+      "feedback": "Our inventory sync issues have disappeared completely. The API integration runs flawlessly."
+    },
+    {
+      "category": "consulting",
+      "id": "iit-pathway-advisory",
+      "title": "IIT M.Tech vs. SDE Career Pathway Advisory",
+      "challenge": "A CSE final year student holding an industry SDE PPO faced a critical decision after receiving an M.Tech offer from IIT Dharwad. They required an objective analysis of IIT's academic curriculum, research policies (such as internship restrictions), and MNC hiring trends compared to practical industry experience.",
+      "solution": "Conducted a detailed strategic evaluation of the academic structure, faculty advisors' research alignment, and placement analytics (MTech vs. BTech recruitment ratios). Highlighted institutional policy constraints regarding off-campus internships and recommended focusing on active industry SDE growth to build practical software engineering expertise.",
+      "outcome": "The client gained clear, data-driven decision criteria and decided to accept the industry SDE role to maximize hands-on software development experience.",
+      "client": {
+        "name": "Aradhya Chakrabarti",
+        "title": "HighRadius SDE Intern & KIIT CSE Student",
+        "linkedin": "https://www.linkedin.com/in/aradhyachakrabarti/"
+      },
+      "feedback": "Thanks for the answer! The details regarding M.Tech project guidelines and internship restrictions helped clarify the situation completely."
+    },
+    {
+      "category": "consulting",
+      "id": "evertz-placement-advisory",
+      "title": "Evertz Campus Placement Strategy Advisory",
+      "challenge": "A final-year engineering student needed high-impact preparation strategies and tips for an upcoming SDE campus placement drive by Evertz.",
+      "solution": "Provided a structured preparation roadmap mapping specific DSA levels (focusing on Medium-level problems) and explaining the combined weight of the technical placement exam and interview rounds in final role assignments.",
+      "outcome": "The candidate entered the recruitment drive with a targeted study plan and clear understanding of the evaluation criteria.",
+      "client": {
+        "name": "Shivam Choudhary",
+        "title": "KIIT SAP FICO & KIIT CSE Student",
+        "linkedin": "https://www.linkedin.com/in/shivam-choudhary-a42761195/"
+      },
+      "feedback": "Okk bhaiya. Thnxx! The targeted DSA focus helped me optimize my preparation timeline."
+    },
+    {
+      "category": "consulting",
+      "id": "hackathon-engineering-mentorship",
+      "title": "Competitive Hackathon Mentorship & Prototype Engineering",
+      "challenge": "An aspiring student engineer needed guidance to design, develop, and execute functional prototypes for multiple competitive hackathons.",
+      "solution": "Mentored the student on architectural selection, UI workflows, and collaborative version control. Co-participated in hackathon sprints to provide direct pair-programming guidance and code review during critical prototype phases.",
+      "outcome": "Successfully built and deployed functional prototypes during multiple hackathons, accelerating the student's engineering and design capabilities.",
+      "client": {
+        "name": "Akshara Khatri",
+        "title": "GL Bajaj Institute of Technology and Management CSE Student & Hackathon Partner",
+        "linkedin": "https://www.linkedin.com/in/akshara-khatri-951101282/"
+      },
+      "feedback": "The hands-on guidance on architecture and git workflows helped us deliver working code on time and won us valuable engineering confidence."
+    }
+  ]
+}
