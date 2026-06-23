@@ -19,17 +19,18 @@
   "projects": [
     {
       "category": "ui-ux",
-      "id": "frontend-dashboard",
-      "title": "Interactive Frontend Dashboard",
-      "challenge": "A client required a clean, real-time interface to track operations metrics, client statistics, and visualize complex data streams in a single dashboard.",
-      "solution": "Designed and built a highly responsive, custom modular layout with chart integrations (using SVG and CSS), optimizing rendering performance and mobile layouts.",
-      "outcome": "Shaved hours off daily status checks, leading to a 35% improvement in daily tracking efficiency.",
+      "id": "ca-firm-template",
+      "title": "Aegis Finance - Chartered Accountant Firm Template",
+      "challenge": "Accounting and CA firms require a highly professional corporate web presence that showcases compliance services while offering clients useful, interactive tools to drive initial engagement and lead generation.",
+      "solution": "Engineered a premium, gold-and-navy themed landing page template containing interactive components: a live-calculating GST & Tax Calculator, and a simulated financial rates web scraper widget.",
+      "outcome": "Created a modular, reusable template that illustrates high-fidelity financial services branding and reduces onboarding friction for tax clients.",
       "client": {
-        "name": "Analytics Partner",
-        "title": "Operations Lead",
+        "name": "Live Demonstration",
+        "title": "Interactive Template",
         "linkedin": "#"
       },
-      "feedback": "The dashboard is incredibly fast and intuitive. Our team can track metrics at a single glance now."
+      "demoPath": "templates/ca-firm/index.html",
+      "feedback": "Click 'Launch Live Demo' above to open the responsive template preview and test the interactive tax tools in a new tab."
     },
     {
       "category": "backend",

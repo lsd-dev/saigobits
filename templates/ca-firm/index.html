@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegis Finance | Premium Auditing & Taxation Services</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Accent Bar -->
+    <div class="top-gold-bar"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">Æ</span>
+                <span class="logo-text">Aegis<span>Finance</span></span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#calculator" class="nav-link">GST Tool</a></li>
+                    <li><a href="#scraper" class="nav-link">Market Rates</a></li>
+                    <li><a href="#contact" class="nav-link btn btn-gold-outline">Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="about">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tagline">Chartered Accountants & Financial Advisors</span>
+                <h1>Precision in Auditing. <br>Excellence in <span class="text-gold">Taxation.</span></h1>
+                <p>Aegis Finance delivers strategic compliance audits, corporate tax planning, and automated accounting workflows to keep your business operating efficiently and legally secure.</p>
+                <div class="hero-ctas">
+                    <a href="#calculator" class="btn btn-gold">Interactive GST Tool</a>
+                    <a href="#services" class="btn btn-navy-outline">Explore Services</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card-pattern"></div>
+                <div class="hero-stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years of Audit Excellence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Excellence</span>
+                <h2>Corporate Financial Services</h2>
+                <p>Expert-led accounting, compliance, and wealth mapping designed for modern companies.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <h3>Statutory Auditing</h3>
+                    <p>Rigorous, independent evaluations of corporate accounts to guarantee compliance and stakeholder transparency.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="4"></line><line x1="8" y1="2" x2="8" y2="4"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <h3>Corporate Taxation</h3>
+                    <p>Proactive tax filing, optimization schemes, and representation audits to minimize corporate liability.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                    </div>
+                    <h3>GST & VAT Filing</h3>
+                    <p>Seamless input-tax credit reconciliations and monthly submissions keeping your business clear of compliance penalties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GST Tool Section (Interactive Calculator) -->
+    <section class="calculator-section" id="calculator">
+        <div class="container calc-layout">
+            <div class="calc-text">
+                <span class="section-tagline">Interactive Utilities</span>
+                <h2>GST Tax Calculator</h2>
+                <p>Evaluate your tax obligations instantly. Input your principal amount, select the GST percentage bracket, and choose whether to calculate inclusive or exclusive taxes. The calculator compiles CGST, SGST, and net totals dynamically.</p>
+                <div class="calc-benefits">
+                    <div class="benefit-item">✓ Central/State Tax split calculations</div>
+                    <div class="benefit-item">✓ Inclusive & Exclusive GST toggle</div>
+                    <div class="benefit-item">✓ Compliant with latest statutory tax brackets</div>
+                </div>
+            </div>
+            
+            <div class="calc-card">
+                <h3>GST Calculation Portal</h3>
+                <div class="form-group">
+                    <label for="amount">Principal Amount ($ / ₹)</label>
+                    <input type="number" id="amount" placeholder="Enter amount" value="10000" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label>GST Tax Bracket</label>
+                    <div class="radio-grid">
+                        <label class="radio-label">
+                            <input type="radio" name="gst-rate" value="5"> 5%
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gst-rate" value="12"> 12%
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gst-rate" value="18" checked> 18%
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gst-rate" value="28"> 28%
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Calculation Type</label>
+                    <div class="toggle-container">
+                        <button id="calc-exclusive" class="toggle-btn active">GST Exclusive</button>
+                        <button id="calc-inclusive" class="toggle-btn">GST Inclusive</button>
+                    </div>
+                </div>
+
+                <div class="results-container">
+                    <div class="result-row">
+                        <span>Original Amount:</span>
+                        <span id="res-original">$ 10,000.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span>CGST (Central Tax):</span>
+                        <span id="res-cgst">$ 900.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span>SGST (State Tax):</span>
+                        <span id="res-sgst">$ 900.00</span>
+                    </div>
+                    <div class="result-row total-row">
+                        <span>Total Payable:</span>
+                        <span id="res-total">$ 11,800.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scraper Widget Section -->
+    <section class="scraper-section" id="scraper">
+        <div class="container scraper-layout">
+            <div class="scraper-card">
+                <div class="scraper-card-header">
+                    <div class="scraper-pulse-indicator">
+                        <span class="pulse-dot"></span>
+                        <span id="scraper-status-text">Scraper Status: Active</span>
+                    </div>
+                    <button id="trigger-scrape-btn" class="btn btn-small-gold">Force Scrape Now</button>
+                </div>
+                
+                <div class="scraper-rates-grid">
+                    <div class="rate-card">
+                        <span class="rate-label">GST Compliance Filings</span>
+                        <span class="rate-value" id="val-gst-filing">GST-3B (Due in 3 Days)</span>
+                        <span class="rate-meta">Scraped from Govt Portal</span>
+                    </div>
+                    <div class="rate-card">
+                        <span class="rate-label">Central Bank Repo Rate</span>
+                        <span class="rate-value" id="val-repo-rate">6.50%</span>
+                        <span class="rate-meta">Scraped from RBI Portal</span>
+                    </div>
+                    <div class="rate-card">
+                        <span class="rate-label">USD to INR Exchange</span>
+                        <span class="rate-value" id="val-usd-inr">₹ 83.45</span>
+                        <span class="rate-meta">Scraped from Finance Stream</span>
+                    </div>
+                    <div class="rate-card">
+                        <span class="rate-label">Direct Tax Base Rate</span>
+                        <span class="rate-value" id="val-tax-rate">25.00%</span>
+                        <span class="rate-meta">Scraped from Income Tax Portal</span>
+                    </div>
+                </div>
+                
+                <div class="scraper-timestamp">
+                    <span>Last Scraping Session: <strong id="scraper-time">Just Now</strong></span>
+                </div>
+            </div>
+            
+            <div class="scraper-text">
+                <span class="section-tagline">Data Scraping Showcase</span>
+                <h2>Simulated Real-Time Financial Scraper Widget</h2>
+                <p>This widget demonstrates our capability to build custom web scraping software that extracts public financial information dynamically. It polls online central banking API resources, tax deadline pages, and currency dashboards to supply your clients with updated reference indexes automatically.</p>
+                <p>Click <strong>"Force Scrape Now"</strong> to trigger a visual demonstration of the scraper connecting to external servers, loading data streams, and updating the values dynamically with smooth animation cues.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Partner with Aegis Finance</h2>
+            <p>Schedule a professional tax audit or statutory consulting session with our certified accountants today.</p>
+            <a href="#" class="btn btn-gold btn-large">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Aegis Finance. All rights reserved. Designed for demo purposes.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
