@@ -30,6 +30,7 @@
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#about" class="nav-link">About Us</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#planner" class="nav-link">Tax Planner</a></li>
                     <li><a href="#why-choose-us" class="nav-link">Why Us</a></li>
                     <li><a href="#industries" class="nav-link">Industries</a></li>
                     <li><a href="#faq" class="nav-link">FAQs</a></li>
@@ -146,6 +147,121 @@
                     </div>
                     <h3>Financial Consulting</h3>
                     <p>Project report preparations, banking facility documentation, working capital optimization, and financial health valuations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SME Financial Planner Section -->
+    <section class="financial-planner" id="planner">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Interactive Tools</span>
+                <h2>SME Financial & Tax Planner</h2>
+                <p>Estimate your operational GST liabilities and corporate income tax projections using our interactive calculator modules.</p>
+            </div>
+            
+            <div class="planner-wrapper">
+                <!-- Tabs Header -->
+                <div class="planner-tabs">
+                    <button class="planner-tab-btn active" data-tab="gst-calculator">GST Liability Calculator</button>
+                    <button class="planner-tab-btn" data-tab="tax-calculator">Corporate Tax Estimator</button>
+                </div>
+                
+                <!-- Tab Contents -->
+                <div class="planner-tab-container">
+                    <!-- Tab 1: GST Calculator -->
+                    <div class="planner-tab-content active" id="gst-calculator">
+                        <div class="planner-grid">
+                            <div class="planner-inputs">
+                                <div class="form-group">
+                                    <label for="gst-amount">Transaction Amount (₹)</label>
+                                    <input type="number" id="gst-amount" value="50000" min="0" step="1000">
+                                </div>
+                                <div class="form-group">
+                                    <label>GST Rate</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="gst-rate" value="5"> 5%</label>
+                                        <label class="radio-label"><input type="radio" name="gst-rate" value="12"> 12%</label>
+                                        <label class="radio-label"><input type="radio" name="gst-rate" value="18" checked> 18% (Standard)</label>
+                                        <label class="radio-label"><input type="radio" name="gst-rate" value="28"> 28%</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>GST Type</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="gst-type" value="exclusive" checked> GST Exclusive</label>
+                                        <label class="radio-label"><input type="radio" name="gst-type" value="inclusive"> GST Inclusive</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="planner-results">
+                                <h4>GST Breakdown</h4>
+                                <div class="result-row">
+                                    <span>Net Amount:</span>
+                                    <strong id="res-gst-net">₹50,000</strong>
+                                </div>
+                                <div class="result-row">
+                                    <span>CGST (Central Tax):</span>
+                                    <strong id="res-gst-cgst">₹4,500</strong>
+                                </div>
+                                <div class="result-row">
+                                    <span>SGST (State Tax):</span>
+                                    <strong id="res-gst-sgst">₹4,500</strong>
+                                </div>
+                                <div class="result-row total-row">
+                                    <span>Total Amount:</span>
+                                    <strong id="res-gst-total">₹59,000</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 2: Corporate Tax Calculator -->
+                    <div class="planner-tab-content" id="tax-calculator">
+                        <div class="planner-grid">
+                            <div class="planner-inputs">
+                                <div class="form-group">
+                                    <label for="tax-profit">Annual Net Profit (₹)</label>
+                                    <input type="number" id="tax-profit" value="1500000" min="0" step="50000">
+                                    <p class="input-helper">Calculate tax based on net profit after deductible business expenses.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tax-regime">Corporate Scheme / Regime</label>
+                                    <select id="tax-regime">
+                                        <option value="22" selected>New Regime (Sec 115BAA) - 22% Base Rate</option>
+                                        <option value="25">Old Regime (Domestic Company) - 25% Base Rate</option>
+                                        <option value="15">New Mfg Companies (Sec 115BAB) - 15% Base Rate</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="planner-results">
+                                <h4>Tax Projection Details</h4>
+                                <div class="result-row">
+                                    <span>Base Income Tax:</span>
+                                    <strong id="res-tax-base">₹3,30,000</strong>
+                                </div>
+                                <div class="result-row">
+                                    <span>Surcharge (10%):</span>
+                                    <strong id="res-tax-surcharge">₹33,000</strong>
+                                </div>
+                                <div class="result-row">
+                                    <span>Health & Cess (4%):</span>
+                                    <strong id="res-tax-cess">₹14,520</strong>
+                                </div>
+                                <div class="result-row total-row">
+                                    <span>Total Tax Liability:</span>
+                                    <strong id="res-tax-total">₹3,77,520</strong>
+                                </div>
+                                <div class="result-row emi-row">
+                                    <span>Effective Tax Rate:</span>
+                                    <strong id="res-tax-effective">25.17%</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

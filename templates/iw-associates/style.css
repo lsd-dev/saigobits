@@ -1236,6 +1236,218 @@ section {
 }
 
 /* -------------------------------------------------------------
+   SME Financial & Tax Planner Section
+------------------------------------------------------------- */
+.financial-planner {
+    background-color: var(--white);
+    border-top: 1px solid var(--grey-light);
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.planner-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 32, 74, 0.05);
+    overflow: hidden;
+}
+
+.planner-tabs {
+    display: flex;
+    background-color: var(--navy-bg-light);
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.planner-tab-btn {
+    flex: 1;
+    padding: 18px 24px;
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--grey-text);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border-bottom: 3px solid transparent;
+    text-align: center;
+}
+
+.planner-tab-btn:hover {
+    color: var(--navy-primary);
+    background-color: rgba(0, 32, 74, 0.01);
+}
+
+.planner-tab-btn.active {
+    color: var(--navy-primary);
+    background-color: var(--white);
+    border-bottom-color: var(--gold-primary);
+}
+
+.planner-tab-container {
+    padding: 40px;
+}
+
+.planner-tab-content {
+    display: none;
+}
+
+.planner-tab-content.active {
+    display: block;
+    animation: fadeInTab 0.4s ease-out;
+}
+
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.planner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.planner-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.planner-inputs .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.planner-inputs label {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.planner-inputs input[type="number"],
+.planner-inputs select {
+    padding: 12px 16px;
+    border: 1px solid var(--grey-border);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--grey-dark);
+    background-color: var(--white);
+    transition: var(--transition-smooth);
+    width: 100%;
+}
+
+.planner-inputs input[type="number"]:focus,
+.planner-inputs select:focus {
+    outline: none;
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--grey-text);
+    cursor: pointer;
+    padding: 10px 14px;
+    background-color: var(--navy-bg-light);
+    border: 1px solid var(--grey-light);
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+.radio-label:hover {
+    border-color: rgba(0, 32, 74, 0.1);
+}
+
+.radio-label input[type="radio"] {
+    accent-color: var(--navy-primary);
+    cursor: pointer;
+}
+
+.input-helper {
+    font-size: 0.75rem;
+    color: var(--grey-text);
+    margin-top: 4px;
+}
+
+.planner-results {
+    background-color: var(--navy-bg-light);
+    padding: 30px;
+    border-radius: 6px;
+    border-left: 4px solid var(--navy-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.planner-results h4 {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 32, 74, 0.08);
+    padding-bottom: 10px;
+    color: var(--navy-primary);
+}
+
+.planner-results .result-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.02);
+}
+
+.planner-results .result-row span {
+    color: var(--grey-text);
+}
+
+.planner-results .result-row strong {
+    color: var(--navy-primary);
+    font-weight: 600;
+}
+
+.planner-results .total-row {
+    border-top: 1px dashed rgba(0, 32, 74, 0.15);
+    padding-top: 14px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: none;
+}
+
+.planner-results .total-row strong {
+    font-size: 1.2rem;
+    color: var(--gold-primary);
+}
+
+.planner-results .emi-row {
+    border-top: 2px solid var(--gold-primary);
+    margin-top: 15px;
+    padding-top: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-bottom: none;
+}
+
+.planner-results .emi-row strong {
+    font-size: 1.2rem;
+}
+
+/* -------------------------------------------------------------
    Responsive Design Media Queries
 ------------------------------------------------------------- */
 
@@ -1329,6 +1541,11 @@ section {
         grid-template-columns: 1fr;
         gap: 50px;
     }
+    
+    .planner-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 
 /* Mobile & Tablet Portrait */
@@ -1402,6 +1619,20 @@ section {
     
     .stat-number {
         font-size: 2.8rem;
+    }
+    
+    .planner-tab-container {
+        padding: 24px 16px;
+    }
+    
+    .planner-tab-btn {
+        padding: 14px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .radio-group {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
 }
 
