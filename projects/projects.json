@@ -33,6 +33,36 @@
       "feedback": "Click 'Launch Live Demo' above to open the responsive template preview and test the interactive tax tools in a new tab."
     },
     {
+      "category": "ui-ux",
+      "id": "iw-associates-template",
+      "title": "I W & Associates - Corporate CA Firm Website",
+      "challenge": "A modern multidisciplinary Chartered Accountancy firm required an enterprise-grade web presence that matches Big 4 design standards to attract Indian SMEs and corporate clients.",
+      "solution": "Built a premium corporate website using a clean white, navy, and gold theme. Populated all 10 standard homepage sections, adding a floating WhatsApp button and interactive FAQ accordion widgets.",
+      "outcome": "Delivered a high-end corporate landing page template that projects deep compliance expertise and makes professional services approachable for growing businesses.",
+      "client": {
+        "name": "Live Demonstration",
+        "title": "Interactive Template",
+        "linkedin": "#"
+      },
+      "demoPath": "templates/iw-associates/index.html",
+      "feedback": "Click 'Launch Live Demo' above to open the premium corporate template in a new tab."
+    },
+    {
+      "category": "ui-ux",
+      "id": "coaching-template",
+      "title": "Apex Career Academy - Premium Coaching Portal",
+      "challenge": "Coaching institutes require a highly interactive website that showcases training programs, highlights prominent mentors, and offers tools like payment calculators to convert student leads.",
+      "solution": "Developed a premium, modular coaching portal featuring interactive program cards, an interactive tuition EMI calculator, a floating WhatsApp inquiry badge, and dynamic FAQ accordions.",
+      "outcome": "Created an enterprise-standard academy template designed to maximize conversions, build brand authority, and simplify program discovery.",
+      "client": {
+        "name": "Live Demonstration",
+        "title": "Interactive Template",
+        "linkedin": "#"
+      },
+      "demoPath": "templates/coaching/index.html",
+      "feedback": "Click 'Launch Live Demo' above to open the responsive coaching academy preview in a new tab."
+    },
+    {
       "category": "backend",
       "id": "api-database",
       "title": "Scalable RESTful API & Database Integration",
