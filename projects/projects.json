@@ -79,18 +79,18 @@
     },
     {
       "category": "ui-ux",
-      "id": "urban-reflection-template",
-      "title": "Urban Reflection - Luxury Interior Design Studio Template",
-      "challenge": "Interior design studios require a premium, visually stunning web presence that showcases their turnkey design execution, high-fidelity portfolios, and provides prospective clients with immediate interactive tools to estimate budgets.",
-      "solution": "Built a luxury-themed portfolio template featuring an interactive before/after split drag slider (comparing raw 3D designs to real executions), an automated space budget estimator, filterable galleries, and contact hooks.",
-      "outcome": "Delivered a high-end, responsive design showcase that establishes local design authority in Raipur and captures high-intent design leads.",
+      "id": "probox-template",
+      "title": "Probox Interiors - Premium Modular Kitchen & Interior Design Studio Template",
+      "challenge": "Modular kitchen and interior design studios in Raipur require a professional, visually stunning web presence that showcases their turnkey design capabilities, highlights Vastu readiness, and provides clients with cost transparency tools.",
+      "solution": "Built a premium portfolio template featuring an interactive before/after split drag slider (comparing raw renders to completed executions), a custom space cost estimator, a family comfort focus grid, and callback request hooks.",
+      "outcome": "Delivered a high-end, responsive landing page that builds trust with custom carpentry options, Vastu principles, and transparent upfront pricing estimation.",
       "client": {
         "name": "Live Demonstration",
         "title": "Interactive Template",
         "linkedin": "#"
       },
-      "demoPath": "templates/urban-reflection/index.html",
-      "feedback": "Click 'Launch Live Demo' above to open the premium interior design studio template in a new tab."
+      "demoPath": "templates/probox/index.html",
+      "feedback": "Click 'Launch Live Demo' above to open the premium Probox modular kitchen and interior design template in a new tab."
     },
     {
       "category": "backend",

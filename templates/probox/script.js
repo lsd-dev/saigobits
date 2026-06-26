@@ -314,7 +314,7 @@ function initBudgetEstimator() {
         if (messageTextarea) {
             const carpetArea = carpetSlider.value;
             const priceVal = priceRangeDisplay.textContent;
-            messageTextarea.value = `Hello Manoj, I just calculated my project budget on the Urban Reflection Cost Estimator. For my ${activeSpaceName} of ${carpetArea} Sq. Ft. with a ${activeFinishName} finish level, the estimate is ${priceVal}. Please contact me to schedule an on-site design consultation.`;
+            messageTextarea.value = `Hello Manmeet, I just calculated my project budget on the Probox Cost Estimator. For my ${activeSpaceName} of ${carpetArea} Sq. Ft. with a ${activeFinishName} finish level, the estimate is ${priceVal}. Please contact me to schedule an on-site design consultation.`;
         }
         
         // Scroll to form smoothly
