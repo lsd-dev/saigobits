@@ -63,6 +63,36 @@
       "feedback": "Click 'Launch Live Demo' above to open the responsive coaching academy preview in a new tab."
     },
     {
+      "category": "ui-ux",
+      "id": "real-estate-template",
+      "title": "Vanguard Realty - Luxury Real Estate Template",
+      "challenge": "Real estate brokerages require a highly engaging, visually rich website that showcases properties, lists expert agents, and provides interactive tools like mortgage calculators to convert buyers.",
+      "solution": "Engineered a luxury real estate landing page template using a charcoal, gold, and white theme. Integrated interactive property filters, a mortgage/EMI calculator, virtual tour promotions, and custom contact forms.",
+      "outcome": "Delivered a premium property brokerage template that highlights luxury listings and simplifies lead collection for high-value transactions.",
+      "client": {
+        "name": "Live Demonstration",
+        "title": "Interactive Template",
+        "linkedin": "#"
+      },
+      "demoPath": "templates/real-estate/index.html",
+      "feedback": "Click 'Launch Live Demo' above to open the responsive real estate brokerage template in a new tab."
+    },
+    {
+      "category": "ui-ux",
+      "id": "urban-reflection-template",
+      "title": "Urban Reflection - Luxury Interior Design Studio Template",
+      "challenge": "Interior design studios require a premium, visually stunning web presence that showcases their turnkey design execution, high-fidelity portfolios, and provides prospective clients with immediate interactive tools to estimate budgets.",
+      "solution": "Built a luxury-themed portfolio template featuring an interactive before/after split drag slider (comparing raw 3D designs to real executions), an automated space budget estimator, filterable galleries, and contact hooks.",
+      "outcome": "Delivered a high-end, responsive design showcase that establishes local design authority in Raipur and captures high-intent design leads.",
+      "client": {
+        "name": "Live Demonstration",
+        "title": "Interactive Template",
+        "linkedin": "#"
+      },
+      "demoPath": "templates/urban-reflection/index.html",
+      "feedback": "Click 'Launch Live Demo' above to open the premium interior design studio template in a new tab."
+    },
+    {
       "category": "backend",
       "id": "api-database",
       "title": "Scalable RESTful API & Database Integration",

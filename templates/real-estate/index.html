@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vanguard Realty is a premium brokerage firm offering elite villas, luxury apartments, and penthouses. Explore properties and calculate mortgage EMIs instantly.">
+    <title>Vanguard Realty | Luxury Properties & Premium Brokerage</title>
+    <link rel="icon" type="image/png" href="../../images/logo.png">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Header / Navbar -->
+    <header class="header" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" aria-label="Vanguard Realty Home">
+                <span class="logo-accent">VR</span>
+                <span class="logo-text">Vanguard Realty</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Toggle Navigation" id="mobile-toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav id="navigation">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#properties" class="nav-link">Properties</a></li>
+                    <li><a href="#calculator" class="nav-link">Mortgage Planner</a></li>
+                    <li><a href="#agents" class="nav-link">Our Agents</a></li>
+                    <li><a href="#faq" class="nav-link">FAQs</a></li>
+                    <li><a href="#contact" class="btn btn-gold nav-cta">Schedule Visit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tagline">Exquisite Living, Redefined</span>
+                <h1>Define Your Lifestyle in <span class="text-gold">Sanctuary Spaces</span></h1>
+                <p>Discover handpicked villas, penthouses, and luxury apartments in premium neighborhoods, managed by seasoned real estate investment experts.</p>
+                <div class="hero-actions">
+                    <a href="#properties" class="btn btn-gold">Browse Listings</a>
+                    <a href="#calculator" class="btn btn-outline">Mortgage Calculator</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-overlay"></div>
+                <div class="hero-floating-card top-card">
+                    <span class="card-icon">🏡</span>
+                    <div class="card-text">
+                        <h4>Premium Collection</h4>
+                        <p>150+ ultra-luxury properties listed exclusively.</p>
+                    </div>
+                </div>
+                <div class="hero-floating-card bottom-card">
+                    <span class="card-icon">🕶️</span>
+                    <div class="card-text">
+                        <h4>Virtual 3D Tours</h4>
+                        <p>Walk through homes in full VR before visiting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Statistics Section -->
+    <section class="stats" id="stats">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">1,250+</span>
+                <span class="stat-label">Properties Sold</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">₹4,200Cr</span>
+                <span class="stat-label">Transaction Volume</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">45+</span>
+                <span class="stat-label">Certified Agents</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.92/5</span>
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Featured Listings Section -->
+    <section class="properties" id="properties">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Exclusive Portfolio</span>
+                <h2>Featured Premium Listings</h2>
+                <p>Explore architectural masterpieces and exclusive private estates designed for high-profile comfort and modern functionality.</p>
+            </div>
+            
+            <!-- Filters Tabs -->
+            <div class="property-filters">
+                <button class="filter-btn active" data-filter="all">All Properties</button>
+                <button class="filter-btn" data-filter="villa">Luxury Villas</button>
+                <button class="filter-btn" data-filter="apartment">Apartments</button>
+                <button class="filter-btn" data-filter="penthouse">Penthouses</button>
+            </div>
+            
+            <div class="properties-grid" id="properties-grid">
+                <!-- Property 1: Villa -->
+                <div class="property-card" data-category="villa">
+                    <div class="prop-badge sale">For Sale</div>
+                    <div class="prop-img-box">
+                        <span class="prop-icon">🏰</span>
+                    </div>
+                    <div class="prop-content">
+                        <span class="prop-price">₹18,50,00,000</span>
+                        <h3>The Grand Imperial Villa</h3>
+                        <p class="prop-location">📍 DLF Phase 5, Gurgaon, HR</p>
+                        <div class="prop-specs">
+                            <span>🛏️ 5 Beds</span>
+                            <span>🚿 6 Baths</span>
+                            <span>📐 7,500 Sq Ft</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-sm prop-btn">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Property 2: Apartment -->
+                <div class="property-card" data-category="apartment">
+                    <div class="prop-badge rent">For Rent</div>
+                    <div class="prop-img-box">
+                        <span class="prop-icon">🏢</span>
+                    </div>
+                    <div class="prop-content">
+                        <span class="prop-price">₹3,50,000 <small>/ month</small></span>
+                        <h3>Skye View Highrise Flat</h3>
+                        <p class="prop-location">📍 Sector 150, Noida, UP</p>
+                        <div class="prop-specs">
+                            <span>🛏️ 3 Beds</span>
+                            <span>🚿 4 Baths</span>
+                            <span>📐 3,200 Sq Ft</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-sm prop-btn">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Property 3: Penthouse -->
+                <div class="property-card" data-category="penthouse">
+                    <div class="prop-badge sale">For Sale</div>
+                    <div class="prop-img-box">
+                        <span class="prop-icon">🌇</span>
+                    </div>
+                    <div class="prop-content">
+                        <span class="prop-price">₹11,20,00,000</span>
+                        <h3>The Crown Jewel Penthouse</h3>
+                        <p class="prop-location">📍 Amanaka, Raipur, CG</p>
+                        <div class="prop-specs">
+                            <span>🛏️ 4 Beds</span>
+                            <span>🚿 5 Baths</span>
+                            <span>📐 5,800 Sq Ft</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-sm prop-btn">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Property 4: Villa -->
+                <div class="property-card" data-category="villa">
+                    <div class="prop-badge sale">For Sale</div>
+                    <div class="prop-img-box">
+                        <span class="prop-icon">🌳</span>
+                    </div>
+                    <div class="prop-content">
+                        <span class="prop-price">₹8,75,00,000</span>
+                        <h3>Whispering Pines Villa</h3>
+                        <p class="prop-location">📍 Ashwani Nagar, Raipur, CG</p>
+                        <div class="prop-specs">
+                            <span>🛏️ 4 Beds</span>
+                            <span>🚿 4 Baths</span>
+                            <span>📐 4,600 Sq Ft</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-sm prop-btn">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Property 5: Apartment -->
+                <div class="property-card" data-category="apartment">
+                    <div class="prop-badge sale">For Sale</div>
+                    <div class="prop-img-box">
+                        <span class="prop-icon">🏙️</span>
+                    </div>
+                    <div class="prop-content">
+                        <span class="prop-price">₹4,80,00,000</span>
+                        <h3>Regency Court Duplex</h3>
+                        <p class="prop-location">📍 Sector 62, Noida, UP</p>
+                        <div class="prop-specs">
+                            <span>🛏️ 3 Beds</span>
+                            <span>🚿 3 Baths</span>
+                            <span>📐 2,800 Sq Ft</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-sm prop-btn">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Property 6: Penthouse -->
+                <div class="property-card" data-category="penthouse">
+                    <div class="prop-badge rent">For Rent</div>
+                    <div class="prop-img-box">
+                        <span class="prop-icon">🌅</span>
+                    </div>
+                    <div class="prop-content">
+                        <span class="prop-price">₹5,00,000 <small>/ month</small></span>
+                        <h3>The Horizon Penthouse</h3>
+                        <p class="prop-location">📍 Golf Course Road, Gurgaon, HR</p>
+                        <div class="prop-specs">
+                            <span>🛏️ 4 Beds</span>
+                            <span>🚿 5 Baths</span>
+                            <span>📐 6,200 Sq Ft</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-sm prop-btn">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Mortgage & Home Loan Calculator -->
+    <section class="calculator-section" id="calculator">
+        <div class="container calc-layout">
+            <div class="calc-intro">
+                <span class="section-tagline">Financial Advisory</span>
+                <h2>Home Loan & <span class="text-gold">Mortgage Planner</span></h2>
+                <p>Calculate your estimated monthly payments for custom properties. Adjust property values, down payments, interest rates, and amortization tenures to find a payment structure that matches your financial plan.</p>
+                <div class="calc-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <p>Real-time down payment validation (Minimum 10%)</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <p>EMI calculation using official amortization math</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <p>Flexible loan tenure limits ranging from 5 to 30 years</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calc-card">
+                <h3>Mortgage Estimator</h3>
+                
+                <div class="calc-group">
+                    <div class="calc-label-row">
+                        <label for="calc-price">Property Value (₹)</label>
+                        <span id="price-val" class="badge-accent">₹1.00 Cr</span>
+                    </div>
+                    <input type="range" id="calc-price" min="2000000" max="50000000" step="500000" value="10000000">
+                </div>
+                
+                <div class="calc-group">
+                    <div class="calc-label-row">
+                        <label for="calc-downpayment">Down Payment</label>
+                        <span id="downpayment-val" class="badge-accent">₹20,00,000 (20%)</span>
+                    </div>
+                    <input type="range" id="calc-downpayment" min="1000000" max="8000000" step="100000" value="2000000">
+                    <p class="slider-helper-text">Minimum down payment is 10% of property value. Maximum is 80%.</p>
+                </div>
+
+                <div class="calc-row-group">
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <label for="calc-tenure">Loan Tenure (Years)</label>
+                            <span id="tenure-val" class="badge-accent">20 Years</span>
+                        </div>
+                        <input type="range" id="calc-tenure" min="5" max="30" step="1" value="20">
+                    </div>
+                    
+                    <div class="calc-group">
+                        <label for="calc-rate">Annual Interest Rate (%)</label>
+                        <input type="number" id="calc-rate" min="5" max="15" step="0.1" value="8.5">
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="result-row">
+                        <span>Selected Property Price:</span>
+                        <strong id="res-prop-price">₹1,00,00,000</strong>
+                    </div>
+                    <div class="result-row">
+                        <span>Down Payment:</span>
+                        <strong id="res-downpayment">₹20,00,000</strong>
+                    </div>
+                    <div class="result-row total-row">
+                        <span>Required Loan Principal:</span>
+                        <strong id="res-principal">₹80,00,000</strong>
+                    </div>
+                    <div class="result-row emi-row">
+                        <span>Monthly Mortgage Payment (EMI):</span>
+                        <strong id="res-emi">₹69,425 / month</strong>
+                    </div>
+                </div>
+                
+                <a href="#contact" class="btn btn-gold calc-submit-btn" id="calc-apply-cta">Pre-Approve Loan & Schedule Viewing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Vanguard Section -->
+    <section class="why-us" id="about">
+        <div class="container why-container">
+            <div class="why-visual">
+                <div class="visual-stack">
+                    <div class="stack-box block-1">
+                        <h4>Exclusive Agent Network</h4>
+                        <p>No double-broking or multiple layers. Deal directly with senior partners to secure properties under direct builder pricing.</p>
+                    </div>
+                    <div class="stack-box block-2">
+                        <h4>Pre-Vetted Legal Titles</h4>
+                        <p>Every listed project undergoes independent title checks, RERA verification, and financial status audits.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="why-content">
+                <span class="section-tagline">Why Vanguard Realty</span>
+                <h2>Your Partners in Real Estate Growth</h2>
+                <p>We combine advanced market data analytics with client-centric service, offering property buyers a single point of advisory for acquisitions, legal paperwork, and mortgage configurations.</p>
+                
+                <div class="why-points">
+                    <div class="why-point-item">
+                        <h5>3D VR Virtual Property Tours</h5>
+                        <p>Tour homes from the comfort of your living room using high-fidelity VR modeling, saving valuable site-seeing time.</p>
+                    </div>
+                    <div class="why-point-item">
+                        <h5>Independent Market Appraisals</h5>
+                        <p>We provide objective market data projections and structural audits to verify property valuations.</p>
+                    </div>
+                    <div class="why-point-item">
+                        <h5>RERA & Title Verification</h5>
+                        <p>We guarantee 100% clean documentation checks, assisting with stamp duty filings and registration paperwork.</p>
+                    </div>
+                    <div class="why-point-item">
+                        <h5>Comprehensive Mortgage Sourcing</h5>
+                        <p>Our dedicated team coordinates with top banks to source customized interest-rate loan quotes for your profile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Virtual Tour Showcase -->
+    <section class="vr-showcase" id="vr-tour">
+        <div class="container vr-container">
+            <div class="vr-content">
+                <span class="section-tagline">Advanced Tech</span>
+                <h2>Walk Through Properties in Virtual Reality</h2>
+                <p>Experience our homes in full 3D from your current location. Our immersive digital twins showcase every corner, window view, and material finish with absolute clarity, reducing physical site visits by up to 80%.</p>
+                <ul class="vr-list">
+                    <li>✓ High-definition 4K virtual tours</li>
+                    <li>✓ Live guided walkthroughs with our senior agents</li>
+                    <li>✓ Interactive measurement tools to test furniture placement</li>
+                </ul>
+                <a href="#contact" class="btn btn-gold">Request Custom VR Code</a>
+            </div>
+            <div class="vr-visual-box">
+                <div class="vr-display-card">
+                    <div class="vr-icon-glow">👁️‍🗨️</div>
+                    <h4>Enter Virtual Tour</h4>
+                    <p>Experience DLF Imperial Villa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Our Expert Agents -->
+    <section class="agents" id="agents">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Certified Consultants</span>
+                <h2>Meet Our Professional Advisors</h2>
+                <p>Work with licensed, top-tier consultants who specialize in luxury real estate, structural checks, and contract laws.</p>
+            </div>
+            
+            <div class="agents-grid">
+                <!-- Agent 1 -->
+                <div class="agent-card">
+                    <div class="agent-avatar">KM</div>
+                    <h4>Kabir Malhotra</h4>
+                    <span class="agent-title">Senior Partner, Luxury Estates</span>
+                    <p class="agent-desc">12+ years in Delhi-NCR luxury deals. Kabir specializes in custom golf villa acquisitions and land title checks.</p>
+                </div>
+                
+                <!-- Agent 2 -->
+                <div class="agent-card">
+                    <div class="agent-avatar">AS</div>
+                    <h4>Anjali Sen</h4>
+                    <span class="agent-title">Lead Advisor, Highrise Penthouses</span>
+                    <p class="agent-desc">Expert in residential highrise portfolios. Anjali manages luxury penthouse acquisitions in Gurgaon and Noida.</p>
+                </div>
+
+                <!-- Agent 3 -->
+                <div class="agent-card">
+                    <div class="agent-avatar">RD</div>
+                    <h4>Rahul Dubey</h4>
+                    <span class="agent-title">Partner, Central India Properties</span>
+                    <p class="agent-desc">Specializes in commercial spaces and gated residential projects in Chhattisgarh and Maharashtra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Client Success</span>
+                <h2>Reviews from Premium Homebuyers</h2>
+                <p>Read about the high-end acquisitions and investment consultancies successfully facilitated by Vanguard Realty.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Acquiring The Grand Imperial Villa was a high-value transaction requiring deep title due diligence and RERA approvals. Vanguard Realty managed the contract negotiations, legal checks, and home loan quotes flawlessly. Exceptional service."</p>
+                    <div class="testimonial-user">
+                        <span class="user-avatar">VK</span>
+                        <div class="user-info">
+                            <h5>Vikram Kapoor</h5>
+                            <p>Managing Director, Kapoor Tech Corp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"As an NRI, evaluating high-rise penthouses in India from abroad was extremely challenging. Vanguard's 3D VR virtual tours were a game-changer. We measured rooms and audited views online before flying down to seal the deal."</p>
+                    <div class="testimonial-user">
+                        <span class="user-avatar">SM</span>
+                        <div class="user-info">
+                            <h5>Sanjay Mehra</h5>
+                            <p>VP Architecture, Capital Partners</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"We worked with Vanguard for our first gating project purchase in Raipur. Their database calculators helped map down payments, and their advisors locked down a great interest rate quote. Professionalism at its finest."</p>
+                    <div class="testimonial-user">
+                        <span class="user-avatar">NS</span>
+                        <div class="user-info">
+                            <h5>Neha Sharma</h5>
+                            <p>Co-Founder, CG AgroTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container faq-layout">
+            <div class="faq-intro">
+                <span class="section-tagline">Information Center</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Need clarifications regarding property registrations, stamp duty rates, site visits, or home loan applications? Read our detailed responses.</p>
+                <a href="#contact" class="btn btn-gold" style="margin-top: 20px;">Contact Helpdesk</a>
+            </div>
+            
+            <div class="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What legal title audits are conducted on listed properties?
+                        <span class="faq-icon-indicator"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Every listed project is subjected to rigorous legal checks. We verify building plans, land title ownership histories (up to 30 years), RERA approvals, municipal non-encumbrance declarations, and builder financial health status prior to onboarding them.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How is the mortgage down payment minimum computed?
+                        <span class="faq-icon-indicator"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Under Reserve Bank regulations in India, lenders require a minimum of 10% to 20% down payment depending on property valuations. Our calculator automatically computes this 10% lower limit of property values, letting you evaluate ranges up to 80% to plan loans.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What are the standard charges for stamp duty and registrations?
+                        <span class="faq-icon-indicator"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Registration rates are set by state governments. Generally, stamp duty fees range from 4% to 8% of purchase values, plus a 1% court registration fee. These costs are external to base property pricing and must be factored into loan calculations.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How do I schedule a virtual reality 3D guided walkthrough?
+                        <span class="faq-icon-indicator"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Submit an inquiry using our site visit form. Select "Virtual Reality Tour" under the interest field. An agent partner will email your custom access credentials and launch a shared Zoom/Google Meet video session to guide you through the VR twin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Contact / Inquiry Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tagline">Connect With Us</span>
+                <h2>Begin Your Property Search</h2>
+                <p>Register for a private site viewing, coordinate a guided VR walkthrough, or request a structural/financial review on listings.</p>
+                
+                <div class="contact-details-list">
+                    <div class="detail-item">
+                        <span class="detail-icon">📞</span>
+                        <div class="detail-text">
+                            <strong>Call Office:</strong>
+                            <a href="tel:+919999111111">+91 99991 11111</a>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">✉</span>
+                        <div class="detail-text">
+                            <strong>Email Inquiries:</strong>
+                            <a href="mailto:acquisitions@vanguardrealty.com">acquisitions@vanguardrealty.com</a>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">📍</span>
+                        <div class="detail-text">
+                            <strong>Corporate HQ Office:</strong>
+                            <p>Vanguard Tower, Sector 54, Golf Course Road, Gurgaon, Haryana 122002</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-card">
+                <h3>Schedule a Private Tour</h3>
+                <form id="inquiry-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="+91 98765 43210">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="interest-select">Inquiry Purpose</label>
+                            <select id="interest-select" required>
+                                <option value="" disabled selected>Select Purpose</option>
+                                <option value="site-visit">Physical Site Visit</option>
+                                <option value="vr-tour">Virtual Reality (VR) Tour</option>
+                                  <option value="valuation">Property Valuation Review</option>
+                                <option value="general">General Advisory</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="property-select">Selected Property</label>
+                            <select id="property-select" required>
+                                <option value="" disabled selected>Select Property</option>
+                                <option value="imperial-villa">The Grand Imperial Villa</option>
+                                <option value="skye-view">Skye View Highrise Flat</option>
+                                <option value="crown-penthouse">The Crown Jewel Penthouse</option>
+                                <option value="pines-villa">Whispering Pines Villa</option>
+                                <option value="regency-duplex">Regency Court Duplex</option>
+                                <option value="horizon-penthouse">The Horizon Penthouse</option>
+                                <option value="none">Not Sure / Undecided</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Acquisition Preferences / Budgets</label>
+                        <textarea id="message" rows="4" required placeholder="Describe your bedroom requirements, location limits, or loan structures..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-gold form-submit-btn" id="submit-btn">Schedule Appointment</button>
+                    <div id="form-success-msg" class="success-message" style="display: none;">
+                        ✓ Inquiry submitted successfully! An acquisitions partner will contact you in under 4 hours to verify site visit protocols.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Footer -->
+    <footer class="footer-main">
+        <div class="container footer-main-layout">
+            <div class="footer-brand-column">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-accent">VR</span>
+                    <span class="logo-text">Vanguard Realty</span>
+                </a>
+                <p>An enterprise-standard residential brokerage specializing in high-end villas, apartments, and penthouses. Licensed real estate consultants (RERA Registered).</p>
+            </div>
+            
+            <div class="footer-links-column">
+                <h4>Navigation</h4>
+                <ul class="footer-nav">
+                    <li><a href="#properties">Featured Properties</a></li>
+                    <li><a href="#calculator">Mortgage EMI Calculator</a></li>
+                    <li><a href="#about">About Our Firm</a></li>
+                    <li><a href="#agents">Meet Our Consultants</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-column">
+                <h4>Support & Legal</h4>
+                <ul class="footer-nav">
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#contact">Schedule Site Visit</a></li>
+                    <li><a href="#">Privacy Safeguards</a></li>
+                    <li><p style="margin: 0; font-size: 0.85rem;">Office Hours: Daily (10:00 AM - 7:30 PM)</p></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-copyright-layout">
+            <p>&copy; 2026 Vanguard Realty. All rights reserved. RERA ID: HARERA/GGM/1420/2026.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919999111111?text=Hello%20Vanguard%20Realty%2C%20I%20would%20like%20to%20inquire%20about%20your%20luxury%20listings." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Vanguard Realty on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.503-5.739-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97-1.861-1.868-4.339-2.897-6.983-2.898-5.442 0-9.87 4.37-9.874 9.8-.002 1.743.486 3.447 1.411 4.951l-.99 3.61 3.733-.967zM17.41 14.1c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.568-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
