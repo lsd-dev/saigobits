@@ -17,10 +17,10 @@
     --color-border-hover: #bdc1c6;  /* Focused Border Gray */
     
     /* Google Colors */
-    --color-google-blue: #1a73e8;
-    --color-google-red: #ea4335;
-    --color-google-yellow: #fbbc05;
-    --color-google-green: #34a853;
+    --color-google-blue: #7d5fff;
+    --color-google-red: #f78fb3;
+    --color-google-yellow: #ffd35c;
+    --color-google-green: #55efc4;
     
     /* Text Colors */
     --color-text-primary: #202124;  /* Charcoal Black */
@@ -28,14 +28,14 @@
     --color-text-muted: #70757a;    /* Light Gray */
     
     /* Gradients */
-    --gradient-accent: linear-gradient(135deg, var(--color-google-blue) 0%, #1557b0 100%);
+    --gradient-accent: linear-gradient(135deg, var(--color-google-blue) 0%, #6c5ce7 100%);
     --gradient-google: linear-gradient(90deg, var(--color-google-blue) 25%, var(--color-google-red) 25% 50%, var(--color-google-yellow) 50% 75%, var(--color-google-green) 75%);
-    --gradient-glow: radial-gradient(circle, rgba(26, 115, 232, 0.08) 0%, rgba(52, 168, 83, 0.04) 50%, transparent 100%);
+    --gradient-glow: radial-gradient(circle, rgba(125, 95, 255, 0.08) 0%, rgba(85, 239, 196, 0.04) 50%, transparent 100%);
 
     /* Utility Measures */
-    --border-radius-sm: 8px;
-    --border-radius-md: 12px;
-    --border-radius-lg: 20px;
+    --border-radius-sm: 12px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 28px;
     
     --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -178,7 +178,7 @@ site-header, site-footer, site-lead-space, site-services, site-projects, site-ab
 }
 
 .btn-primary:hover {
-    background-color: #1557b0;
+    background-color: #6c5ce7;
     box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
 }
 
@@ -191,7 +191,7 @@ site-header, site-footer, site-lead-space, site-services, site-projects, site-ab
 .btn-secondary:hover {
     background-color: #f8f9fa;
     border-color: #bdc1c6;
-    color: #1557b0;
+    color: #6c5ce7;
 }
 
 /* ==========================================================================
@@ -317,10 +317,10 @@ site-header, site-footer, site-lead-space, site-services, site-projects, site-ab
     align-items: center;
     background-color: #ffffff;
     background-image: 
-        radial-gradient(circle at 80% 20%, rgba(26, 115, 232, 0.06) 0%, transparent 40%),
-        radial-gradient(circle at 15% 85%, rgba(52, 168, 83, 0.05) 0%, transparent 45%),
-        radial-gradient(circle at 50% 60%, rgba(234, 67, 53, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 85% 75%, rgba(251, 188, 5, 0.04) 0%, transparent 35%);
+        radial-gradient(circle at 80% 20%, rgba(125, 95, 255, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 15% 85%, rgba(85, 239, 196, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 50% 60%, rgba(247, 143, 179, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 85% 75%, rgba(255, 211, 92, 0.04) 0%, transparent 35%);
     overflow: hidden;
 }
 
@@ -456,7 +456,7 @@ site-header, site-footer, site-lead-space, site-services, site-projects, site-ab
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(400px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(26, 115, 232, 0.05), transparent 40%);
+    background: radial-gradient(400px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(125, 95, 255, 0.05), transparent 40%);
     pointer-events: none;
     z-index: 1;
 }
@@ -617,9 +617,9 @@ site-header, site-footer, site-lead-space, site-services, site-projects, site-ab
     transition: var(--transition-smooth);
 }
 
-.blue-proj .project-visual-icon { color: rgba(26, 115, 232, 0.2); }
-.red-proj .project-visual-icon { color: rgba(234, 67, 53, 0.2); }
-.green-proj .project-visual-icon { color: rgba(52, 168, 83, 0.2); }
+.blue-proj .project-visual-icon { color: rgba(125, 95, 255, 0.2); }
+.red-proj .project-visual-icon { color: rgba(247, 143, 179, 0.2); }
+.green-proj .project-visual-icon { color: rgba(85, 239, 196, 0.2); }
 
 .project-card:hover .project-visual-icon {
     transform: scale(1.08);
@@ -1168,7 +1168,7 @@ site-header, site-footer, site-lead-space, site-services, site-projects, site-ab
 }
 
 .demo-btn:hover {
-    background-color: #1557b0;
+    background-color: #6c5ce7;
     box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
     transform: translateY(-2px);
 }
@@ -1267,7 +1267,7 @@ site-header, site-footer, site-lead-space, site-services, site-projects, site-ab
 .loading-spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(26, 115, 232, 0.1);
+    border: 3px solid rgba(125, 95, 255, 0.15);
     border-radius: 50%;
     border-top-color: var(--color-google-blue);
     animation: spin 1s ease-in-out infinite;
