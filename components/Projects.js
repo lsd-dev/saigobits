@@ -37,24 +37,22 @@ class SiteProjects extends HTMLElement {
                             </article>
                         </a>
 
-                        <!-- Project 2: Backend (Red) -->
-                        <a href="projects.html?category=backend" class="project-card-link">
+                        <!-- Project 2: Technical Support (Red/Pink Accent) -->
+                        <a href="projects.html?category=technical-support" class="project-card-link">
                             <article class="project-card red-proj" id="project-card-2">
                                 <div class="project-visual-wrapper">
-                                    <span class="project-badge">Backend</span>
+                                    <span class="project-badge">Support</span>
                                     <div class="project-visual-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                                            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="project-info">
-                                    <h3>API & Database Integration</h3>
-                                    <p>Engineered a scalable RESTful API with automated database synchronization to unify customer order streams and inventory databases across multiple vendors.</p>
+                                    <h3>Technical Support & IT Operations</h3>
+                                    <p>Configured desktop OS environments (Ubuntu Desktop LTS with Ubuntu Pro extended security) and custom media/gaming console emulator rigging on Windows.</p>
                                     <span class="project-explore-link red-link">
-                                        Explore Projects 
+                                        Explore Support 
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </span>
                                 </div>

@@ -11,7 +11,7 @@ class SiteLeadSpace extends HTMLElement {
                 </div>
                 
                 <div class="container lead-space-content">
-                    <h1>Your Last, <span class="text-gradient">Stop.</span></h1>
+                    <h1>Your Last <span class="text-gradient">Stop.</span></h1>
                     <h2>We deliver high-quality, project-based technical solutions that help small businesses reduce costs, streamline operations, and drive growth.</h2>
                     <div class="lead-space-ctas">
                         <a href="#contact" class="btn btn-primary">Get a Project Estimate</a>

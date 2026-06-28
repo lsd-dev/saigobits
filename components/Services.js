@@ -38,8 +38,8 @@ class SiteServices extends HTMLElement {
                                 </svg>
                             </div>
                             <h3>Technical Support</h3>
-                            <p>Proactive troubleshooting, maintenance, data backups, and strategic system upgrades. Keeping your operations secure and running 24/7.</p>
-                            <a href="projects.html?category=backend" class="service-link">
+                            <p>Proactive maintenance, Ubuntu Desktop LTS setup (with Ubuntu Pro extended security configuration), custom media/gaming emulator rigging (NES, Gameboy, etc.), and system recovery support.</p>
+                             <a href="projects.html?category=technical-support" class="service-link">
                                 Explore Support 
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>

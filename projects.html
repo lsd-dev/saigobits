@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SaigoBits project showcase and case studies. Detailed technical solutions, custom development, and IT consulting outcomes.">
     <title>Projects Showcase | SaigoBits</title>
-    <link rel="stylesheet" href="style.css?v=1.4">
+    <link rel="stylesheet" href="style.css?v=1.6">
     <link rel="icon" type="image/png" href="images/logo.png">
     
     <!-- Load Web Components -->
@@ -181,37 +181,251 @@
                 }
 
                 card.innerHTML = `
-                    <div class="project-detail-header">
-                        <h2>${proj.title}</h2>
-                        <span class="project-number-badge">Case #${idx + 1}</span>
-                    </div>
-                    
-                    <div class="project-detail-body">
-                        <div class="project-detail-section">
-                            <h4 class="label-challenge">Challenge</h4>
-                            <p>${proj.challenge}</p>
+                    <div class="project-detail-main">
+                        <div class="project-detail-header">
+                            <h2>${proj.title}</h2>
+                            <span class="project-number-badge">Case #${idx + 1}</span>
                         </div>
                         
-                        <div class="project-detail-section">
-                            <h4 class="label-solution">Solution & Strategy</h4>
-                            <p>${proj.solution}</p>
+                        <div class="project-detail-body">
+                            <div class="project-detail-section">
+                                <h4 class="label-challenge">Challenge</h4>
+                                <p>${proj.challenge}</p>
+                            </div>
+                            
+                            <div class="project-detail-section">
+                                <h4 class="label-solution">Solution & Strategy</h4>
+                                <p>${proj.solution}</p>
+                            </div>
+                            
+                            <div class="project-detail-section">
+                                <h4 class="label-outcome">Outcome & Impact</h4>
+                                <p>${proj.outcome}</p>
+                            </div>
                         </div>
                         
-                        <div class="project-detail-section">
-                            <h4 class="label-outcome">Outcome & Impact</h4>
-                            <p>${proj.outcome}</p>
+                        <div class="project-detail-footer">
+                            ${clientHTML}
+                            ${demoHTML}
+                            ${feedbackHTML}
                         </div>
                     </div>
-                    
-                    <div class="project-detail-footer">
-                        ${clientHTML}
-                        ${demoHTML}
-                        ${feedbackHTML}
+                    <div class="project-detail-visual">
+                        ${getProjectVisual(proj.id)}
                     </div>
                 `;
                 
                 container.appendChild(card);
             });
+        }
+
+        function getProjectVisual(projId) {
+            const svgAttrs = 'viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"';
+            
+            switch (projId) {
+                case 'ca-firm-template':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-ca" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#efecff"/>
+                                    <stop offset="100%" stop-color="#e0dbff"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-ca)"/>
+                            <rect x="40" y="110" width="24" height="50" rx="4" fill="#7d5fff"/>
+                            <rect x="74" y="80" width="24" height="80" rx="4" fill="#6c5ce7"/>
+                            <rect x="108" y="95" width="24" height="65" rx="4" fill="#ffd35c"/>
+                            <rect x="142" y="60" width="24" height="100" rx="4" fill="#55efc4"/>
+                            <path d="M52 100 L86 70 L120 85 L154 50" fill="none" stroke="#202124" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="154" cy="50" r="5" fill="#f78fb3" stroke="#202124" stroke-width="2"/>
+                        </svg>
+                    `;
+                case 'iw-associates-template':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-iw" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#fff0f5"/>
+                                    <stop offset="100%" stop-color="#ffd5e5"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-iw)"/>
+                            <path d="M100 45 L150 65 V115 C150 145 125 165 100 170 C75 165 50 145 50 115 V65 L100 45 Z" fill="#f78fb3" stroke="#202124" stroke-width="3" stroke-linejoin="round"/>
+                            <path d="M75 105 L93 123 L125 85" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    `;
+                case 'coaching-template':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-coach" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ebfbf5"/>
+                                    <stop offset="100%" stop-color="#cbf3e5"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-coach)"/>
+                            <path d="M100 60 L160 85 L100 110 L40 85 Z" fill="#55efc4" stroke="#202124" stroke-width="3" stroke-linejoin="round"/>
+                            <rect x="80" y="110" width="40" height="25" fill="#202124" rx="2"/>
+                            <path d="M100 110 V140 C100 150 120 150 120 140" fill="none" stroke="#ffd35c" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="160" cy="85" r="4" fill="#ffd35c"/>
+                        </svg>
+                    `;
+                case 'real-estate-template':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-re" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#fffcf0"/>
+                                    <stop offset="100%" stop-color="#fff3cc"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-re)"/>
+                            <path d="M60 140 V90 L100 60 L140 90 V140 Z" fill="#ffd35c" stroke="#202124" stroke-width="3" stroke-linejoin="round"/>
+                            <rect x="85" y="105" width="30" height="35" rx="3" fill="#202124"/>
+                            <circle cx="93" cy="122" r="2" fill="#ffffff"/>
+                            <circle cx="100" cy="45" r="8" fill="#f78fb3"/>
+                        </svg>
+                    `;
+                case 'probox-template':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-probox" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#efecff"/>
+                                    <stop offset="100%" stop-color="#e0dbff"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-probox)"/>
+                            <rect x="40" y="50" width="120" height="100" rx="8" fill="#ffffff" stroke="#202124" stroke-width="3"/>
+                            <line x1="100" y1="50" x2="100" y2="150" stroke="#202124" stroke-width="2" stroke-dasharray="4 4"/>
+                            <circle cx="70" cy="100" r="4" fill="#7d5fff"/>
+                            <circle cx="130" cy="100" r="4" fill="#55efc4"/>
+                            <path d="M90 70 H110 M90 130 H110" stroke="#202124" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    `;
+                case 'ubuntu-setup':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-ubuntu" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffecd2"/>
+                                    <stop offset="100%" stop-color="#fcb69f"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-ubuntu)"/>
+                            
+                            <!-- Feet -->
+                            <ellipse cx="75" cy="160" rx="18" ry="8" fill="#ffd35c" stroke="#202124" stroke-width="2"/>
+                            <ellipse cx="125" cy="160" rx="18" ry="8" fill="#ffd35c" stroke="#202124" stroke-width="2"/>
+                            
+                            <!-- Flippers -->
+                            <ellipse cx="50" cy="120" rx="12" ry="30" transform="rotate(-20 50 120)" fill="#202124"/>
+                            <ellipse cx="150" cy="120" rx="12" ry="30" transform="rotate(20 150 120)" fill="#202124"/>
+                            
+                            <!-- Body -->
+                            <ellipse cx="100" cy="115" rx="48" ry="52" fill="#202124" stroke="#202124" stroke-width="2"/>
+                            
+                            <!-- White Tummy -->
+                            <ellipse cx="100" cy="125" rx="34" ry="38" fill="#ffffff"/>
+                            
+                            <!-- Ubuntu Logo on Chest -->
+                            <circle cx="100" cy="125" r="14" fill="none" stroke="#fc8151" stroke-width="3"/>
+                            <circle cx="100" cy="111" r="3.5" fill="#fc8151"/>
+                            <circle cx="88" cy="132" r="3.5" fill="#fc8151"/>
+                            <circle cx="112" cy="132" r="3.5" fill="#fc8151"/>
+                            
+                            <!-- Eyes Backing -->
+                            <ellipse cx="85" cy="80" rx="14" ry="16" fill="#ffffff"/>
+                            <ellipse cx="115" cy="80" rx="14" ry="16" fill="#ffffff"/>
+                            
+                            <!-- Pupils -->
+                            <circle cx="85" cy="80" r="6" fill="#202124"/>
+                            <circle cx="115" cy="80" r="6" fill="#202124"/>
+                            <circle cx="83" cy="77" r="2" fill="#ffffff"/>
+                            <circle cx="113" cy="77" r="2" fill="#ffffff"/>
+                            
+                            <!-- Beak -->
+                            <path d="M90 90 Q100 102 110 90 Z" fill="#ffd35c" stroke="#202124" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    `;
+                case 'retro-gaming-setup':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-retro" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#efecff"/>
+                                    <stop offset="100%" stop-color="#e0dbff"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-retro)"/>
+                            <rect x="40" y="70" width="120" height="60" rx="20" fill="#7d5fff" stroke="#202124" stroke-width="3"/>
+                            <path d="M60 100 H80 M70 90 V110" stroke="#202124" stroke-width="4" stroke-linecap="round"/>
+                            <circle cx="125" cy="95" r="7" fill="#ffd35c" stroke="#202124" stroke-width="2"/>
+                            <circle cx="140" cy="105" r="7" fill="#f78fb3" stroke="#202124" stroke-width="2"/>
+                            <path d="M100 52 L95 47 H90 V52 L100 62 L110 52 V47 H105 Z" fill="#f78fb3" stroke="#202124" stroke-width="1.5"/>
+                        </svg>
+                    `;
+                case 'iit-pathway-advisory':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-iit" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ebfbf5"/>
+                                    <stop offset="100%" stop-color="#cbf3e5"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-iit)"/>
+                            <path d="M100 160 V120 C100 100 60 90 60 70 V40" fill="none" stroke="#202124" stroke-width="3" stroke-dasharray="2 2"/>
+                            <path d="M100 160 V120 C100 100 140 90 140 70 V40" fill="none" stroke="#55efc4" stroke-width="3"/>
+                            <circle cx="100" cy="160" r="6" fill="#202124"/>
+                            <circle cx="140" cy="40" r="10" fill="#55efc4" stroke="#202124" stroke-width="2"/>
+                            <path d="M135 40 L138 43 L145 36" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="60" cy="40" r="10" fill="#202124"/>
+                            <text x="56" y="44" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">M</text>
+                        </svg>
+                    `;
+                case 'evertz-placement-advisory':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-evertz" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#fffcf0"/>
+                                    <stop offset="100%" stop-color="#fff3cc"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-evertz)"/>
+                            <line x1="100" y1="50" x2="60" y2="100" stroke="#202124" stroke-width="3"/>
+                            <line x1="100" y1="50" x2="140" y2="100" stroke="#202124" stroke-width="3"/>
+                            <line x1="60" y1="100" x2="40" y2="150" stroke="#202124" stroke-width="3"/>
+                            <line x1="60" y1="100" x2="80" y2="150" stroke="#202124" stroke-width="3"/>
+                            <circle cx="100" cy="50" r="14" fill="#ffd35c" stroke="#202124" stroke-width="3"/>
+                            <circle cx="60" cy="100" r="14" fill="#f78fb3" stroke="#202124" stroke-width="3"/>
+                            <circle cx="140" cy="100" r="14" fill="#55efc4" stroke="#202124" stroke-width="3"/>
+                            <circle cx="40" cy="150" r="10" fill="#7d5fff" stroke="#202124" stroke-width="2"/>
+                            <circle cx="80" cy="150" r="10" fill="#7d5fff" stroke="#202124" stroke-width="2"/>
+                        </svg>
+                    `;
+                case 'hackathon-engineering-mentorship':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-hack" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#efecff"/>
+                                    <stop offset="100%" stop-color="#e0dbff"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-hack)"/>
+                            <path d="M60 60 H140 V90 C140 115 120 130 100 130 C80 130 60 115 60 90 Z" fill="#ffd35c" stroke="#202124" stroke-width="3" stroke-linejoin="round"/>
+                            <path d="M60 70 H45 V90 H60" fill="none" stroke="#202124" stroke-width="3" stroke-linejoin="round"/>
+                            <path d="M140 70 H155 V90 H140" fill="none" stroke="#202124" stroke-width="3" stroke-linejoin="round"/>
+                            <rect x="75" y="130" width="50" height="25" rx="4" fill="#202124"/>
+                            <polygon points="100,32 103,37 109,37 104,41 106,47 100,43 94,47 96,41 91,37 97,37" fill="#f78fb3"/>
+                        </svg>
+                    `;
+                default:
+                    return '';
+            }
         }
     </script>
 </body>

@@ -5,10 +5,10 @@
       "subtitle": "UI/UX & Frontend Development Projects",
       "description": "Custom, responsive interfaces and dashboards designed for optimal user experience, fast data rendering, and conversion."
     },
-    "backend": {
-      "title": "API & Database Integrations",
-      "subtitle": "Backend Engineering & Integration Projects",
-      "description": "Scalable RESTful APIs, database synchronizations, and data pipeline solutions built to optimize corporate operations."
+    "technical-support": {
+      "title": "Technical Support & IT Operations",
+      "subtitle": "Infrastructure Administration, OS Deployment & Rigging",
+      "description": "Enterprise Linux server deployments, extended security configurations (Ubuntu Pro), proactive system maintenance, and custom console emulation rigging."
     },
     "consulting": {
       "title": "Workflow Transformation & Consulting",
@@ -93,18 +93,32 @@
       "feedback": "Click 'Launch Live Demo' above to open the premium Probox modular kitchen and interior design template in a new tab."
     },
     {
-      "category": "backend",
-      "id": "api-database",
-      "title": "Scalable RESTful API & Database Integration",
-      "challenge": "A local vendor needed to consolidate multiple inventory data streams and vendor order formats into a single, unified database schema.",
-      "solution": "Engineered a scalable RESTful API with automated database synchronization schedules to ensure inventory updates are processed with sub-second latencies.",
-      "outcome": "Successfully unified order entries, reducing order synchronization delays to near-zero.",
+      "category": "technical-support",
+      "id": "ubuntu-setup",
+      "title": "Ubuntu Desktop LTS Installation & Ubuntu Pro Workstation Hardening",
+      "challenge": "A developer client needed to set up a secure, stable Ubuntu Desktop workstation environment with access to Extended Security Maintenance (ESM) to ensure long-term patching for all workspace tools and package repositories.",
+      "solution": "Installed Ubuntu Desktop LTS, optimized system graphic drivers, registered and activated Ubuntu Pro for desktop ESM, enabled secure firewall (UFW) configurations, and configured automated workspace backup schedules.",
+      "outcome": "Established a hardened, development-ready Linux workstation with guaranteed security patching for all open-source dependencies (universe/main) for 10 years.",
       "client": {
-        "name": "Logistics Distributor",
-        "title": "CTO",
+        "name": "Remote Software Engineer",
+        "title": "Workstation Client",
         "linkedin": "#"
       },
-      "feedback": "Our inventory sync issues have disappeared completely. The API integration runs flawlessly."
+      "feedback": "The desktop setup is incredibly clean, and having Ubuntu Pro protection on my workstation gives me absolute confidence."
+    },
+    {
+      "category": "technical-support",
+      "id": "retro-gaming-setup",
+      "title": "Custom Retro Console Emulator Rigging & Optimization",
+      "challenge": "Gaming enthusiasts require seamless retro console emulation setups on Windows PCs without audio-lag, screen-tearing, or controller mapping configuration problems.",
+      "solution": "Deployed RetroArch frontend emulator, optimized RetroArch cores for NES, Gameboy Color/Advance, and SNES, configured controller profiles, and enabled shaders for authentic scanline display effects.",
+      "outcome": "Successfully configured retro emulator platforms supporting classic titles like Super Mario Bros., Pokémon Red/Blue, The Legend of Zelda, and Tetris with zero latency.",
+      "client": {
+        "name": "Gaming Client",
+        "title": "Home Entertainment Owner",
+        "linkedin": "#"
+      },
+      "feedback": "Perfect emulation! Reliving old classics like Pokemon and Mario on my TV has been absolutely flawless."
     },
     {
       "category": "consulting",
