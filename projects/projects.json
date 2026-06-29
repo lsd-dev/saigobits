@@ -109,16 +109,30 @@
     {
       "category": "technical-support",
       "id": "retro-gaming-setup",
-      "title": "Custom Retro Console Emulator Rigging & Optimization",
+      "title": "Custom Retro Console Emulator Rigging & Optimization on Windows",
       "challenge": "Gaming enthusiasts require seamless retro console emulation setups on Windows PCs without audio-lag, screen-tearing, or controller mapping configuration problems.",
-      "solution": "Deployed RetroArch frontend emulator, optimized RetroArch cores for NES, Gameboy Color/Advance, and SNES, configured controller profiles, and enabled shaders for authentic scanline display effects.",
-      "outcome": "Successfully configured retro emulator platforms supporting classic titles like Super Mario Bros., Pokémon Red/Blue, The Legend of Zelda, and Tetris with zero latency.",
+      "solution": "Deployed RetroArch frontend emulator on Windows, optimized RetroArch cores for NES, Gameboy Color/Advance, and SNES, configured controller profiles, and enabled shaders for authentic scanline display effects.",
+      "outcome": "Successfully configured retro emulator platforms supporting classic titles like Super Mario Bros., Pokémon Red/Blue, The Legend of Zelda, and Tetris with zero latency on Windows.",
       "client": {
         "name": "Gaming Client",
         "title": "Home Entertainment Owner",
         "linkedin": "#"
       },
       "feedback": "Perfect emulation! Reliving old classics like Pokemon and Mario on my TV has been absolutely flawless."
+    },
+    {
+      "category": "technical-support",
+      "id": "ps2-emulation-setup",
+      "title": "PlayStation 2 (PS2) Emulator Configuration & Optimization on Windows",
+      "challenge": "A classic gaming enthusiast wanted to play their owned library of PlayStation 2 games on their Windows 11 PC with enhanced resolutions, stable performance, and full controller compatibility.",
+      "solution": "Deployed the PCSX2 standalone emulator on Windows, configured BIOS file paths, optimized Vulkan renderer backend configurations, mapped custom DualSense/Xbox controller profiles, and enabled widescreen patches.",
+      "outcome": "Successfully achieved high-performance emulation of legendary PS2 titles like Shadow of the Colossus, Gran Turismo 4, and Grand Theft Auto: San Andreas on Windows.",
+      "client": {
+        "name": "Console Gaming Fan",
+        "title": "Retro Gamer",
+        "linkedin": "#"
+      },
+      "feedback": "Playing my childhood games on my PC feels like magic. The PS2 emulator setup is absolutely perfect and everything runs so smoothly!"
     },
     {
       "category": "consulting",
