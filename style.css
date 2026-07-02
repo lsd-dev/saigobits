@@ -1783,6 +1783,10 @@ site-header, site-footer, site-lead-space, site-services, site-projects, site-ab
     .form-iframe-container {
         height: 790px;
     }
+
+    .clients-modal-list {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 /* Show All Clients Button */

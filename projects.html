@@ -896,11 +896,11 @@
         }
     </script>
     <!-- Modal for displaying long lists of clients -->
-    <div id="clients-modal" class="clients-modal" aria-hidden="true" role="dialog">
+    <div id="clients-modal" class="clients-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
         <div class="clients-modal-content">
             <div class="clients-modal-header">
-                <h3>All Verified Clients</h3>
-                <button class="clients-modal-close" onclick="closeClientsModal()">&times;</button>
+                <h3 id="modal-title">All Verified Clients</h3>
+                <button class="clients-modal-close" onclick="closeClientsModal()" aria-label="Close modal">&times;</button>
             </div>
             <div class="clients-modal-list" id="clients-modal-list">
                 <!-- Client names will load here -->
@@ -923,6 +923,10 @@
             
             modal.classList.add('open');
             modal.setAttribute('aria-hidden', 'false');
+            
+            // Set focus to close button for accessibility
+            const closeBtn = modal.querySelector('.clients-modal-close');
+            if (closeBtn) closeBtn.focus();
         }
 
         function closeClientsModal() {
@@ -936,6 +940,16 @@
             const modal = document.getElementById('clients-modal');
             if (e.target === modal) {
                 closeClientsModal();
+            }
+        });
+
+        // Close modal on escape key press (Enterprise A11y standard)
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('clients-modal');
+                if (modal.classList.contains('open')) {
+                    closeClientsModal();
+                }
             }
         });
     </script>
