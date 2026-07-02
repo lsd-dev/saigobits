@@ -19,7 +19,6 @@ class SiteFooter extends HTMLElement {
                             <h4>Navigation</h4>
                             <ul class="footer-links">
                                 <li class="footer-link"><a href="index.html#services">Services</a></li>
-                                <li class="footer-link"><a href="index.html#projects">Projects</a></li>
                                 <li class="footer-link"><a href="index.html#certificates">Certifications</a></li>
                                 <li class="footer-link"><a href="index.html#about">About Us</a></li>
                                 <li class="footer-link"><a href="index.html#contact">Contact Us</a></li>

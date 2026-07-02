@@ -13,11 +13,35 @@ class SiteProjects extends HTMLElement {
                     </div>
 
                     <div class="projects-grid">
-                        <!-- Project 1: UI/UX (Blue) -->
-                        <a href="projects.html?category=ui-ux" class="project-card-link">
-                            <article class="project-card blue-proj" id="project-card-1">
+                        <!-- Project 1: Production Applications (Yellow) -->
+                        <a href="projects.html?category=production" class="project-card-link">
+                            <article class="project-card yellow-proj" id="project-card-1">
                                 <div class="project-visual-wrapper">
-                                    <span class="project-badge">UI/UX</span>
+                                    <span class="project-badge">Production</span>
+                                    <div class="project-visual-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h3>Production Applications</h3>
+                                    <p>Browse active, secure web portals and interactive computational platforms deployed in the real world with verified user bases.</p>
+                                    <span class="project-explore-link yellow-link">
+                                        Explore Applications 
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </span>
+                                </div>
+                            </article>
+                        </a>
+
+                        <!-- Project 2: UI/UX Templates (Blue) -->
+                        <a href="projects.html?category=ui-ux" class="project-card-link">
+                            <article class="project-card blue-proj" id="project-card-2">
+                                <div class="project-visual-wrapper">
+                                    <span class="project-badge">Templates</span>
                                     <div class="project-visual-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -27,19 +51,19 @@ class SiteProjects extends HTMLElement {
                                     </div>
                                 </div>
                                 <div class="project-info">
-                                    <h3>Interactive Frontend Dashboard</h3>
-                                    <p>Created a highly responsive, custom dashboard layout displaying critical metrics, client stats, and visual graphs for real-time operation tracking.</p>
+                                    <h3>Interactive Web Templates</h3>
+                                    <p>High-fidelity, responsive pre-built website templates optimized for conversions, lightweight page sizes, and zero-framework complexity.</p>
                                     <span class="project-explore-link blue-link">
-                                        Explore Projects 
+                                        Explore Templates 
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </span>
                                 </div>
                             </article>
                         </a>
 
-                        <!-- Project 2: Technical Support (Red/Pink Accent) -->
+                        <!-- Project 3: Technical Support (Red/Pink Accent) -->
                         <a href="projects.html?category=technical-support" class="project-card-link">
-                            <article class="project-card red-proj" id="project-card-2">
+                            <article class="project-card red-proj" id="project-card-3">
                                 <div class="project-visual-wrapper">
                                     <span class="project-badge">Support</span>
                                     <div class="project-visual-icon">
@@ -59,9 +83,9 @@ class SiteProjects extends HTMLElement {
                             </article>
                         </a>
 
-                        <!-- Project 3: Full-Stack / Consulting (Green) -->
+                        <!-- Project 4: Full-Stack / Consulting (Green) -->
                         <a href="projects.html?category=consulting" class="project-card-link">
-                            <article class="project-card green-proj" id="project-card-3">
+                            <article class="project-card green-proj" id="project-card-4">
                                 <div class="project-visual-wrapper">
                                     <span class="project-badge">Consulting</span>
                                     <div class="project-visual-icon">

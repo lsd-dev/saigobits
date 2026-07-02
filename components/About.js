@@ -7,7 +7,6 @@ class SiteAbout extends HTMLElement {
             <section class="section-padding" id="about" aria-labelledby="about-heading">
                 <div class="container about-layout">
                     <div class="about-text">
-                        <span class="lead-space-tagline" style="margin-bottom: 12px;">Who we are</span>
                         <h2 id="about-heading">The SaigoBits Approach</h2>
                         <p>SaigoBits was founded on the idea that high-quality technical expertise should be accessible, transparent, and strictly project-focused. I specialize in frontend development, backend logic, and IT consulting to help your business operate more efficiently. Partner directly with an engineer to launch products and secure systems without the commitment and overhead of a full-time hire.</p>
                         

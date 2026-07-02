@@ -8,7 +8,17 @@
     "technical-support": {
       "title": "Technical Support & IT Operations",
       "subtitle": "Infrastructure Administration, OS Deployment & Rigging",
-      "description": "Enterprise Linux server deployments, extended security configurations (Ubuntu Pro), proactive system maintenance, and custom console emulation rigging."
+      "description": "Enterprise operating system installations, security hardening, custom workspace configs, and console emulator rigging."
+    },
+    "production": {
+      "title": "Production-Grade Applications",
+      "subtitle": "Real-World Deployed Software Systems",
+      "description": "High-performance, secure, and actively used production applications built to enterprise standards and domain requirements."
+    },
+    "operations-cases": {
+      "title": "Verified Operations Case Studies",
+      "subtitle": "Real-World Systems Hardening & Custom Deployments",
+      "description": "A record of secure operating system deployments, fleet configurations, and custom console setups executed for our clients with verified feedback."
     },
     "consulting": {
       "title": "Workflow Transformation & Consulting",
@@ -18,121 +28,204 @@
   },
   "projects": [
     {
+      "category": "production",
+      "type": "production",
+      "id": "automata-toolkit",
+      "title": "Automata Toolkit - Interactive Computational Simulator",
+      "challenge": "Computer science students and educators require responsive, interactive tools to simulate, analyze, and convert Finite Automata (DFA, NFA, e-NFA) and Regular Expressions without server-side lag or complex setup.",
+      "solution": "Engineered a client-side web application using ES6 modules and D3.js force-directed graphs. Integrated step-by-step tape simulation, conversions (e-NFA to NFA, NFA to DFA), DFA minimization, and BFS Cartesian product equivalence testing.",
+      "outcome": "Delivered a zero-dependency, static frontend toolkit used by students to study computation theory, complying with strict JSDoc typing standards.",
+      "client": {
+        "names": ["Mridul Chandrawanshi"],
+        "title": "Systems Engineer & Developer"
+      },
+      "demoPath": "https://mridul-iit-dh.github.io/Automata-Toolkit/",
+      "feedback": "A comprehensive computational toolkit that visualizes automata transitions and converts regex in real-time."
+    },
+    {
+      "category": "production",
+      "type": "production",
+      "id": "iit-exchange",
+      "title": "IIT Exchange - Secure Institutional Campus Marketplace",
+      "challenge": "Campus members at IIT Dharwad required a secure, verified portal to buy, sell, and manage academic and lifestyle assets without public exposure or unauthorized external listings.",
+      "solution": "Built a React 19 SPA powered by Vite, Tailwind CSS 4.0, and Framer Motion. Configured a secure Node.js/Express API gateway, Firebase Authentication restricted to '@iitdh.ac.in' domains, and Firestore databases.",
+      "outcome": "Launched an exclusive, high-performance marketplace enabling campus members to securely trade assets with real-time updates and media optimization.",
+      "client": {
+        "names": ["Mridul Chandrawanshi"],
+        "title": "Systems Engineer & Developer"
+      },
+      "demoPath": "https://iit-exchange.onrender.com/",
+      "feedback": "Tactile bottom navigation, snappy spring transition animations, and secure domain controls make this the perfect campus marketplace."
+    },
+    {
       "category": "ui-ux",
+      "type": "template",
       "id": "ca-firm-template",
       "title": "Aegis Finance - Chartered Accountant Firm Template",
       "challenge": "Accounting and CA firms require a highly professional corporate web presence that showcases compliance services while offering clients useful, interactive tools to drive initial engagement and lead generation.",
       "solution": "Engineered a premium, gold-and-navy themed landing page template containing interactive components: a live-calculating GST & Tax Calculator, and a simulated financial rates web scraper widget.",
       "outcome": "Created a modular, reusable template that illustrates high-fidelity financial services branding and reduces onboarding friction for tax clients.",
       "client": {
-        "name": "Live Demonstration",
-        "title": "Interactive Template",
-        "linkedin": "#"
+        "names": ["Live Demonstration"],
+        "title": "Interactive Template"
       },
-      "demoPath": "templates/ca-firm/index.html",
-      "feedback": "Click 'Launch Live Demo' above to open the responsive template preview and test the interactive tax tools in a new tab."
+      "demoPath": "templates/ca-firm/index.html"
     },
     {
       "category": "ui-ux",
+      "type": "template",
       "id": "iw-associates-template",
       "title": "I W & Associates - Corporate CA Firm Website",
       "challenge": "A modern multidisciplinary Chartered Accountancy firm required an enterprise-grade web presence that matches Big 4 design standards to attract Indian SMEs and corporate clients.",
       "solution": "Built a premium corporate website using a clean white, navy, and gold theme. Populated all 10 standard homepage sections, adding a floating WhatsApp button and interactive FAQ accordion widgets.",
       "outcome": "Delivered a high-end corporate landing page template that projects deep compliance expertise and makes professional services approachable for growing businesses.",
       "client": {
-        "name": "Live Demonstration",
-        "title": "Interactive Template",
-        "linkedin": "#"
+        "names": ["Live Demonstration"],
+        "title": "Interactive Template"
       },
-      "demoPath": "templates/iw-associates/index.html",
-      "feedback": "Click 'Launch Live Demo' above to open the premium corporate template in a new tab."
+      "demoPath": "templates/iw-associates/index.html"
     },
     {
       "category": "ui-ux",
+      "type": "template",
       "id": "coaching-template",
       "title": "Apex Career Academy - Premium Coaching Portal",
       "challenge": "Coaching institutes require a highly interactive website that showcases training programs, highlights prominent mentors, and offers tools like payment calculators to convert student leads.",
       "solution": "Developed a premium, modular coaching portal featuring interactive program cards, an interactive tuition EMI calculator, a floating WhatsApp inquiry badge, and dynamic FAQ accordions.",
       "outcome": "Created an enterprise-standard academy template designed to maximize conversions, build brand authority, and simplify program discovery.",
       "client": {
-        "name": "Live Demonstration",
-        "title": "Interactive Template",
-        "linkedin": "#"
+        "names": ["Live Demonstration"],
+        "title": "Interactive Template"
       },
-      "demoPath": "templates/coaching/index.html",
-      "feedback": "Click 'Launch Live Demo' above to open the responsive coaching academy preview in a new tab."
+      "demoPath": "templates/coaching/index.html"
     },
     {
       "category": "ui-ux",
+      "type": "template",
       "id": "real-estate-template",
       "title": "Vanguard Realty - Luxury Real Estate Template",
       "challenge": "Real estate brokerages require a highly engaging, visually rich website that showcases properties, lists expert agents, and provides interactive tools like mortgage calculators to convert buyers.",
       "solution": "Engineered a luxury real estate landing page template using a charcoal, gold, and white theme. Integrated interactive property filters, a mortgage/EMI calculator, virtual tour promotions, and custom contact forms.",
       "outcome": "Delivered a premium property brokerage template that highlights luxury listings and simplifies lead collection for high-value transactions.",
       "client": {
-        "name": "Live Demonstration",
-        "title": "Interactive Template",
-        "linkedin": "#"
+        "names": ["Live Demonstration"],
+        "title": "Interactive Template"
       },
-      "demoPath": "templates/real-estate/index.html",
-      "feedback": "Click 'Launch Live Demo' above to open the responsive real estate brokerage template in a new tab."
+      "demoPath": "templates/real-estate/index.html"
     },
     {
       "category": "ui-ux",
+      "type": "template",
       "id": "probox-template",
       "title": "Probox Interiors - Premium Modular Kitchen & Interior Design Studio Template",
       "challenge": "Modular kitchen and interior design studios in Raipur require a professional, visually stunning web presence that showcases their turnkey design capabilities, highlights Vastu readiness, and provides clients with cost transparency tools.",
       "solution": "Built a premium portfolio template featuring an interactive before/after split drag slider (comparing raw renders to completed executions), a custom space cost estimator, a family comfort focus grid, and callback request hooks.",
       "outcome": "Delivered a high-end, responsive landing page that builds trust with custom carpentry options, Vastu principles, and transparent upfront pricing estimation.",
       "client": {
-        "name": "Live Demonstration",
-        "title": "Interactive Template",
-        "linkedin": "#"
+        "names": ["Live Demonstration"],
+        "title": "Interactive Template"
       },
-      "demoPath": "templates/probox/index.html",
-      "feedback": "Click 'Launch Live Demo' above to open the premium Probox modular kitchen and interior design template in a new tab."
+      "demoPath": "templates/probox/index.html"
     },
     {
       "category": "technical-support",
+      "type": "template",
+      "id": "ubuntu-hardening-service",
+      "title": "Linux Workstation Installation & Enterprise Pro Hardening",
+      "challenge": "Developer environments require secure, stable OS configurations with registered patching mechanisms to protect source code assets from vulnerability exploits.",
+      "solution": "Install Ubuntu Desktop LTS, optimize system graphic drivers, register and configure Ubuntu Pro subscription credentials, set up UFW firewall rules, and automate secure workspace backup scripts.",
+      "outcome": "Configures a hardened development workstation with 10 years of security patch coverage and active system logs.",
+      "demoPath": ""
+    },
+    {
+      "category": "technical-support",
+      "type": "template",
+      "id": "windows-setup-service",
+      "title": "Windows OS Installation & Personal Workspace Optimization",
+      "challenge": "Standard operating systems require clean installations, storage configuration, and driver alignment to operate without consumer bloatware and background telemetry.",
+      "solution": "Deploy clean Windows 11 Home/Pro installations, align storage volumes, install certified GPU/motherboard drivers, set up secure local user credentials, and disable tracking cogs.",
+      "outcome": "Delivers a secure, fast, and optimized Windows desktop environment tailored for everyday productivity.",
+      "demoPath": ""
+    },
+    {
+      "category": "technical-support",
+      "type": "template",
+      "id": "emulation-setup-service",
+      "title": "Custom Gaming Emulator Rigging & Controller Optimization",
+      "challenge": "Gaming enthusiasts require seamless retro console emulator configurations on Windows without audio lag, screen tearing, or controller layout mapping issues.",
+      "solution": "Rig PCSX2 and RetroArch frontend applications on Windows, optimize Vulkan graphics renderer backends, map DualSense/Xbox controller layouts, and apply scanline display shaders.",
+      "outcome": "Delivers a latency-free retro console gaming configuration supporting SNES, NES, GBA, and PS2 titles.",
+      "demoPath": ""
+    },
+    {
+      "category": "operations-cases",
+      "type": "production",
       "id": "ubuntu-setup",
-      "title": "Ubuntu Desktop LTS Installation & Ubuntu Pro Workstation Hardening",
-      "challenge": "A developer client needed to set up a secure, stable Ubuntu Desktop workstation environment with access to Extended Security Maintenance (ESM) to ensure long-term patching for all workspace tools and package repositories.",
-      "solution": "Installed Ubuntu Desktop LTS, optimized system graphic drivers, registered and activated Ubuntu Pro for desktop ESM, enabled secure firewall (UFW) configurations, and configured automated workspace backup schedules.",
-      "outcome": "Established a hardened, development-ready Linux workstation with guaranteed security patching for all open-source dependencies (universe/main) for 10 years.",
+      "title": "Ubuntu Desktop LTS Workstation Installation",
+      "challenge": "A developer client needed to set up a secure, stable Ubuntu Desktop workstation environment for software development tasks and verified long-term package repository caching.",
+      "solution": "Installed Ubuntu Desktop LTS, configured GPU drivers, optimized memory alignments, and configured local automated workspace backups.",
+      "outcome": "Delivered a clean, high-performance Ubuntu workstation configured to run IDE compilers with optimal memory stability.",
       "client": {
-        "name": "Remote Software Engineer",
-        "title": "Workstation Client",
-        "linkedin": "#"
+        "names": ["Kaushal Chavan"],
+        "title": "Software Engineer"
       },
-      "feedback": "The desktop setup is incredibly clean, and having Ubuntu Pro protection on my workstation gives me absolute confidence."
+      "feedback": "The workstation is completely stable and boots up instantly. IDE compilers are running faster than before."
     },
     {
-      "category": "technical-support",
+      "category": "operations-cases",
+      "type": "production",
+      "id": "ubuntu-pro-setup",
+      "title": "Ubuntu Pro ESM Workstation Security Hardening",
+      "challenge": "A developer needed to secure their personal operating system configurations with Long-Term Support Extended Security Maintenance (ESM) to protect code repositories.",
+      "solution": "Activated Ubuntu Pro ESM security licenses, configured secure UFW firewall rules, and hardened file system permissions.",
+      "outcome": "Configured a highly secure development workspace with guaranteed 10-year package vulnerability coverage.",
+      "client": {
+        "names": ["Mridul Chandrawanshi"],
+        "title": "Systems Engineer & Developer"
+      },
+      "feedback": "Having my personal workstation hardened with Ubuntu Pro gives me absolute confidence."
+    },
+    {
+      "category": "operations-cases",
+      "type": "production",
+      "id": "windows-personal-setup",
+      "title": "Windows OS Installation & Performance Optimization",
+      "challenge": "Clients required a fresh, secure installation of Windows OS on their PCs, optimizing storage performance and workspace configurations without default telemetry.",
+      "solution": "Deployed clean Windows installations, partition-aligned storage drives, aligned motherboard drivers, and configured custom Group Policies to block tracking.",
+      "outcome": "Established optimized Windows desktops tailored for everyday developer tools and office productivity.",
+      "client": {
+        "names": ["Kaushal Chavan", "Rohit Kumar"],
+        "title": "Software Engineers / Clients"
+      },
+      "feedback": "The PCs boot instantly and run perfectly clean without all the usual pre-installed junk."
+    },
+    {
+      "category": "operations-cases",
+      "type": "production",
       "id": "retro-gaming-setup",
-      "title": "Custom Retro Console Emulator Rigging & Optimization on Windows",
-      "challenge": "Gaming enthusiasts require seamless retro console emulation setups on Windows PCs without audio-lag, screen-tearing, or controller mapping configuration problems.",
-      "solution": "Deployed RetroArch frontend emulator on Windows, optimized RetroArch cores for NES, Gameboy Color/Advance, and SNES, configured controller profiles, and enabled shaders for authentic scanline display effects.",
-      "outcome": "Successfully configured retro emulator platforms supporting classic titles like Super Mario Bros., Pokémon Red/Blue, The Legend of Zelda, and Tetris with zero latency on Windows.",
+      "title": "Custom Retro Console Emulator Rigging & Optimization",
+      "challenge": "A retro gaming enthusiast required low-latency console emulators configured on their PC to play classic titles without mapping issues.",
+      "solution": "Deployed RetroArch frontend emulator, configured optimized gaming cores, mapped controller profiles, and enabled scanline shaders.",
+      "outcome": "Configured a zero-latency retro emulator rig supporting SNES, NES, and GBA titles on local PC hardware.",
       "client": {
-        "name": "Gaming Client",
-        "title": "Home Entertainment Owner",
-        "linkedin": "#"
+        "names": ["Mridul Chandrawanshi"],
+        "title": "Game Emulator Enthusiast / Developer"
       },
-      "feedback": "Perfect emulation! Reliving old classics like Pokemon and Mario on my TV has been absolutely flawless."
+      "feedback": "Perfect emulation! Reliving classic gaming titles has been absolutely flawless."
     },
     {
-      "category": "technical-support",
+      "category": "operations-cases",
+      "type": "production",
       "id": "ps2-emulation-setup",
-      "title": "PlayStation 2 (PS2) Emulator Configuration & Optimization on Windows",
-      "challenge": "A classic gaming enthusiast wanted to play their owned library of PlayStation 2 games on their Windows 11 PC with enhanced resolutions, stable performance, and full controller compatibility.",
-      "solution": "Deployed the PCSX2 standalone emulator on Windows, configured BIOS file paths, optimized Vulkan renderer backend configurations, mapped custom DualSense/Xbox controller profiles, and enabled widescreen patches.",
-      "outcome": "Successfully achieved high-performance emulation of legendary PS2 titles like Shadow of the Colossus, Gran Turismo 4, and Grand Theft Auto: San Andreas on Windows.",
+      "title": "PlayStation 2 (PS2) Emulator Configuration & Optimization",
+      "challenge": "A classic gaming developer wanted to play legacy PlayStation 2 game backups on their PC with enhanced resolution scaling and full controller support.",
+      "solution": "Deployed PCSX2 emulator, mapped custom DualSense profiles, optimized Vulkan graphics render backends, and enabled widescreen patches.",
+      "outcome": "Achieved high-performance PlayStation 2 emulation running games smoothly with enhanced resolutions.",
       "client": {
-        "name": "Console Gaming Fan",
-        "title": "Retro Gamer",
-        "linkedin": "#"
+        "names": ["Mridul Chandrawanshi"],
+        "title": "Game Emulator Enthusiast / Developer"
       },
-      "feedback": "Playing my childhood games on my PC feels like magic. The PS2 emulator setup is absolutely perfect and everything runs so smoothly!"
+      "feedback": "Playing my childhood games on my PC feels like magic. The PS2 emulator setup is absolutely perfect."
     },
     {
       "category": "consulting",
@@ -142,9 +235,8 @@
       "solution": "Conducted a detailed strategic evaluation of the academic structure, faculty advisors' research alignment, and placement analytics (MTech vs. BTech recruitment ratios). Highlighted institutional policy constraints regarding off-campus internships and recommended focusing on active industry SDE growth to build practical software engineering expertise.",
       "outcome": "The client gained clear, data-driven decision criteria and decided to accept the industry SDE role to maximize hands-on software development experience.",
       "client": {
-        "name": "Aradhya Chakrabarti",
-        "title": "HighRadius SDE Intern & KIIT CSE Student",
-        "linkedin": "https://www.linkedin.com/in/aradhyachakrabarti/"
+        "names": ["Aradhya Chakrabarti"],
+        "title": "HighRadius SDE Intern & KIIT CSE Student"
       },
       "feedback": "Thanks for the answer! The details regarding M.Tech project guidelines and internship restrictions helped clarify the situation completely."
     },
@@ -156,9 +248,8 @@
       "solution": "Provided a structured preparation roadmap mapping specific DSA levels (focusing on Medium-level problems) and explaining the combined weight of the technical placement exam and interview rounds in final role assignments.",
       "outcome": "The candidate entered the recruitment drive with a targeted study plan and clear understanding of the evaluation criteria.",
       "client": {
-        "name": "Shivam Choudhary",
-        "title": "KIIT SAP FICO & KIIT CSE Student",
-        "linkedin": "https://www.linkedin.com/in/shivam-choudhary-a42761195/"
+        "names": ["Shivam Choudhary"],
+        "title": "KIIT SAP FICO & KIIT CSE Student"
       },
       "feedback": "Okk bhaiya. Thnxx! The targeted DSA focus helped me optimize my preparation timeline."
     },
@@ -170,9 +261,8 @@
       "solution": "Mentored the student on architectural selection, UI workflows, and collaborative version control. Co-participated in hackathon sprints to provide direct pair-programming guidance and code review during critical prototype phases.",
       "outcome": "Successfully built and deployed functional prototypes during multiple hackathons, accelerating the student's engineering and design capabilities.",
       "client": {
-        "name": "Akshara Khatri",
-        "title": "GL Bajaj Institute of Technology and Management CSE Student & Hackathon Partner",
-        "linkedin": "https://www.linkedin.com/in/akshara-khatri-951101282/"
+        "names": ["Akshara Khatri"],
+        "title": "GL Bajaj Institute of Technology and Management CSE Student & Hackathon Partner"
       },
       "feedback": "The hands-on guidance on architecture and git workflows helped us deliver working code on time and won us valuable engineering confidence."
     }

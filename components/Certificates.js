@@ -50,7 +50,6 @@ class SiteCertificates extends HTMLElement {
             <section class="section-padding" id="certificates" aria-labelledby="certificates-heading">
                 <div class="container">
                     <div class="section-header">
-                        <span class="lead-space-tagline" style="margin-bottom: 12px; background: #fef7e0; color: #b06000;">Credentials</span>
                         <h2 id="certificates-heading">Professional Certifications</h2>
                         <p>Industry-recognized qualifications validating analytical capability, digital optimization skills, and structured project governance.</p>
                     </div>

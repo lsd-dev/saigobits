@@ -7,7 +7,6 @@ class SiteServices extends HTMLElement {
             <section class="section-padding" id="services" aria-labelledby="services-heading">
                 <div class="container">
                     <div class="section-header">
-                        <span class="lead-space-tagline" style="margin-bottom: 12px;">Expertise</span>
                         <h2 id="services-heading">Tailored Solutions for Your Business</h2>
                         <p>High-quality engineering and strategic support without the overhead of a full-time hire.</p>
                     </div>
