@@ -751,3 +751,131 @@ a {
         font-size: 1.85rem;
     }
 }
+
+/* Aegis Finance Custom Contact Form */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #a0aec0;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-detail-icon {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+}
+
+.contact-detail-text h4 {
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.contact-detail-text p {
+    font-size: 0.9rem;
+    color: #a0aec0;
+    margin: 0;
+}
+
+.contact-form-card {
+    background-color: var(--color-navy);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-card h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form-card .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.contact-form-card label {
+    font-size: 0.85rem;
+    color: #a0aec0;
+    font-weight: 500;
+}
+
+.contact-form-card input,
+.contact-form-card select,
+.contact-form-card textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-navy-dark);
+    color: #ffffff;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.contact-form-card input:focus,
+.contact-form-card select:focus,
+.contact-form-card textarea:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.contact-form-card .btn-gold {
+    margin-top: 8px;
+}
+
+.success-message {
+    padding: 12px;
+    background-color: rgba(72, 187, 120, 0.15);
+    border: 1px solid #48bb78;
+    color: #48bb78;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}

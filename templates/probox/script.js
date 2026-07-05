@@ -1,6 +1,22 @@
-/* ==========================================================================
-   URBAN REFLECTION - PREMIUM JAVASCRIPT INTERACTIONS
-   ========================================================================== */
+// ==========================================================================
+// Google Forms Integration Configuration
+// To link this form to a production Google Form, set enabled to true
+// and update formActionUrl and entryMappings with your Google Form values.
+// ==========================================================================
+const GOOGLE_FORM_CONFIG = {
+    enabled: false,
+    formActionUrl: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse",
+    entryMappings: {
+        "name": "entry.111111111",      // Full Name
+        "phone": "entry.222222222",     // Phone Number
+        "email": "entry.333333333",     // Email Address
+        "spaceType": "entry.444444444", // Project Space Type
+        "budget": "entry.555555555",    // Target Budget Range
+        "message": "entry.666666666"    // Project Description
+    }
+};
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
@@ -371,19 +387,50 @@ function initContactForm() {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Submitting Request...';
         
-        // Simulate network API submission
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
-            
-            // Show Success Notification
-            toast.classList.add('show');
-            form.reset();
-            
-            // Hide notification after 5 seconds
+        if (GOOGLE_FORM_CONFIG.enabled) {
+            const formData = new FormData();
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.name, document.getElementById('client_name').value.trim());
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.phone, document.getElementById('client_phone').value.trim());
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.email, document.getElementById('client_email').value.trim());
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.spaceType, document.getElementById('form_space_type').value);
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.budget, document.getElementById('form_budget').value);
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.message, document.getElementById('client_message').value.trim());
+
+            fetch(GOOGLE_FORM_CONFIG.formActionUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            })
+            .then(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                toast.classList.add('show');
+                form.reset();
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5000);
+            })
+            .catch(err => {
+                console.error('Submission error:', err);
+                alert('We encountered an error sending your request. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            });
+        } else {
+            // Simulate network API submission
             setTimeout(() => {
-                toast.classList.remove('show');
-            }, 5000);
-        }, 1200);
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                
+                // Show Success Notification
+                toast.classList.add('show');
+                form.reset();
+                
+                // Hide notification after 5 seconds
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5000);
+            }, 1200);
+        }
     });
 }

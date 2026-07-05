@@ -216,7 +216,60 @@
         <div class="container">
             <h2>Partner with Aegis Finance</h2>
             <p>Schedule a professional tax audit or statutory consulting session with our certified accountants today.</p>
-            <a href="#" class="btn btn-gold btn-large">Schedule a Consultation</a>
+            
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h3>Office HQ</h3>
+                    <p>Have an upcoming audit or need advice on corporate tax structuring? Let's connect and streamline your statutory compliance.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon">📍</span>
+                            <div class="contact-detail-text">
+                                <h4>Address</h4>
+                                <p>Civil Lines, Raipur, CG</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon">✉️</span>
+                            <div class="contact-detail-text">
+                                <h4>Email</h4>
+                                <p>manmeet@aegisfinance.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <h3>Schedule a Consultation</h3>
+                    <form id="inquiry-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required placeholder="e.g. Mridul Chandrawanshi">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="e.g. name@domain.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="service-type">Required Service</label>
+                            <select id="service-type" required>
+                                <option value="tax-filing" selected>Statutory Tax Filing</option>
+                                <option value="corporate-audit">Corporate Auditing</option>
+                                <option value="gst-reconciliation">GST Reconciliation</option>
+                                <option value="general-consulting">Financial Consulting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Describe Your Inquiry</label>
+                            <textarea id="message" rows="4" required placeholder="Describe your corporate scale, revenue brackets, or filing timelines..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-block" id="submit-btn">Book Consultation</button>
+                        <div id="form-success-msg" class="success-message" style="display: none;">
+                            ✓ Consultation requested! Our tax partners will contact you shortly.
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 

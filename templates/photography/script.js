@@ -1,13 +1,27 @@
-/**
- * LensCraft Studios - Script Controller
- * Interactive Gallery Filter, Lightbox Modal & Investment Calculator
- */
+// ==========================================================================
+// Google Forms Integration Configuration
+// To link this form to a production Google Form, set enabled to true
+// and update formActionUrl and entryMappings with your Google Form values.
+// ==========================================================================
+const GOOGLE_FORM_CONFIG = {
+    enabled: false,
+    formActionUrl: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse",
+    entryMappings: {
+        "name": "entry.111111111",      // Full Name
+        "email": "entry.222222222",     // Email Address
+        "date": "entry.333333333",      // Event Date
+        "location": "entry.444444444",  // Venue / Location
+        "message": "entry.555555555"    // Vision Details
+    }
+};
+
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initGalleryFilter();
     initLightbox();
     initQuoteCalculator();
+    initBookingForm();
 });
 
 /**
@@ -213,4 +227,56 @@ function initQuoteCalculator() {
 
     // Initial calculation run
     calculateTotal();
+}
+
+/**
+ * Booking inquiry form submission
+ */
+function initBookingForm() {
+    const form = document.getElementById('bookingForm');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending Request...';
+
+        if (GOOGLE_FORM_CONFIG.enabled) {
+            const formData = new FormData();
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.name, document.getElementById('client-name').value.trim());
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.email, document.getElementById('client-email').value.trim());
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.date, document.getElementById('event-date').value);
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.location, document.getElementById('event-location').value.trim());
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.message, document.getElementById('form-message').value.trim());
+
+            fetch(GOOGLE_FORM_CONFIG.formActionUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            })
+            .then(() => {
+                alert('Thank you! Your quote calculation has been captured. We will get back to you shortly.');
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            })
+            .catch(err => {
+                console.error('Submission error:', err);
+                alert('We encountered an error sending your request. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            });
+        } else {
+            setTimeout(() => {
+                alert('Thank you! Your quote calculation has been captured. We will get back to you shortly.');
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }, 1200);
+        }
+    });
 }

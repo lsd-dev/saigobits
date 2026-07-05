@@ -1,6 +1,23 @@
+// ==========================================================================
+// Google Forms Integration Configuration
+// To link this form to a production Google Form, set enabled to true
+// and update formActionUrl and entryMappings with your Google Form values.
+// ==========================================================================
+const GOOGLE_FORM_CONFIG = {
+    enabled: false,
+    formActionUrl: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse",
+    entryMappings: {
+        "name": "entry.111111111",      // Full Name
+        "email": "entry.222222222",     // Email Address
+        "service": "entry.333333333",   // Required Service
+        "message": "entry.444444444"    // Inquiry Details
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     initGstCalculator();
     initSimulatedScraper();
+    initContactForm();
 });
 
 /**
@@ -187,4 +204,66 @@ function initSimulatedScraper() {
     }
     
     triggerBtn.addEventListener('click', runScraper);
+}
+
+/**
+ * Consultation Inquiry Form Submission
+ */
+function initContactForm() {
+    const form = document.getElementById('inquiry-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('form-success-msg');
+
+    if (!form || !submitBtn || !successMsg) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        submitBtn.disabled = true;
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'Booking Consultation...';
+
+        if (GOOGLE_FORM_CONFIG.enabled) {
+            const formData = new FormData();
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.name, document.getElementById('name').value.trim());
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.email, document.getElementById('email').value.trim());
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.service, document.getElementById('service-type').value);
+            formData.append(GOOGLE_FORM_CONFIG.entryMappings.message, document.getElementById('message').value.trim());
+
+            fetch(GOOGLE_FORM_CONFIG.formActionUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            })
+            .then(() => {
+                successMsg.style.display = 'block';
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 5000);
+            })
+            .catch(err => {
+                console.error('Submission error:', err);
+                alert('We encountered an error sending your request. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            });
+        } else {
+            // Simulated local timer
+            setTimeout(() => {
+                successMsg.style.display = 'block';
+                form.reset();
+
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                    setTimeout(() => {
+                        successMsg.style.display = 'none';
+                    }, 5000);
+                }, 1000);
+            }, 1200);
+        }
+    });
 }

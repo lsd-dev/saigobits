@@ -1,3 +1,20 @@
+// ==========================================================================
+// Google Forms Integration Configuration
+// To link this form to a production Google Form, set enabled to true
+// and update formActionUrl and entryMappings with your Google Form values.
+// ==========================================================================
+const GOOGLE_FORM_CONFIG = {
+    enabled: false,
+    formActionUrl: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse",
+    entryMappings: {
+        "name": "entry.111111111",      // Full Name
+        "phone": "entry.222222222",     // Phone Number
+        "email": "entry.333333333",     // Email Address
+        "service": "entry.444444444",   // Required Service
+        "message": "entry.555555555"    // Inquiry Details
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------------------
     // 1. Mobile Navigation Menu
@@ -245,22 +262,52 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalBtnText = submitBtn.textContent;
             submitBtn.textContent = 'Sending Inquiry...';
 
-            // Simulate server network latency
-            setTimeout(() => {
-                // Show success message
-                successMsg.style.display = 'block';
-                inquiryForm.reset();
+            if (GOOGLE_FORM_CONFIG.enabled) {
+                const formData = new FormData();
+                formData.append(GOOGLE_FORM_CONFIG.entryMappings.name, document.getElementById('name').value.trim());
+                formData.append(GOOGLE_FORM_CONFIG.entryMappings.phone, document.getElementById('phone').value.trim());
+                formData.append(GOOGLE_FORM_CONFIG.entryMappings.email, document.getElementById('email').value.trim());
+                formData.append(GOOGLE_FORM_CONFIG.entryMappings.service, document.getElementById('service-type').value);
+                formData.append(GOOGLE_FORM_CONFIG.entryMappings.message, document.getElementById('message').value.trim());
 
-                // Restore button after delay
-                setTimeout(() => {
+                fetch(GOOGLE_FORM_CONFIG.formActionUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                })
+                .then(() => {
+                    successMsg.style.display = 'block';
+                    inquiryForm.reset();
                     submitBtn.disabled = false;
                     submitBtn.textContent = originalBtnText;
-                    // Fade out success message slowly
                     setTimeout(() => {
                         successMsg.style.display = 'none';
                     }, 5000);
-                }, 1000);
-            }, 1500);
+                })
+                .catch(err => {
+                    console.error('Submission error:', err);
+                    alert('We encountered an error sending your inquiry. Please try again.');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                });
+            } else {
+                // Simulate server network latency
+                setTimeout(() => {
+                    // Show success message
+                    successMsg.style.display = 'block';
+                    inquiryForm.reset();
+
+                    // Restore button after delay
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalBtnText;
+                        // Fade out success message slowly
+                        setTimeout(() => {
+                            successMsg.style.display = 'none';
+                        }, 5000);
+                    }, 1000);
+                }, 1500);
+            }
         });
     }
 });
