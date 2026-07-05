@@ -15,11 +15,11 @@ class SiteContact extends HTMLElement {
                             <form class="custom-contact-form" id="contactForm">
                                 <div class="form-group">
                                     <label for="contact-name">Full Name</label>
-                                    <input type="text" id="contact-name" class="form-control" placeholder="e.g. Mridul Chandrawanshi" required>
+                                    <input type="text" id="contact-name" class="form-control" placeholder="e.g. John Doe" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="contact-email">Email Address</label>
-                                    <input type="email" id="contact-email" class="form-control" placeholder="e.g. name@domain.com" required>
+                                    <input type="email" id="contact-email" class="form-control" placeholder="e.g. john@example.com" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="contact-message">Message / Project Description</label>
