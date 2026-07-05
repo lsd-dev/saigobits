@@ -151,7 +151,8 @@
                 { label: "Finance / Corporate", tag: "finance" },
                 { label: "Education", tag: "education" },
                 { label: "Real Estate", tag: "real-estate" },
-                { label: "Design / Interiors", tag: "interiors" }
+                { label: "Design / Interiors", tag: "interiors" },
+                { label: "Media / Creative", tag: "creative" }
             ],
             "technical-support": [
                 { label: "All Services", tag: "all" },
@@ -364,6 +365,9 @@
             }
             if (tag === 'interiors') {
                 return id === 'probox-template';
+            }
+            if (tag === 'creative') {
+                return id === 'lenscraft-template';
             }
             if (tag === 'linux') {
                 return id === 'ubuntu-setup' || id === 'ubuntu-pro-setup' || id === 'ubuntu-hardening-service';
@@ -888,6 +892,30 @@
                             <path d="M140 70 H155 V90 H140" fill="none" stroke="#202124" stroke-width="3" stroke-linejoin="round"/>
                             <rect x="75" y="130" width="50" height="25" rx="4" fill="#202124"/>
                             <polygon points="100,32 103,37 109,37 104,41 106,47 100,43 94,47 96,41 91,37 97,37" fill="#f78fb3"/>
+                        </svg>
+                    `;
+                case 'lenscraft-template':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-lens" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#fff5e6"/>
+                                    <stop offset="100%" stop-color="#ffd499"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-lens)"/>
+                            <circle cx="100" cy="100" r="50" fill="none" stroke="#202124" stroke-width="4"/>
+                            <circle cx="100" cy="100" r="48" fill="none" stroke="#e0a96d" stroke-width="2"/>
+                            <line x1="100" y1="50" x2="135" y2="65" stroke="#202124" stroke-width="2"/>
+                            <line x1="135" y1="65" x2="148" y2="100" stroke="#202124" stroke-width="2"/>
+                            <line x1="148" y1="100" x2="135" y2="135" stroke="#202124" stroke-width="2"/>
+                            <line x1="135" y1="135" x2="100" y2="150" stroke="#202124" stroke-width="2"/>
+                            <line x1="100" y1="150" x2="65" y2="135" stroke="#202124" stroke-width="2"/>
+                            <line x1="65" y1="135" x2="52" y2="100" stroke="#202124" stroke-width="2"/>
+                            <line x1="52" y1="100" x2="65" y2="65" stroke="#202124" stroke-width="2"/>
+                            <line x1="65" y1="65" x2="100" y2="50" stroke="#202124" stroke-width="2"/>
+                            <circle cx="100" cy="100" r="14" fill="#202124"/>
+                            <circle cx="105" cy="95" r="4" fill="#ffffff" opacity="0.8"/>
                         </svg>
                     `;
                 default:

@@ -265,6 +265,20 @@
         "title": "GL Bajaj Institute of Technology and Management CSE Student & Hackathon Partner"
       },
       "feedback": "The hands-on guidance on architecture and git workflows helped us deliver working code on time and won us valuable engineering confidence."
+    },
+    {
+      "category": "ui-ux",
+      "type": "template",
+      "id": "lenscraft-template",
+      "title": "LensCraft Studios - Premium Photography & Videography Portfolio Template",
+      "challenge": "Professional wedding photographers and event videographers require a highly visual, immersive landing page portfolio to display high-resolution albums, alongside interactive tools like quote calculators to capture prospective client leads.",
+      "solution": "Built a premium, cinematic dark-mode portfolio template. Integrated custom golden-hour color palettes, a filterable media gallery with animated lightbox zoom popups, and an interactive real-time price estimation calculator.",
+      "outcome": "Delivered a lightweight, highly responsive creative media portfolio template that builds trust and streamlines booking inquiries.",
+      "client": {
+        "names": ["Live Demonstration"],
+        "title": "Interactive Template"
+      },
+      "demoPath": "templates/photography/index.html"
     }
   ]
 }
