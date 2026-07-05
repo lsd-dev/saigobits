@@ -22,7 +22,7 @@ class SiteContact extends HTMLElement {
                                     <input type="email" id="contact-email" class="form-control" placeholder="e.g. john@example.com" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="contact-message">Message / Project Description</label>
+                                    <label for="contact-message">Description</label>
                                     <textarea id="contact-message" class="form-control" rows="5" placeholder="Describe the project scope, timing requirements, and target outcomes..." required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
