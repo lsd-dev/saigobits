@@ -279,6 +279,20 @@
         "title": "Interactive Template"
       },
       "demoPath": "templates/photography/index.html"
+    },
+    {
+      "category": "ui-ux",
+      "type": "template",
+      "id": "model-portfolio-template",
+      "title": "Elara Portfolio - Premium Model & Digital Creator Template",
+      "challenge": "Independent fashion models and digital creators need an elegant, minimalist online presence to showcase editorial portfolios, statistics, services, and secure brand collaborations in a premium luxury dark aesthetic.",
+      "solution": "Built a high-end, responsive dark-gold portfolio template featuring statistic boards, a filterable portfolio gallery with built-in lightbox, fictional luxury brand logos, testimonial carousels, and a floating contact form.",
+      "outcome": "Delivered a lightweight, highly responsive creative media portfolio template that builds credibility and simplifies booking inquiries for models and digital creators.",
+      "client": {
+        "names": ["Live Demonstration"],
+        "title": "Interactive Template"
+      },
+      "demoPath": "templates/model-portfolio/index.html"
     }
   ]
 }

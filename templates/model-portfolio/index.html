@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official portfolio of Elara, a premium fashion model and digital creator. Specializing in luxury brand collaborations, editorial campaigns, and aesthetic content.">
+    <meta name="keywords" content="fashion model, digital creator, editorial modeling, luxury brand partnerships, lifestyle model, portfolio template, clean HTML CSS JS">
+    <title>ELARA | Premium Model & Digital Creator Portfolio</title>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="logo">ELARA<span>.</span></a>
+            
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.75rem;">Book Now</a>
+            </div>
+
+            <!-- Hamburger Button for Mobile -->
+            <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img class="hero-bg-img" src="images/hero-portrait.png" alt="Elara Portrait Backdrop" loading="eager">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">Fashion Model &amp; Digital Creator</span>
+                <h1 class="hero-title">Defining Beauty <br><span>Through</span> Art</h1>
+                <p class="hero-desc">An editorial model and digital storyteller crafting high-end visual experiences for global luxury and lifestyle brands.</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })" role="button" aria-label="Scroll down to about section">
+            Scroll
+            <span></span>
+        </div>
+    </section>
+
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <span class="section-subtitle">Aesthetic Vision</span>
+                <h2 class="section-title">The <span>Creator</span> Behind the Lens</h2>
+                
+                <div class="about-grid">
+                    <div class="about-img-container">
+                        <img class="about-img" src="images/about-portrait.png" alt="Elara Portrait Profile" loading="lazy">
+                    </div>
+                    
+                    <div class="about-details">
+                        <div class="about-bio">
+                            <p>Based in New York City, I work with high-end luxury fashion labels, beauty brands, and premium travel destinations globally. With over 6 years of editorial, commercial, and runway experience, I blend modeling with a keen eye for art direction and digital content creation.</p>
+                            <p>My work centers on celebrating elegance, minimalism, and sustainable luxury. I collaborate with photographers, creative directors, and brands who believe that fashion is a powerful form of artistic expression.</p>
+                        </div>
+                        
+                        <!-- Statistics Grid -->
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-val">5'10"</span>
+                                <span class="stat-label">Height</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-val">34"</span>
+                                <span class="stat-label">Bust</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-val">24"</span>
+                                <span class="stat-label">Waist</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-val">35"</span>
+                                <span class="stat-label">Hips</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-val">8.5 US</span>
+                                <span class="stat-label">Shoes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-val">Hazel</span>
+                                <span class="stat-label">Eyes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="bg-alt">
+            <div class="container">
+                <span class="section-subtitle">Visual Collection</span>
+                <h2 class="section-title">Curated <span>Work</span></h2>
+                
+                <!-- Category Filter Tabs -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all" aria-label="Show all portfolio items">All</button>
+                    <button class="filter-btn" data-filter="fashion" aria-label="Show fashion category">Fashion</button>
+                    <button class="filter-btn" data-filter="lifestyle" aria-label="Show lifestyle category">Lifestyle</button>
+                    <button class="filter-btn" data-filter="editorial" aria-label="Show editorial category">Editorial</button>
+                    <button class="filter-btn" data-filter="commercial" aria-label="Show commercial category">Commercial</button>
+                </div>
+                
+                <!-- Gallery Grid -->
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="fashion">
+                        <img src="images/portfolio-fashion.png" alt="Model posing in avant-garde designer collection" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Fashion</span>
+                            <h3 class="portfolio-title">Avant-Garde Silhouette</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="lifestyle">
+                        <img src="images/portfolio-lifestyle.png" alt="Model enjoying coffee in morning sunlight" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Lifestyle</span>
+                            <h3 class="portfolio-title">Chic Leisure</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="editorial">
+                        <img src="images/portfolio-editorial.png" alt="Dramatic lighting editorial magazine photo shoot" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Editorial</span>
+                            <h3 class="portfolio-title">Shadow Play</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="commercial">
+                        <img src="images/portfolio-commercial.png" alt="Cosmetics commercial model beauty shoot" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Commercial</span>
+                            <h3 class="portfolio-title">Luminous Skin</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="fashion">
+                        <img src="images/portfolio-editorial.png" alt="High contrast black and white model lookbook pose" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Fashion</span>
+                            <h3 class="portfolio-title">Monochrome Essence</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="editorial">
+                        <img src="images/portfolio-fashion.png" alt="Model walking down stairs during luxury campaign" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Editorial</span>
+                            <h3 class="portfolio-title">Urban Elegance</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery viewer">
+            <button class="lightbox-btn lightbox-close" aria-label="Close lightbox">&times;</button>
+            <button class="lightbox-btn lightbox-prev" aria-label="Previous image">&#10094;</button>
+            <button class="lightbox-btn lightbox-next" aria-label="Next image">&#10095;</button>
+            <div class="lightbox-content">
+                <img class="lightbox-img" src="" alt="">
+                <div class="lightbox-caption">
+                    <h3 class="lightbox-title"></h3>
+                    <span class="lightbox-category"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Collaborations Section -->
+        <section id="collaborations" style="padding: 5rem 0; border-bottom: 1px solid var(--border-glass);">
+            <div class="container">
+                <span class="section-subtitle">Trusted By Global Labels</span>
+                
+                <div class="collabs-grid">
+                    <!-- Brand Logo 1 (Lumen) -->
+                    <div class="collab-logo" aria-label="Lumen Luxury Brand Logo">
+                        <svg viewBox="0 0 160 50">
+                            <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="22" letter-spacing="8">L U M E N</text>
+                        </svg>
+                    </div>
+                    <!-- Brand Logo 2 (Valois) -->
+                    <div class="collab-logo" aria-label="Valois Couture Logo">
+                        <svg viewBox="0 0 160 50">
+                            <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="20" letter-spacing="9" font-style="italic">V A L O I S</text>
+                        </svg>
+                    </div>
+                    <!-- Brand Logo 3 (Aura) -->
+                    <div class="collab-logo" aria-label="Aura Cosmetics Logo">
+                        <svg viewBox="0 0 160 50">
+                            <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="'Inter', sans-serif" font-size="18" font-weight="300" letter-spacing="10">A U R A</text>
+                        </svg>
+                    </div>
+                    <!-- Brand Logo 4 (Opal) -->
+                    <div class="collab-logo" aria-label="Opal Jewelry Logo">
+                        <svg viewBox="0 0 160 50">
+                            <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="22" letter-spacing="7" font-weight="600">O P A L</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <span class="section-subtitle">Collaboration Offerings</span>
+                <h2 class="section-title">Professional <span>Services</span></h2>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="service-icon" aria-hidden="true">✦</span>
+                        <h3>Brand Partnerships</h3>
+                        <p>Aesthetic representation for luxury, beauty, and premium travel brands. High-end social campaigns, reels, static posts, and custom brand ambassadorships.</p>
+                        <a href="#contact" class="service-link">Inquire Rates</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <span class="service-icon" aria-hidden="true">✦</span>
+                        <h3>Editorial Modeling</h3>
+                        <p>High-concept lookbooks, fashion campaigns, runway bookings, and editorial print work. Professional modeling with strong conceptual art direction.</p>
+                        <a href="#contact" class="service-link">View Details</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <span class="service-icon" aria-hidden="true">✦</span>
+                        <h3>Content Creation</h3>
+                        <p>Artistic content generation for lifestyle and cosmetic brands. Delivering high-resolution photography, aesthetic product shots, and vertical video campaigns.</p>
+                        <a href="#contact" class="service-link">Portfolio Deck</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="bg-alt">
+            <div class="container">
+                <span class="section-subtitle">Collaborators</span>
+                <h2 class="section-title">Client <span>Voices</span></h2>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial-track">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide">
+                            <div class="quote-icon">&ldquo;</div>
+                            <p class="testimonial-text">Elara brings an unparalleled depth to set. Her ability to translate a brand's luxury identity into raw, sophisticated emotion is truly exceptional.</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Alessandro Rossi</span>
+                                <span class="author-role">Creative Director, Valois Couture</span>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide">
+                            <div class="quote-icon">&ldquo;</div>
+                            <p class="testimonial-text">Working with Elara on our cosmetics campaign was an absolute pleasure. Her professionalism, natural movement, and radiant presence elevated the entire shoot.</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Sarah Jenkins</span>
+                                <span class="author-role">Lead Photographer, Jenkins Studio</span>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide">
+                            <div class="quote-icon">&ldquo;</div>
+                            <p class="testimonial-text">A professional creator who speaks the language of luxury. Elara's digital content for our resort campaign was exquisite and drove amazing engagement.</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Marcus Chang</span>
+                                <span class="author-role">VP Marketing, Aura Resorts</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Navigation Dots -->
+                    <div class="testimonial-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <span class="section-subtitle">Assistance</span>
+                <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-1">
+                            <h3>Where are you based and do you travel?</h3>
+                            <span class="faq-icon">&#43;</span>
+                        </button>
+                        <div id="faq-ans-1" class="faq-answer">
+                            <p>I am based in New York City, USA, but I regularly travel globally for editorial shoots, modeling assignments, and brand campaigns. Travel arrangements are typically managed by the booking client or agency.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-2">
+                            <h3>How can brands collaborate with you?</h3>
+                            <span class="faq-icon">&#43;</span>
+                        </button>
+                        <div id="faq-ans-2" class="faq-answer">
+                            <p>For bookings, partnerships, and collaborations, please complete the contact form below or email me directly at info@elaracreative.com. Please include booking details, timelines, expected deliverables, and budget parameters.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-3">
+                            <h3>Do you provide UGC or short-form video creation?</h3>
+                            <span class="faq-icon">&#43;</span>
+                        </button>
+                        <div id="faq-ans-3" class="faq-answer">
+                            <p>Yes, as a digital creator, I shoot high-quality, aesthetic content including Instagram Reels, TikTok video files, and static posts styled specifically to align with premium branding guidelines.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-4">
+                            <h3>What is your typical booking timeline?</h3>
+                            <span class="faq-icon">&#43;</span>
+                        </button>
+                        <div id="faq-ans-4" class="faq-answer">
+                            <p>For modeling campaigns and travel, I recommend booking at least 3-4 weeks in advance. For digital content creation, project deliverables are typically finalized within 7-14 business days after product delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-alt">
+            <div class="container">
+                <span class="section-subtitle">Reach Out</span>
+                <h2 class="section-title">Let's <span>Create</span> Together</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-heading">
+                            <h3>Booking &amp; Collaborations</h3>
+                            <p>Please contact my booking agent or email me directly to discuss commercial campaigns, collaborations, editorial bookings, and creative projects.</p>
+                        </div>
+                        
+                        <div class="contact-channels">
+                            <!-- Email Link -->
+                            <div class="channel-card">
+                                <div class="channel-icon" aria-hidden="true">✉</div>
+                                <div class="channel-details">
+                                    <h4>Direct Email</h4>
+                                    <a href="mailto:info@elaracreative.com">info@elaracreative.com</a>
+                                </div>
+                            </div>
+                            <!-- Instagram -->
+                            <div class="channel-card">
+                                <div class="channel-icon" aria-hidden="true">📸</div>
+                                <div class="channel-details">
+                                    <h4>Instagram</h4>
+                                    <a href="https://instagram.com" target="_blank" rel="noopener">@elara.creative</a>
+                                </div>
+                            </div>
+                            <!-- WhatsApp -->
+                            <div class="channel-card">
+                                <div class="channel-icon" aria-hidden="true">💬</div>
+                                <div class="channel-details">
+                                    <h4>WhatsApp</h4>
+                                    <a href="https://wa.me/1234567890" target="_blank" rel="noopener">+1 (234) 567-890</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder=" " required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder=" " required>
+                                <label for="email">Email Address</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="subject" placeholder=" " required>
+                                <label for="subject">Subject / Project Type</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" rows="4" placeholder=" " required></textarea>
+                                <label for="message">Message details (Date, concept, rates...)</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+                            
+                            <div id="formStatus" class="form-status" role="status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#home" class="logo">ELARA<span>.</span></a>
+            
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#services">Services</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            
+            <div class="footer-socials">
+                <a href="https://instagram.com" class="social-icon" target="_blank" rel="noopener" aria-label="Elara on Instagram">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/1234567890" class="social-icon" target="_blank" rel="noopener" aria-label="Elara on WhatsApp">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.717-1.465L0 24zm6.59-4.846c1.6.95 3.197 1.41 5.366 1.412 5.543 0 10.059-4.512 10.063-10.058.002-2.686-1.043-5.212-2.942-7.114C17.234 1.492 14.717.449 12.016.449c-5.548 0-10.066 4.512-10.07 10.06-.002 2.062.536 4.048 1.56 5.79l-1.023 3.733 3.84-1.008c1.7.925 3.312 1.13 4.734.93zM17.476 14.39c-.3-.149-1.77-.874-2.045-.974-.275-.1-.475-.149-.675.15-.2.299-.775.974-.95 1.173-.175.2-.35.224-.65.074-1.208-.604-1.986-.984-2.775-2.336-.208-.356.208-.33.596-1.104.099-.2.05-.374-.025-.524-.075-.15-.675-1.624-.925-2.224-.244-.587-.492-.507-.675-.516-.174-.009-.374-.011-.574-.011s-.525.075-.8.374c-.275.299-1.05 1.024-1.05 2.497 0 1.472 1.07 2.891 1.22 3.09.15.2 2.106 3.216 5.1 4.512.713.309 1.27.493 1.704.631.716.227 1.368.195 1.883.118.574-.085 1.77-.724 2.02-1.385.25-.66.25-1.229.175-1.38-.075-.149-.275-.249-.575-.399z"/>
+                    </svg>
+                </a>
+                <a href="mailto:info@elaracreative.com" class="social-icon" aria-label="Email Elara">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M0 3v18h24v-18h-24zm21.514 2l-9.514 5.626-9.514-5.626h19.028zm-19.514 14v-10.907l10 5.913 10-5.913v10.907h-20z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <p class="footer-copy">&copy; 2026 Elara Creative. All Rights Reserved. Designed for elegance.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

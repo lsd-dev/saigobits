@@ -367,7 +367,7 @@
                 return id === 'probox-template';
             }
             if (tag === 'creative') {
-                return id === 'lenscraft-template';
+                return id === 'lenscraft-template' || id === 'model-portfolio-template';
             }
             if (tag === 'linux') {
                 return id === 'ubuntu-setup' || id === 'ubuntu-pro-setup' || id === 'ubuntu-hardening-service';
@@ -916,6 +916,20 @@
                             <line x1="65" y1="65" x2="100" y2="50" stroke="#202124" stroke-width="2"/>
                             <circle cx="100" cy="100" r="14" fill="#202124"/>
                             <circle cx="105" cy="95" r="4" fill="#ffffff" opacity="0.8"/>
+                        </svg>
+                    `;
+                case 'model-portfolio-template':
+                    return `
+                        <svg ${svgAttrs}>
+                            <defs>
+                                <linearGradient id="grad-model" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#2a2a2a"/>
+                                    <stop offset="100%" stop-color="#121212"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="16" fill="url(#grad-model)"/>
+                            <polygon points="100,45 118,80 155,80 125,102 136,138 100,116 64,138 75,102 45,80 82,80" fill="#ffd35c" stroke="#202124" stroke-width="2"/>
+                            <rect x="25" y="25" width="150" height="150" fill="none" stroke="#e0a96d" stroke-width="2" opacity="0.3" rx="8"/>
                         </svg>
                     `;
                 default:
