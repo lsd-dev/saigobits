@@ -18,6 +18,10 @@ class SiteContact extends HTMLElement {
                                     <input type="text" id="contact-name" class="form-control" placeholder="e.g. John Doe" required>
                                 </div>
                                 <div class="form-group">
+                                    <label for="contact-phone">Phone Number</label>
+                                    <input type="tel" id="contact-phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+                                </div>
+                                <div class="form-group">
                                     <label for="contact-email">Email Address</label>
                                     <input type="email" id="contact-email" class="form-control" placeholder="e.g. john@example.com" required>
                                 </div>
@@ -77,11 +81,13 @@ class SiteContact extends HTMLElement {
 
             const name = this.querySelector('#contact-name').value.trim();
             const email = this.querySelector('#contact-email').value.trim();
+            const phone = this.querySelector('#contact-phone').value.trim();
             const message = this.querySelector('#contact-message').value.trim();
 
             const formData = new FormData();
             formData.append('entry.2116052852', name);
-            formData.append('entry.1558582620', email);
+            formData.append('entry.1558582620', phone);
+            formData.append('entry.1195491445', email);
             formData.append('entry.288713975', message);
 
             try {
