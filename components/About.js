@@ -8,24 +8,24 @@ class SiteAbout extends HTMLElement {
                 <div class="container about-layout">
                     <div class="about-text">
                         <h2 id="about-heading">The SaigoBits Approach</h2>
-                        <p>SaigoBits was founded on the idea that high-quality technical expertise should be accessible, transparent, and strictly project-focused. I specialize in frontend development, backend logic, and IT consulting to help your business operate more efficiently. Partner directly with an engineer to launch products and secure systems without the commitment and overhead of a full-time hire.</p>
+                        <p>SaigoBits delivers senior-level engineering capability and IT advisory structured to meet the agility demands of modern enterprises. We specialize in building robust frontend interfaces, secure backend services, and resilient system integrations. By partnering directly with a dedicated engineer, organizations accelerate product timelines, optimize cloud infrastructure, and eliminate the corporate overhead of agency middlemen.</p>
                         
                         <div class="about-features">
                             <div class="about-feature-item">
-                                <div class="about-feature-title">Project-Focused</div>
-                                <div class="about-feature-desc">Clear scopes, milestones, and deliverable commitments.</div>
+                                <div class="about-feature-title">Outcome-Driven Delivery</div>
+                                <div class="about-feature-desc">Fixed scopes, transparent milestones, and SLA-aligned commitments.</div>
                             </div>
                             <div class="about-feature-item">
-                                <div class="about-feature-title">Direct Collaboration</div>
-                                <div class="about-feature-desc">Partner directly with an expert, bypassing agency middlemen.</div>
+                                <div class="about-feature-title">Engineering Partnerships</div>
+                                <div class="about-feature-desc">Direct collaboration with a senior engineer to ensure high-fidelity implementation.</div>
                             </div>
                             <div class="about-feature-item">
-                                <div class="about-feature-title">No Overhead Cost</div>
-                                <div class="about-feature-desc">Pay only for the exact digital results you need.</div>
+                                <div class="about-feature-title">Capital Efficiency</div>
+                                <div class="about-feature-desc">Optimize resource allocation by paying strictly for high-impact deliverables.</div>
                             </div>
                             <div class="about-feature-item">
-                                <div class="about-feature-title">Future-Proof Tech</div>
-                                <div class="about-feature-desc">Using modern, standards-based stacks that scale easily.</div>
+                                <div class="about-feature-title">Scalable Architecture</div>
+                                <div class="about-feature-desc">Utilizing modern, standards-compliant stacks designed for longevity.</div>
                             </div>
                         </div>
                     </div>
@@ -36,15 +36,15 @@ class SiteAbout extends HTMLElement {
                         <div class="about-card-stack">
                             <div class="about-visual-card blue-highlight">
                                 <h4>Software Engineering</h4>
-                                <p>Custom-tailored web interfaces, integrated interactive features, and robust backend structures built to scale.</p>
+                                <p>High-performance, custom-tailored web applications, responsive user interfaces, and robust backend systems engineered for cloud environments.</p>
                             </div>
                             <div class="about-visual-card green-highlight">
                                 <h4>System Integration</h4>
-                                <p>Seamless API connections, database synchronizations, and data pipelines to unify your digital operations.</p>
+                                <p>Seamless API orchestrations, real-time database synchronizations, and automated data pipelines to unify enterprise operations.</p>
                             </div>
                             <div class="about-visual-card red-highlight">
-                                <h4>Strategic Consulting</h4>
-                                <p>Expert advice on system audits, cloud infrastructure migration, and cost-efficient software selection.</p>
+                                <h4>Strategic Advisory</h4>
+                                <p>Comprehensive architecture audits, cloud migration strategies, and cost-optimization roadmaps to maximize technology ROI.</p>
                             </div>
                         </div>
                     </div>
