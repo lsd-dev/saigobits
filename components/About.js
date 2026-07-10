@@ -36,7 +36,7 @@ class SiteAbout extends HTMLElement {
                         <div class="about-card-stack">
                             <div class="about-visual-card blue-highlight">
                                 <h4>Software Engineering</h4>
-                                <p>Custom-tailored web interfaces, interactive dashboards, and robust backend structures built to scale.</p>
+                                <p>Custom-tailored web interfaces, integrated interactive features, and robust backend structures built to scale.</p>
                             </div>
                             <div class="about-visual-card green-highlight">
                                 <h4>System Integration</h4>

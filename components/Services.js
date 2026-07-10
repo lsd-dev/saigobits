@@ -21,8 +21,8 @@ class SiteServices extends HTMLElement {
                                     <line x1="14" y1="4" x2="10" y2="20"></line>
                                 </svg>
                             </div>
-                            <h3>Websites</h3>
-                            <p>Custom, responsive frontend development for websites, dashboards, and modern UI. Optimized for speed, accessibility, and high conversion.</p>
+                            <h3>Websites & Web Apps</h3>
+                            <p>Custom, responsive websites and web applications integrated with advanced features like secure contact forms, interactive Google Maps, and social media floating controls. Optimized for speed, search engines, and high conversion.</p>
                             <a href="projects.html?category=ui-ux" class="service-link">
                                 Explore Websites 
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>

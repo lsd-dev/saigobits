@@ -1,9 +1,9 @@
 {
   "categories": {
     "ui-ux": {
-      "title": "Interactive Frontend Dashboards",
+      "title": "Dynamic Web Applications & Custom Websites",
       "subtitle": "UI/UX & Frontend Development Projects",
-      "description": "Custom, responsive interfaces and dashboards designed for optimal user experience, fast data rendering, and conversion."
+      "description": "Custom, responsive websites and applications designed for optimal user experience, integrated with secure forms, Google Maps, social media controls, and fast rendering."
     },
     "technical-support": {
       "title": "Technical Support & IT Operations",
