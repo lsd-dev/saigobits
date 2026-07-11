@@ -293,6 +293,20 @@
         "title": "Interactive Template"
       },
       "demoPath": "templates/model-portfolio/index.html"
+    },
+    {
+      "category": "ui-ux",
+      "type": "template",
+      "id": "flowfi-template",
+      "title": "Flowfi - Premium Loan Advisory & Financial Services Template",
+      "challenge": "Borrowers struggle to find the right loan solutions, navigate complex credit analysis, and compare diverse lender options without falling into aggressive sales tactics.",
+      "solution": "Developed a premium, minimalist advisory template. Included an interactive loan EMI calculator, a step-by-step credit/CIBIL analysis section, response-oriented services boards, an integrated contact form, and a custom floating WhatsApp assistant.",
+      "outcome": "Created a trustworthy, responsive fintech advisory template optimized for client engagement and qualified financial lead generation.",
+      "client": {
+        "names": ["Live Demonstration"],
+        "title": "Interactive Template"
+      },
+      "demoPath": "templates/flowfi/index.html"
     }
   ]
 }

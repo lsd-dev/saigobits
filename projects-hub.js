@@ -250,7 +250,7 @@ function projectMatchesTag(proj, tag) {
     const id = proj.id;
     
     if (tag === 'finance') {
-        return id === 'ca-firm-template' || id === 'iw-associates-template';
+        return id === 'ca-firm-template' || id === 'iw-associates-template' || id === 'flowfi-template';
     }
     if (tag === 'education') {
         return id === 'coaching-template';
@@ -825,6 +825,31 @@ function getProjectVisual(projId) {
                     <rect width="200" height="200" rx="16" fill="url(#grad-model)"/>
                     <polygon points="100,45 118,80 155,80 125,102 136,138 100,116 64,138 75,102 45,80 82,80" fill="#ffd35c" stroke="#202124" stroke-width="2"/>
                     <rect x="25" y="25" width="150" height="150" fill="none" stroke="#e0a96d" stroke-width="2" opacity="0.3" rx="8"/>
+                </svg>
+            `;
+        case 'flowfi-template':
+            return `
+                <svg ${svgAttrs}>
+                    <defs>
+                        <linearGradient id="grad-flowfi" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="100%" stop-color="#f8f9fb"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="200" height="200" rx="16" fill="url(#grad-flowfi)"/>
+                    <!-- Modern fintech flow lines -->
+                    <path d="M 40,110 C 60,70 80,130 100,100 C 120,70 140,130 160,90" fill="none" stroke="#16A34A" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="40" cy="110" r="6" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+                    <circle cx="100" cy="100" r="6" fill="#16A34A" stroke="#ffffff" stroke-width="1.5"/>
+                    <circle cx="160" cy="90" r="6" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+                    <!-- Glassmorphism card overlay details -->
+                    <rect x="50" y="45" width="100" height="35" rx="8" fill="#ffffff" fill-opacity="0.8" stroke="#111111" stroke-width="1.5"/>
+                    <rect x="62" y="55" width="30" height="6" rx="3" fill="#111111"/>
+                    <rect x="62" y="67" width="55" height="4" rx="2" fill="#16A34A"/>
+                    <circle cx="132" cy="62" r="5" fill="#16A34A"/>
+                    <!-- Logo brand text -->
+                    <text x="100" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#111111">Flowfi</text>
+                    <circle cx="138" cy="154" r="3" fill="#16A34A"/>
                 </svg>
             `;
         default:
