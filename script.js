@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initMobileNav();
         initCardGlowEffect();
         initSmoothScrolling();
+        handleInquiryPreFill();
     });
 });
 
@@ -123,4 +124,40 @@ function initSmoothScrolling() {
             }
         });
     });
+}
+
+/**
+ * Checks for query parameters (specifically 'inquiry') to auto-populate
+ * the contact form and scroll down to the contact section.
+ */
+function handleInquiryPreFill() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const inquiry = urlParams.get('inquiry');
+    
+    if (inquiry) {
+        // Wait for site-contact to load and render the textarea
+        const textarea = document.getElementById('contact-message');
+        if (textarea) {
+            textarea.value = decodeURIComponent(inquiry);
+            
+            // Clean up the URL query parameter so refreshing doesn't keep scrolling/filling
+            const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;
+            window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
+            
+            // Scroll to the contact section after a brief delay to ensure layout has settled
+            setTimeout(() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    const offsetTop = contactSection.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 300);
+        } else {
+            // Fallback: If elements are still rendering, check again in a moment
+            setTimeout(handleInquiryPreFill, 100);
+        }
+    }
 }

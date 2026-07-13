@@ -1,0 +1,801 @@
+/* ==========================================================================
+   SaigoBits - Pricing Page Stylesheet
+   ========================================================================== */
+
+/* Hero Header Section */
+.pricing-hero {
+    padding: 120px 0 60px 0;
+    background-color: var(--color-bg-base);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(125, 95, 255, 0.05) 0%, transparent 35%),
+        radial-gradient(circle at 90% 80%, rgba(85, 239, 196, 0.04) 0%, transparent 40%);
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-breadcrumbs {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+
+.pricing-breadcrumbs a {
+    color: var(--color-text-secondary);
+    transition: var(--transition-smooth);
+}
+
+.pricing-breadcrumbs a:hover {
+    color: var(--color-google-blue);
+}
+
+.pricing-hero h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.pricing-hero p {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Package Grid Section */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 40px 0;
+}
+
+.pricing-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 40px 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-bounce);
+    overflow: hidden;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(400px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(125, 95, 255, 0.05), transparent 45%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(60, 64, 67, 0.08), 0 2px 6px rgba(60, 64, 67, 0.04);
+    border-color: var(--color-border-hover);
+}
+
+/* Accent top borders */
+.pricing-card.blue-tier {
+    border-top: 5px solid #1a73e8; /* Vibrant Google Blue */
+}
+
+.pricing-card.purple-tier {
+    border-top: 5px solid #6c5ce7; /* Vibrant Purple */
+}
+
+.pricing-card.green-tier {
+    border-top: 5px solid #0f9d58; /* Vibrant Google Green */
+}
+
+/* Highlighted Popular Card */
+.pricing-card.popular {
+    border-color: #6c5ce7;
+    box-shadow: 0 8px 24px rgba(108, 92, 231, 0.06);
+    background-color: #fbfbfe;
+}
+
+.pricing-card.popular:hover {
+    box-shadow: 0 16px 36px rgba(108, 92, 231, 0.12);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: linear-gradient(135deg, var(--color-google-blue) 0%, #6c5ce7 100%);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.3);
+}
+
+/* Card Header */
+.card-header-top h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.card-header-top .tier-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    min-height: 48px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.card-price-block {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 28px;
+}
+
+.card-price-block .price {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+}
+
+.card-price-block .currency {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-right: 2px;
+}
+
+/* Features List */
+.card-features-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+}
+
+.card-features-list {
+    list-style: none;
+    margin-bottom: 32px;
+    flex-grow: 1;
+}
+
+.card-features-list li {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.card-features-list li svg {
+    width: 18px;
+    height: 18px;
+    color: #0f9d58; /* Green check */
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.card-features-list li.nested-info {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    padding-left: 28px;
+    margin-top: -8px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.card-cta-btn {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition-bounce);
+}
+
+.blue-tier .card-cta-btn {
+    background-color: #f1f3f4;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.blue-tier .card-cta-btn:hover {
+    background-color: #e8eaed;
+    border-color: var(--color-border-hover);
+}
+
+.popular .card-cta-btn {
+    background: linear-gradient(135deg, var(--color-google-blue) 0%, #6c5ce7 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(125, 95, 255, 0.25);
+}
+
+.popular .card-cta-btn:hover {
+    box-shadow: 0 6px 20px rgba(125, 95, 255, 0.4);
+    transform: scale(1.02);
+}
+
+.green-tier .card-cta-btn {
+    background-color: #f1f3f4;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.green-tier .card-cta-btn:hover {
+    background-color: #e8eaed;
+    border-color: var(--color-border-hover);
+}
+
+.best-for {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--color-border);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.best-for strong {
+    color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   Interactive Quote Calculator
+   ========================================================================== */
+.calculator-section {
+    background-color: var(--color-bg-sec);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.calculator-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+.calculator-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 32px;
+}
+
+.calc-group-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: var(--color-text-primary);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 8px;
+}
+
+/* Package Options */
+.package-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.package-option {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.package-option:hover {
+    border-color: var(--color-border-hover);
+    background-color: #fafafa;
+}
+
+.package-option input[type="radio"] {
+    margin-right: 16px;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-google-blue);
+    cursor: pointer;
+}
+
+.package-option.selected {
+    border-color: var(--color-google-blue);
+    background-color: rgba(125, 95, 255, 0.03);
+}
+
+.package-opt-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.package-opt-name {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.package-opt-price {
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-text-primary);
+}
+
+/* Addons List */
+.addons-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.addon-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    padding: 14px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.addon-item:hover {
+    border-color: var(--color-border-hover);
+    background-color: #fafafa;
+}
+
+.addon-item input[type="checkbox"] {
+    margin-right: 16px;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-google-blue);
+    cursor: pointer;
+}
+
+.addon-item.selected {
+    border-color: #0f9d58; /* Green border for selected add-ons */
+    background-color: rgba(15, 157, 88, 0.02);
+}
+
+.addon-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.addon-text {
+    display: flex;
+    flex-direction: column;
+    padding-right: 28px; /* Substantial padding between explanation and price tag */
+}
+
+.addon-name {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.addon-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.addon-price {
+    font-weight: 700;
+    color: var(--color-text-primary);
+    white-space: nowrap;
+}
+
+/* Slider Controls */
+.pages-slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.page-calc-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 1px solid var(--color-border);
+    background: #ffffff;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    user-select: none;
+    padding: 0;
+}
+
+.page-calc-btn:hover {
+    background: #f1f3f4;
+    border-color: var(--color-border-hover);
+    color: var(--color-google-blue);
+    transform: scale(1.08);
+}
+
+.page-calc-btn:active {
+    transform: scale(0.95);
+}
+
+.pages-count-badge {
+    background-color: #e8f0fe;
+    color: var(--color-google-blue);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Summary Dashboard Panel */
+.calculator-summary-sticky {
+    position: sticky;
+    top: 100px;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(60, 64, 67, 0.04);
+}
+
+.summary-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--color-text-primary);
+}
+
+.summary-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+}
+
+.summary-line.package-line {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.summary-line.addon-line svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    vertical-align: middle;
+    color: #0f9d58;
+}
+
+.summary-total-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+.summary-total-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.summary-total-price {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-google-blue);
+}
+
+.summary-total-price span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.calc-cta-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--color-google-blue) 0%, #6c5ce7 100%);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.05rem;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(125, 95, 255, 0.25);
+    transition: var(--transition-bounce);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.calc-cta-btn:hover {
+    box-shadow: 0 6px 20px rgba(125, 95, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.calc-notes {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-top: 14px;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   Comparison Table Matrix
+   ========================================================================== */
+.comparison-table-wrapper {
+    overflow-x: auto;
+    margin-top: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 750px;
+}
+
+.comparison-table th, 
+.comparison-table td {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-table th {
+    background-color: var(--color-bg-sec);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+}
+
+.comparison-table th:first-child {
+    width: 40%;
+}
+
+.comparison-table th:not(:first-child) {
+    width: 20%;
+    text-align: center;
+}
+
+.comparison-table td:not(:first-child) {
+    text-align: center;
+}
+
+.comparison-table tr:hover td {
+    background-color: rgba(248, 249, 250, 0.8);
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-feature-name {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    display: block;
+}
+
+.comparison-feature-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.check-icon {
+    color: #0f9d58; /* Green Check */
+    width: 20px;
+    height: 20px;
+}
+
+.dash-icon {
+    color: var(--color-border-hover);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   FAQ Section
+   ========================================================================== */
+.faq-accordion {
+    max-width: 850px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    background: #ffffff;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.faq-item:hover {
+    border-color: var(--color-border-hover);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 22px 28px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.faq-chevron {
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-secondary);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 28px;
+    color: var(--color-text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.65;
+    background-color: rgba(248, 249, 250, 0.4);
+}
+
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+    color: var(--color-google-blue);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px; /* arbitrary height to slide down */
+    padding: 0 28px 24px 28px;
+    border-top: 1px solid #f1f3f4;
+}
+
+/* FAQ Footer Quote Info */
+.faq-footer {
+    text-align: center;
+    margin-top: 48px;
+    font-size: 1.05rem;
+}
+
+.faq-footer a {
+    color: var(--color-google-blue);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pricing-grid .pricing-card.green-tier {
+        grid-column: span 2;
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .calculator-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-summary-sticky {
+        position: static;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-grid .pricing-card.green-tier {
+        grid-column: span 1;
+    }
+    
+    .pricing-card {
+        padding: 32px 24px;
+    }
+    
+    .package-opt-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .package-opt-price {
+        align-self: flex-end;
+    }
+    
+    .comparison-table th, 
+    .comparison-table td {
+        padding: 14px 16px;
+    }
+    
+    .faq-question {
+        padding: 18px 20px;
+        font-size: 1rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px 20px;
+    }
+}
