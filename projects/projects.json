@@ -158,6 +158,16 @@
       "demoPath": ""
     },
     {
+      "category": "technical-support",
+      "type": "template",
+      "id": "cloudflare-vpn-service",
+      "title": "Cloudflare Zero Trust VPN & Secure DNS Routing Setup",
+      "challenge": "Remote developers and small teams require secure, private internet routing and access control to protect workspaces from malicious web traffic and domain attacks.",
+      "solution": "Configure Cloudflare Zero Trust gateway connections, set up secure DNS filters (WARP routing), block malware/tracking domains, and deploy private VPN agents.",
+      "outcome": "Configures a zero-trust network tunnel protecting all device data and routing connections securely.",
+      "demoPath": ""
+    },
+    {
       "category": "operations-cases",
       "type": "production",
       "id": "ubuntu-setup",

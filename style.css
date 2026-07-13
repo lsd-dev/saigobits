@@ -520,9 +520,9 @@ site-header, site-footer, site-lead-space, site-services, site-projects, site-ab
     gap: 6px;
 }
 
-.blue-card .service-link { color: var(--color-google-blue); }
-.red-card .service-link { color: var(--color-google-red); }
-.green-card .service-link { color: var(--color-google-green); }
+.blue-card .service-link { color: #1a73e8; }
+.red-card .service-link { color: #ea4335; }
+.green-card .service-link { color: #0f9d58; }
 
 .service-link svg {
     width: 14px;

@@ -265,10 +265,10 @@ function projectMatchesTag(proj, tag) {
         return id === 'lenscraft-template' || id === 'model-portfolio-template';
     }
     if (tag === 'linux') {
-        return id === 'ubuntu-setup' || id === 'ubuntu-pro-setup' || id === 'ubuntu-hardening-service';
+        return id === 'ubuntu-setup' || id === 'ubuntu-pro-setup' || id === 'ubuntu-hardening-service' || id === 'cloudflare-vpn-service';
     }
     if (tag === 'windows') {
-        return id === 'windows-personal-setup' || id === 'windows-setup-service';
+        return id === 'windows-personal-setup' || id === 'windows-setup-service' || id === 'cloudflare-vpn-service';
     }
     if (tag === 'emulation') {
         return id === 'retro-gaming-setup' || id === 'ps2-emulation-setup' || id === 'emulation-setup-service';
@@ -850,6 +850,34 @@ function getProjectVisual(projId) {
                     <!-- Logo brand text -->
                     <text x="100" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#111111">Flowfi</text>
                     <circle cx="138" cy="154" r="3" fill="#16A34A"/>
+                </svg>
+            `;
+        case 'cloudflare-vpn-service':
+            return `
+                <svg ${svgAttrs}>
+                    <defs>
+                        <linearGradient id="grad-cloudflare" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#fff8f2"/>
+                            <stop offset="100%" stop-color="#fdf0e2"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="200" height="200" rx="16" fill="url(#grad-cloudflare)"/>
+                    
+                    <!-- Cloud outline in Cloudflare Orange -->
+                    <path d="M50,110 a20,20 0 0,1 15,-18 a25,25 0 0,1 45,-15 a30,30 0 0,1 48,6 a20,20 0 0,1 7,37 H60 a20,20 0 0,1 -10,-10 z" fill="#ffffff" stroke="#f38020" stroke-width="2.5" stroke-linejoin="round"/>
+                    
+                    <!-- Shield outline for Zero Trust Security -->
+                    <path d="M100,85 L135,95 V125 C135,145 100,158 100,158 C100,158 65,145 65,125 V95 Z" fill="#e8f5e9" stroke="#0f9d58" stroke-width="2.5" stroke-linejoin="round" opacity="0.9"/>
+                    
+                    <!-- Secured Checkmark inside Shield -->
+                    <path d="M88,122 L97,130 L115,112" fill="none" stroke="#0f9d58" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <!-- Secure connection lock badge -->
+                    <circle cx="150" cy="70" r="14" fill="#0f9d58" stroke="#ffffff" stroke-width="2"/>
+                    <!-- Lock shackle -->
+                    <path d="M145,70 V65 a5,5 0 0,1 10,0 V70" fill="none" stroke="#ffffff" stroke-width="2"/>
+                    <!-- Lock body -->
+                    <rect x="142" y="69" width="16" height="12" rx="2" fill="#ffffff"/>
                 </svg>
             `;
         default:

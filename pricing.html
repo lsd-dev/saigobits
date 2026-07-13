@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SaigoBits service packages and interactive pricing calculator. Find the perfect package to establish a professional presence, generate enquiries, or automate customer responses.">
+    <meta name="description" content="SaigoBits service packages and interactive pricing calculator. Find the perfect package to establish a professional presence, optimize operating systems, configure retro emulators, or audit software costs.">
     <title>Pricing & Packages | SaigoBits</title>
     <link rel="stylesheet" href="style.css?v=1.7">
-    <link rel="stylesheet" href="pricing.css">
+    <link rel="stylesheet" href="pricing.css?v=1.1">
     <link rel="icon" type="image/png" href="images/logo.png">
     
     <!-- Load Web Components -->
@@ -25,140 +25,401 @@
                 <div class="pricing-breadcrumbs">
                     <a href="index.html">Home</a> &gt; <span>Pricing</span>
                 </div>
-                <h1>Value-Driven Web Solutions</h1>
-                <p>Transparent upfront pricing designed to help your business build a professional image, capture customer interest, and streamline manual work.</p>
+                <h1>Value-Driven Service Packages</h1>
+                <p>Transparent upfront pricing designed to help your business build a professional image, capture customer enquiries, optimize workstations, or cut software costs.</p>
             </div>
         </section>
 
+        <!-- Tab switcher navigation -->
+        <div class="container" style="padding-top: 40px; padding-bottom: 0;">
+            <div class="pricing-tabs-container">
+                <div class="pricing-tabs" role="tablist">
+                    <button class="pricing-tab-btn active" id="tab-websites" onclick="switchCategory('websites')" role="tab" aria-selected="true" aria-controls="panel-websites">Websites & Apps</button>
+                    <button class="pricing-tab-btn" id="tab-workstations" onclick="switchCategory('workstations')" role="tab" aria-selected="false" aria-controls="panel-workstations">Workstation & OS Support</button>
+                    <button class="pricing-tab-btn" id="tab-consulting" onclick="switchCategory('consulting')" role="tab" aria-selected="false" aria-controls="panel-consulting">Consulting</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Package Section -->
-        <section class="section-padding">
+        <section class="section-padding" style="padding-top: 10px;">
             <div class="container">
-                <div class="section-header">
-                    <h2>Choose Your Business Solution</h2>
-                    <p>Select a pre-configured package or build a custom plan using the interactive calculator below.</p>
+                
+                <!-- Category 1 Panel: Websites & Apps -->
+                <div class="tab-panel active" id="panel-websites" role="tabpanel" aria-labelledby="tab-websites">
+                    <div class="section-header">
+                        <h2>Choose Your Website Solution</h2>
+                        <p>Select a pre-configured website package or customize a package with options in the calculator below.</p>
+                    </div>
+
+                    <div class="pricing-grid">
+                        <!-- Package 1: Essential Presence -->
+                        <article class="pricing-card blue-tier" id="tier-essential">
+                            <div class="card-header-top">
+                                <h3>Essential Presence</h3>
+                                <p class="tier-desc">Perfect for businesses that want a professional online presence.</p>
+                            </div>
+                            <div class="card-price-block">
+                                <span class="currency">₹</span>
+                                <span class="price">10,000</span>
+                            </div>
+                            
+                            <div class="card-features-title">Includes</div>
+                            <ul class="card-features-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Custom Website Built for Your Business</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Complete Website Source Code Delivered</span>
+                                </li>
+                                <li class="nested-info">Saved to your private GitHub repository, serving as an excellent version-controlled backup.</li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Secure HTTPS configuration</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Fully Responsive Design (Desktop, Tablet & Mobile)</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Hosting Setup Assistance</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Business Email Setup Assistance</span>
+                                </li>
+                            </ul>
+
+                            <button class="btn card-cta-btn" onclick="selectPresetPlan('essential')">Choose Plan</button>
+                            
+                            <div class="best-for">
+                                Best for: <strong>New/small businesses establishing an online presence.</strong>
+                            </div>
+                        </article>
+
+                        <!-- Package 2: Business Growth -->
+                        <article class="pricing-card green-tier popular" id="tier-growth">
+                            <div class="popular-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-top: -1px;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                Most Popular
+                            </div>
+                            <div class="card-header-top">
+                                <h3>Business Growth</h3>
+                                <p class="tier-desc">Everything in Essential Presence, plus enquiry-generating tools to help customers reach you easily.</p>
+                            </div>
+                            <div class="card-price-block">
+                                <span class="currency">₹</span>
+                                <span class="price">15,000</span>
+                            </div>
+                            
+                            <div class="card-features-title">Everything Above Plus</div>
+                            <ul class="card-features-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <strong>Custom Contact Form</strong>
+                                </li>
+                                <li class="nested-info">Collect customer inquiries directly on your website.</li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <strong>Google Maps Integration</strong>
+                                </li>
+                                <li class="nested-info">Help clients find your physical storefront or office location immediately.</li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <strong>Floating WhatsApp Button</strong>
+                                </li>
+                                <li class="nested-info">Allow mobile visitors to initiate a direct message with you in one tap.</li>
+                            </ul>
+
+                            <button class="btn card-cta-btn" onclick="selectPresetPlan('growth')">Choose Plan</button>
+                            
+                            <div class="best-for">
+                                Best for: <strong>Local/service businesses seeking to generate more leads.</strong>
+                            </div>
+                        </article>
+
+                        <!-- Package 3: Business Automation -->
+                        <article class="pricing-card yellow-tier" id="tier-automation">
+                            <div class="card-header-top">
+                                <h3>Business Automation</h3>
+                                <p class="tier-desc">Everything in Business Growth, plus automated data workflows to save time and organize leads.</p>
+                            </div>
+                            <div class="card-price-block">
+                                <span class="currency">₹</span>
+                                <span class="price">20,000</span>
+                            </div>
+                            
+                            <div class="card-features-title">Everything Above Plus</div>
+                            <ul class="card-features-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <strong>Instant Email Notifications</strong>
+                                </li>
+                                <li class="nested-info">Get an immediate email notification the moment a customer submits a contact request.</li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <strong>Automated Database Syncing</strong>
+                                </li>
+                                <li class="nested-info">Inquiries are automatically recorded into an easy-to-use customer spreadsheet database.</li>
+                            </ul>
+
+                            <button class="btn card-cta-btn" onclick="selectPresetPlan('automation')">Choose Plan</button>
+                            
+                            <div class="best-for">
+                                Best for: <strong>Businesses receiving frequent inquiries looking to eliminate manual entry.</strong>
+                            </div>
+                        </article>
+                    </div>
                 </div>
 
-                <div class="pricing-grid">
-                    <!-- Package 1: Essential Presence -->
-                    <article class="pricing-card blue-tier" id="tier-essential">
-                        <div class="card-header-top">
-                            <h3>Essential Presence</h3>
-                            <p class="tier-desc">Perfect for businesses that want a professional online presence.</p>
-                        </div>
-                        <div class="card-price-block">
-                            <span class="currency">₹</span>
-                            <span class="price">10,000</span>
-                        </div>
-                        
-                        <div class="card-features-title">Includes</div>
-                        <ul class="card-features-list">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <span>Custom Website Built for Your Business</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <span>Complete Website Source Code Delivered</span>
-                            </li>
-                            <li class="nested-info">Saved to your private GitHub repository, serving as an excellent version-controlled backup.</li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <span>Secure HTTPS configuration</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <span>Fully Responsive Design (Desktop, Tablet & Mobile)</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <span>Hosting Setup Assistance</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <span>Business Email Setup Assistance</span>
-                            </li>
-                        </ul>
+                <!-- Category 2 Panel: Workstation & OS Support -->
+                <div class="tab-panel" id="panel-workstations" role="tabpanel" aria-labelledby="tab-workstations">
+                    <div class="section-header">
+                        <h2>Choose Workstation & OS Setup Solutions</h2>
+                        <p>Configure a clean operating system environment or retro gaming configuration for your desktop hardware.</p>
+                    </div>
 
-                        <button class="btn card-cta-btn" onclick="selectPresetPlan('essential')">Choose Plan</button>
-                        
-                        <div class="best-for">
-                            Best for: <strong>New/small businesses establishing an online presence.</strong>
-                        </div>
-                    </article>
+                    <div class="pricing-grid workstation-grid">
+                        <!-- Support 1: Windows Setup -->
+                        <article class="pricing-card windows-tier" id="tier-windows">
+                            <div class="card-header-top">
+                                <h3>Windows OS Setup</h3>
+                                <p class="tier-desc">Clean, fast, and telemetry-free Windows workspace setup.</p>
+                            </div>
+                            <div class="card-price-block">
+                                <span class="currency">₹</span>
+                                <span class="price">4,000</span>
+                            </div>
+                            
+                            <div class="card-features-title">Includes</div>
+                            <ul class="card-features-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Secure clean install of Windows 11 Home/Pro</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Telemetry & background tracking configuration</span>
+                                </li>
+                                <li class="nested-info">Disables default data reporting and optimizes startup performance.</li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Bloatware & default app package removal</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Secure local user account credentials configuration</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Windows Defender firewall optimization</span>
+                                </li>
+                            </ul>
 
-                    <!-- Package 2: Business Growth -->
-                    <article class="pricing-card purple-tier popular" id="tier-growth">
-                        <div class="popular-badge">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-top: -1px;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            Most Popular
-                        </div>
-                        <div class="card-header-top">
-                            <h3>Business Growth</h3>
-                            <p class="tier-desc">Everything in Essential Presence, plus enquiry-generating tools to help customers reach you easily.</p>
-                        </div>
-                        <div class="card-price-block">
-                            <span class="currency">₹</span>
-                            <span class="price">15,000</span>
-                        </div>
-                        
-                        <div class="card-features-title">Everything Above Plus</div>
-                        <ul class="card-features-list">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <strong>Custom Contact Form</strong>
-                            </li>
-                            <li class="nested-info">Collect customer enquiries directly on your website.</li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <strong>Google Maps Integration</strong>
-                            </li>
-                            <li class="nested-info">Help clients find your physical storefront or office location immediately.</li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <strong>Floating WhatsApp Button</strong>
-                            </li>
-                            <li class="nested-info">Allow mobile visitors to initiate a direct message with you in one tap.</li>
-                        </ul>
+                            <button class="btn card-cta-btn" onclick="selectPresetPlan('windows')">Choose Plan</button>
+                            
+                            <div class="best-for">
+                                Best for: <strong>Users seeking a clutter-free, fast Windows experience.</strong>
+                            </div>
+                        </article>
 
-                        <button class="btn card-cta-btn" onclick="selectPresetPlan('growth')">Choose Plan</button>
-                        
-                        <div class="best-for">
-                            Best for: <strong>Local/service businesses seeking to generate more leads.</strong>
-                        </div>
-                    </article>
+                        <!-- Support 2: Linux Setup -->
+                        <article class="pricing-card linux-tier" id="tier-linux">
+                            <div class="card-header-top">
+                                <h3>Linux OS Setup</h3>
+                                <p class="tier-desc">Clean, secure, and stable Linux operating system deployment.</p>
+                            </div>
+                            <div class="card-price-block">
+                                <span class="currency">₹</span>
+                                <span class="price">6,000</span>
+                            </div>
+                            
+                            <div class="card-features-title">Includes</div>
+                            <ul class="card-features-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Clean install of Ubuntu Desktop LTS</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>System graphics & hardware driver configuration</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Ubuntu Pro connection setup</span>
+                                </li>
+                                <li class="nested-info">Registers credentials to activate extended security patching for 10 years.</li>
+                            </ul>
 
-                    <!-- Package 3: Business Automation -->
-                    <article class="pricing-card green-tier" id="tier-automation">
-                        <div class="card-header-top">
-                            <h3>Business Automation</h3>
-                            <p class="tier-desc">Everything in Business Growth, plus automated data workflows to save time and organize leads.</p>
-                        </div>
-                        <div class="card-price-block">
-                            <span class="currency">₹</span>
-                            <span class="price">20,000</span>
-                        </div>
-                        
-                        <div class="card-features-title">Everything Above Plus</div>
-                        <ul class="card-features-list">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <strong>Instant Email Notifications</strong>
-                            </li>
-                            <li class="nested-info">Get an immediate email notification the moment a customer submits a contact request.</li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                <strong>Automated Database Syncing</strong>
-                            </li>
-                            <li class="nested-info">Inquiries are automatically recorded into an easy-to-use customer spreadsheet database.</li>
-                        </ul>
+                            <button class="btn card-cta-btn" onclick="selectPresetPlan('linux')">Choose Plan</button>
+                            
+                            <div class="best-for">
+                                Best for: <strong>Developers and privacy-focused professionals needing Linux workstations.</strong>
+                            </div>
+                        </article>
 
-                        <button class="btn card-cta-btn" onclick="selectPresetPlan('automation')">Choose Plan</button>
-                        
-                        <div class="best-for">
-                            Best for: <strong>Businesses receiving frequent inquiries looking to eliminate manual entry.</strong>
-                        </div>
-                    </article>
+                        <!-- Support 3: Emulation Setup -->
+                        <article class="pricing-card emulation-tier" id="tier-emulation">
+                            <div class="card-header-top">
+                                <h3>Retro & PS2 Emulation</h3>
+                                <p class="tier-desc">Unified emulator setup to play your favorite retro and PS2 games.</p>
+                            </div>
+                            <div class="card-price-block">
+                                <span class="currency">₹</span>
+                                <span class="price">4,000</span>
+                            </div>
+                            
+                            <div class="card-features-title">Includes</div>
+                            <ul class="card-features-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Installation & configuration of RetroArch & PCSX2</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Unified core setup for retro consoles and PlayStation 2 (PS2)</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Controller configuration (Wireless or USB Gamepads)</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Vulkan graphic backend optimizations to prevent screen tearing</span>
+                                </li>
+                            </ul>
+
+                            <button class="btn card-cta-btn" onclick="selectPresetPlan('emulation')">Choose Plan</button>
+                            
+                            <div class="best-for">
+                                Best for: <strong>Gamers wanting console gaming configs without setup struggles.</strong>
+                            </div>
+                        </article>
+                    </div>
                 </div>
+
+                <!-- Category 3 Panel: Consulting -->
+                <div class="tab-panel" id="panel-consulting" role="tabpanel" aria-labelledby="tab-consulting">
+                    <div class="section-header">
+                        <h2>Choose Consulting Solutions</h2>
+                        <p>Evaluate your software expenditures, clarify engineering career pathways, or request custom consultations.</p>
+                    </div>
+
+                    <div class="pricing-grid consulting-grid">
+                        <!-- Consulting 1: Career & Tech Mentorship -->
+                        <article class="pricing-card blue-tier" id="tier-mentorship">
+                            <div class="card-header-top">
+                                <h3>Career & Tech Mentorship</h3>
+                                <p class="tier-desc">Guidance on career pathway decisions and development mentorship.</p>
+                            </div>
+                            <div class="card-price-block" style="margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; gap: 8px; justify-content: center; width: 100%;">
+                                <div style="font-size: 0.775rem; font-weight: 700; color: #0f9d58; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 4px; background: #e8f5e9; padding: 6px 14px; border-radius: 50px; box-shadow: 0 2px 6px rgba(15,157,88,0.04); margin-bottom: 4px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="13" height="13" style="margin-top: -1px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                                    First 5 Mins FREE
+                                </div>
+                                <div style="display: flex; align-items: baseline; justify-content: center; gap: 2px;">
+                                    <span class="currency">₹</span>
+                                    <span class="price">999</span>
+                                </div>
+                                <div style="font-size: 0.8rem; color: var(--color-text-muted); font-weight: 500; margin-top: -4px;">Pay later, only if you extend</div>
+                            </div>
+                            
+                            <div class="card-features-title">Includes</div>
+                            <ul class="card-features-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>1-on-1 strategic career pathway planning</span>
+                                </li>
+                                <li class="nested-info">Objective reviews comparing corporate engineering roles with post-graduate IIT academic routes.</li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Pair programming & technical mentorship</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Hackathon prototyping & git workflow strategy</span>
+                                </li>
+                            </ul>
+
+                            <button class="btn card-cta-btn" onclick="selectPresetPlan('mentorship')">Book Free Intro Call</button>
+                            
+                            <div class="best-for">
+                                Best for: <strong>Students, graduates, or engineers wanting project & career guidance.</strong>
+                            </div>
+                        </article>
+
+                        <!-- Consulting 2: Cost Audit -->
+                        <article class="pricing-card audit-tier" id="tier-audit">
+                            <div class="card-header-top">
+                                <h3>Software Cost Audit</h3>
+                                <p class="tier-desc">Slash software licensing costs and remove redundant digital tools.</p>
+                            </div>
+                            <div class="card-price-block">
+                                <span class="currency">₹</span>
+                                <span class="price">7,500</span>
+                            </div>
+                            
+                            <div class="card-features-title">Includes</div>
+                            <ul class="card-features-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>1-on-1 operational tool assessment with your team</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Redundant licensing & software billing analysis report</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Cheaper or free open-source software recommendations</span>
+                                </li>
+                            </ul>
+
+                            <button class="btn card-cta-btn" onclick="selectPresetPlan('audit')">Choose Plan</button>
+                            
+                            <div class="best-for">
+                                Best for: <strong>Small businesses looking to cut software overhead.</strong>
+                            </div>
+                        </article>
+
+                        <!-- Consulting 3: Custom Advisory -->
+                        <article class="pricing-card advisory-tier" id="tier-advisory">
+                            <div class="card-header-top">
+                                <h3>Tech Advisory & Custom Consulting</h3>
+                                <p class="tier-desc">Custom technology consultations, codebase audits, or bespoke engineering advising.</p>
+                            </div>
+                            <div class="card-price-block">
+                                <span class="price" style="font-size: 2.2rem;">Custom Quote</span>
+                            </div>
+                            
+                            <div class="card-features-title">Includes</div>
+                            <ul class="card-features-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Personal 1-on-1 advisory sessions</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Bespoke research studies & technical advising</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Technical feasibility studies & architecture reviews</span>
+                                </li>
+                            </ul>
+
+                            <button class="btn card-cta-btn" onclick="selectPresetPlan('advisory')">Request Callback</button>
+                            
+                            <div class="best-for">
+                                Best for: <strong>Organizations with specific custom technology or advising needs.</strong>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -167,124 +428,201 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Interactive Cost Calculator</h2>
-                    <p>Select your base package, toggle add-ons, and adjust extra page counts to estimate your total investment.</p>
+                    <p>Customize your selections to dynamically estimate your digital configurations and total service cost.</p>
                 </div>
 
                 <div class="calculator-layout">
                     <!-- Left: Controls -->
                     <div class="calculator-card">
-                        <!-- Step 1: Base Package Selection -->
-                        <h4 class="calc-group-title">1. Select Base Plan</h4>
-                        <div class="package-options">
-                            <label class="package-option selected" id="opt-essential">
-                                <input type="radio" name="calc-package" value="essential" checked onchange="updateCalc()">
-                                <div class="package-opt-details">
-                                    <span class="package-opt-name">Essential Presence</span>
-                                    <span class="package-opt-price">₹10,000</span>
-                                </div>
-                            </label>
-                            
-                            <label class="package-option" id="opt-growth">
-                                <input type="radio" name="calc-package" value="growth" onchange="updateCalc()">
-                                <div class="package-opt-details">
-                                    <span class="package-opt-name">Business Growth</span>
-                                    <span class="package-opt-price">₹15,000</span>
-                                </div>
-                            </label>
-                            
-                            <label class="package-option" id="opt-automation">
-                                <input type="radio" name="calc-package" value="automation" onchange="updateCalc()">
-                                <div class="package-opt-details">
-                                    <span class="package-opt-name">Business Automation</span>
-                                    <span class="package-opt-price">₹20,000</span>
-                                </div>
-                            </label>
-                        </div>
-
-                        <!-- Step 2: Add-on Selection -->
-                        <h4 class="calc-group-title">2. Choose Optional Add-ons</h4>
-                        <div class="addons-list">
-                            <label class="addon-item" id="addon-seo">
-                                <input type="checkbox" value="seo" onchange="updateCalc()">
-                                <div class="addon-details">
-                                    <div class="addon-text">
-                                        <span class="addon-name">Search Engine Optimization (SEO) Setup</span>
-                                        <span class="addon-desc">Meta configurations, Google Search Console indexing, Sitemap & Robots.txt</span>
+                        
+                        <!-- Panel 1: Websites Controls -->
+                        <div class="calc-controls-panel" id="calc-controls-websites">
+                            <h4 class="calc-group-title">1. Select Website Plan</h4>
+                            <div class="package-options">
+                                <label class="package-option selected" id="opt-essential">
+                                    <input type="radio" name="calc-package-websites" value="essential" checked onchange="updateCalc()">
+                                    <div class="package-opt-details">
+                                        <span class="package-opt-name">Essential Presence</span>
+                                        <span class="package-opt-price">₹10,000</span>
                                     </div>
-                                    <span class="addon-price">+ ₹2,000</span>
-                                </div>
-                            </label>
-
-                            <label class="addon-item" id="addon-gbp">
-                                <input type="checkbox" value="gbp" onchange="updateCalc()">
-                                <div class="addon-details">
-                                    <div class="addon-text">
-                                        <span class="addon-name">Google Business Profile (Maps) Setup</span>
-                                        <span class="addon-desc">Local Map placement, verification coordination, and profile optimization</span>
+                                </label>
+                                
+                                <label class="package-option" id="opt-growth">
+                                    <input type="radio" name="calc-package-websites" value="growth" onchange="updateCalc()">
+                                    <div class="package-opt-details">
+                                        <span class="package-opt-name">Business Growth</span>
+                                        <span class="package-opt-price">₹15,000</span>
                                     </div>
-                                    <span class="addon-price">+ ₹1,500</span>
-                                </div>
-                            </label>
-
-                            <label class="addon-item" id="addon-maintenance">
-                                <input type="checkbox" value="maintenance" onchange="updateCalc()">
-                                <div class="addon-details">
-                                    <div class="addon-text">
-                                        <span class="addon-name">Monthly Technical Maintenance</span>
-                                        <span class="addon-desc">Continuous uptime monitoring, security checks, and minor updates (1 hr/mo)</span>
+                                </label>
+                                
+                                <label class="package-option" id="opt-automation">
+                                    <input type="radio" name="calc-package-websites" value="automation" onchange="updateCalc()">
+                                    <div class="package-opt-details">
+                                        <span class="package-opt-name">Business Automation</span>
+                                        <span class="package-opt-price">₹20,000</span>
                                     </div>
-                                    <span class="addon-price">+ ₹1,000/mo</span>
-                                </div>
-                            </label>
-
-                            <label class="addon-item" id="addon-content">
-                                <input type="checkbox" value="content" onchange="updateCalc()">
-                                <div class="addon-details">
-                                    <div class="addon-text">
-                                        <span class="addon-name">Copywriting & Content Assistance</span>
-                                        <span class="addon-desc">Professional drafts for your pages, services, and headings</span>
-                                    </div>
-                                    <span class="addon-price">Quote Separately</span>
-                                </div>
-                            </label>
-
-                            <label class="addon-item" id="addon-domain">
-                                <input type="checkbox" value="domain" onchange="updateCalc()">
-                                <div class="addon-details">
-                                    <div class="addon-text">
-                                        <span class="addon-name">Domain Purchase Assistance</span>
-                                        <span class="addon-desc">Searching domain availability, registration configuration, and custom DNS mapping</span>
-                                    </div>
-                                    <span class="addon-price">FREE</span>
-                                </div>
-                            </label>
-
-                            <label class="addon-item" id="addon-hosting">
-                                <input type="checkbox" value="hosting" onchange="updateCalc()">
-                                <div class="addon-details">
-                                    <div class="addon-text">
-                                        <span class="addon-name">Web Hosting Setup Assistance</span>
-                                        <span class="addon-desc">Configure code repository connection to Render/Vercel/Netlify hosting servers</span>
-                                    </div>
-                                    <span class="addon-price">FREE</span>
-                                </div>
-                            </label>
-                        </div>
-
-                        <!-- Step 3: Additional Pages Calculator -->
-                        <h4 class="calc-group-title">3. Add Extra Pages</h4>
-                        <div class="pages-slider-wrapper">
-                            <div class="slider-header">
-                                <span>Additional Pages</span>
-                                <span class="pages-cost-label" id="pages-cost-display">₹0</span>
+                                </label>
                             </div>
-                            <div class="slider-container" style="justify-content: flex-start; gap: 20px; align-items: center; margin-top: 10px;">
-                                <button type="button" class="btn page-calc-btn" onclick="decrementPages()">&minus;</button>
-                                <span class="pages-count-badge" id="pages-badge">0 Pages</span>
-                                <button type="button" class="btn page-calc-btn" onclick="incrementPages()">&plus;</button>
+
+                            <h4 class="calc-group-title">2. Choose Optional Add-ons</h4>
+                            <div class="addons-list">
+                                <label class="addon-item">
+                                    <input type="checkbox" value="seo" onchange="updateCalc()">
+                                    <div class="addon-details">
+                                        <div class="addon-text">
+                                            <span class="addon-name">Search Engine Optimization (SEO) Setup</span>
+                                            <span class="addon-desc">Meta configurations, Google Search Console indexing, Sitemap & Robots.txt</span>
+                                        </div>
+                                        <span class="addon-price">+ ₹2,000</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-item">
+                                    <input type="checkbox" value="gbp" onchange="updateCalc()">
+                                    <div class="addon-details">
+                                        <div class="addon-text">
+                                            <span class="addon-name">Google Business Profile (Maps) Setup</span>
+                                            <span class="addon-desc">Local Map placement, verification coordination, and profile optimization</span>
+                                        </div>
+                                        <span class="addon-price">+ ₹1,500</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-item">
+                                    <input type="checkbox" value="maintenance" onchange="updateCalc()">
+                                    <div class="addon-details">
+                                        <div class="addon-text">
+                                            <span class="addon-name">Monthly Technical Maintenance</span>
+                                            <span class="addon-desc">Continuous uptime monitoring, security checks, and minor updates (1 hr/mo)</span>
+                                        </div>
+                                        <span class="addon-price">+ ₹1,000/mo</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-item">
+                                    <input type="checkbox" value="content" onchange="updateCalc()">
+                                    <div class="addon-details">
+                                        <div class="addon-text">
+                                            <span class="addon-name">Copywriting & Content Assistance</span>
+                                            <span class="addon-desc">Professional drafts for your pages, services, and headings</span>
+                                        </div>
+                                        <span class="addon-price">Quote Separately</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-item">
+                                    <input type="checkbox" value="domain" onchange="updateCalc()">
+                                    <div class="addon-details">
+                                        <div class="addon-text">
+                                            <span class="addon-name">Domain Purchase Assistance</span>
+                                            <span class="addon-desc">Searching domain availability, registration configuration, and custom DNS mapping</span>
+                                        </div>
+                                        <span class="addon-price">FREE</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-item">
+                                    <input type="checkbox" value="hosting" onchange="updateCalc()">
+                                    <div class="addon-details">
+                                        <div class="addon-text">
+                                            <span class="addon-name">Web Hosting Setup Assistance</span>
+                                            <span class="addon-desc">Configure code repository connection to Render/Vercel/Netlify hosting servers</span>
+                                        </div>
+                                        <span class="addon-price">FREE</span>
+                                    </div>
+                                </label>
                             </div>
-                            <p style="font-size: 0.825rem; color: var(--color-text-muted); margin-top: 12px;">Each additional custom page is ₹750 (Base packages include standard homepage layout templates).</p>
+
+                            <h4 class="calc-group-title">3. Add Extra Pages</h4>
+                            <div class="pages-slider-wrapper">
+                                <div class="slider-header">
+                                    <span>Additional Pages</span>
+                                    <span class="pages-cost-label" id="pages-cost-display">₹0</span>
+                                </div>
+                                <div class="slider-container" style="justify-content: flex-start; gap: 20px; align-items: center; margin-top: 10px;">
+                                    <button type="button" class="btn page-calc-btn" onclick="decrementPages()">&minus;</button>
+                                    <span class="pages-count-badge" id="pages-badge">0 Pages</span>
+                                    <button type="button" class="btn page-calc-btn" onclick="incrementPages()">&plus;</button>
+                                </div>
+                                <p style="font-size: 0.825rem; color: var(--color-text-muted); margin-top: 12px;">Each additional custom page is ₹750 (Base packages include standard homepage layout templates).</p>
+                            </div>
                         </div>
+
+                        <!-- Panel 2: Workstation Controls -->
+                        <div class="calc-controls-panel" id="calc-controls-workstations" style="display: none;">
+                            <h4 class="calc-group-title">1. Select Workstation & OS Package</h4>
+                            <div class="package-options">
+                                <label class="package-option selected" id="opt-windows">
+                                    <input type="radio" name="calc-package-workstations" value="windows" checked onchange="updateCalc()">
+                                    <div class="package-opt-details">
+                                        <span class="package-opt-name">Windows OS Setup</span>
+                                        <span class="package-opt-price">₹4,000</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="package-option" id="opt-linux">
+                                    <input type="radio" name="calc-package-workstations" value="linux" onchange="updateCalc()">
+                                    <div class="package-opt-details">
+                                        <span class="package-opt-name">Linux OS Setup</span>
+                                        <span class="package-opt-price">₹6,000</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="package-option" id="opt-emulation">
+                                    <input type="radio" name="calc-package-workstations" value="emulation" onchange="updateCalc()">
+                                    <div class="package-opt-details">
+                                        <span class="package-opt-name">Retro & PS2 Emulation Setup</span>
+                                        <span class="package-opt-price">₹4,000</span>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <h4 class="calc-group-title">2. Choose Optional Add-on</h4>
+                            <div class="addons-list">
+                                <label class="addon-item">
+                                    <input type="checkbox" value="vpn" onchange="updateCalc()">
+                                    <div class="addon-details">
+                                        <div class="addon-text">
+                                            <span class="addon-name">Cloudflare Zero Trust VPN Setup</span>
+                                            <span class="addon-desc">Deploy Cloudflare secure WARP gateway and DNS filters</span>
+                                        </div>
+                                        <span class="addon-price">+ ₹1,500</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Panel 3: Consulting Controls -->
+                        <div class="calc-controls-panel" id="calc-controls-consulting" style="display: none;">
+                            <h4 class="calc-group-title">1. Select Consulting Service</h4>
+                            <div class="package-options">
+                                <label class="package-option selected" id="opt-mentorship">
+                                    <input type="radio" name="calc-package-consulting" value="mentorship" checked onchange="updateCalc()">
+                                    <div class="package-opt-details">
+                                        <span class="package-opt-name">Career & Tech Mentorship <span style="color: #0f9d58; font-weight: bold; font-size: 0.8rem;">(First 5 Mins FREE &bull; Pay Later)</span></span>
+                                        <span class="package-opt-price">₹999</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="package-option" id="opt-audit">
+                                    <input type="radio" name="calc-package-consulting" value="audit" onchange="updateCalc()">
+                                    <div class="package-opt-details">
+                                        <span class="package-opt-name">Software Stack & Cost Audit</span>
+                                        <span class="package-opt-price">₹7,500</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="package-option" id="opt-advisory">
+                                    <input type="radio" name="calc-package-consulting" value="advisory" onchange="updateCalc()">
+                                    <div class="package-opt-details">
+                                        <span class="package-opt-name">Custom Tech Advisory</span>
+                                        <span class="package-opt-price">Quote Separately</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 16px;">We focus on cost reductions, career pathways, and technical advising. Consulting services do not include raw programming pipelines or custom system integrations.</p>
+                        </div>
+
                     </div>
 
                     <!-- Right: Summary (Sticky) -->
@@ -297,8 +635,8 @@
 
                         <div class="summary-total-panel">
                             <span class="summary-total-label">Estimated Price:</span>
-                            <div class="summary-total-price">
-                                <span>₹</span><span id="calc-total">10,000</span>
+                            <div class="summary-total-price" id="calc-total">
+                                <span>₹</span><span>10,000</span>
                             </div>
                         </div>
 
@@ -319,8 +657,8 @@
         <section class="section-padding">
             <div class="container">
                 <div class="section-header">
-                    <h2>Plan Comparison</h2>
-                    <p>Compare specific features across packages to choose the option that fits your requirements.</p>
+                    <h2>Website Plan Comparison</h2>
+                    <p>Compare specific features across website packages to choose the option that fits your requirements.</p>
                 </div>
 
                 <div class="comparison-table-wrapper">
@@ -435,7 +773,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Frequently Asked Questions</h2>
-                    <p>Clear, direct answers about packages, hosting fees, and ongoing maintenance.</p>
+                    <p>Clear, direct answers about packages, support liability, and auditing rules.</p>
                 </div>
 
                 <div class="faq-accordion">
@@ -475,22 +813,33 @@
                     <!-- FAQ 4 -->
                     <div class="faq-item">
                         <button class="faq-question" onclick="toggleFaq(this)">
-                            Can I start with the Essential plan and add features later?
+                            What is Google Business Profile maps setup, and does it require additional payment?
                             <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Absolutely. We build all websites with modular components. If you launch with the Essential plan today, you can easily upgrade to Business Growth or add specific features (like notifications or WhatsApp buttons) whenever you need them.</p>
+                            <p>Google Maps placement is a completely free registration service provided by Google. There are no paid developer APIs or tools needed. We set up and configure your listing using your existing Google account. However, you will need a physical mailing address to receive Google's verification postcard containing your activation PIN.</p>
                         </div>
                     </div>
 
                     <!-- FAQ 5 -->
                     <div class="faq-item">
                         <button class="faq-question" onclick="toggleFaq(this)">
-                            What is included in the SEO Setup?
+                            What emulation consoles do you support?
                             <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Our SEO Setup ensures search crawlers understand and index your site effectively. It includes configuring search-friendly title and description tags, optimizing semantic headings (H1/H2), generating a sitemap.xml, configuring robots.txt, and registering your site directly with Google Search Console so you appear in Google search results without delay.</p>
+                            <p>Our emulation rigging focuses specifically on setting up RetroArch backends for retro gaming consoles (such as NES, SNES, Genesis, Gameboy, N64) and PCSX2 configurations for PlayStation 2 (PS2). We optimize GPU renderers and map USB or Bluetooth gamepads to ensure latency-free plug-and-play gaming.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            How does the Software Cost Audit save my business money?
+                            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We review the subscriptions and digital tools (CRMs, storage, communications, invoicing) that your team is actively paying for. We then deliver a detailed report detailing where you can consolidate services, downgrade unused seats, or swap expensive SaaS licenses for free, secure open-source alternatives, often saving small businesses thousands of rupees monthly.</p>
                         </div>
                     </div>
                 </div>
@@ -507,24 +856,46 @@
 
     <script src="script.js"></script>
     <script>
-        // Data configurations
-        const packages = {
-            essential: { name: "Essential Presence", price: 10000 },
-            growth: { name: "Business Growth", price: 15000 },
-            automation: { name: "Business Automation", price: 20000 }
-        };
-
-        const addons = {
-            seo: { name: "SEO Setup", price: 2000, term: "" },
-            gbp: { name: "Google Business Profile", price: 1500, term: "" },
-            maintenance: { name: "Monthly Maintenance", price: 1000, term: "/mo" },
-            content: { name: "Copywriting Setup", price: 0, label: "Quote Separately", term: "" },
-            domain: { name: "Domain Registration Assistance", price: 0, label: "FREE", term: "" },
-            hosting: { name: "Web Hosting Setup Assistance", price: 0, label: "FREE", term: "" }
+        // Data configurations grouped by service category
+        const serviceCategories = {
+            websites: {
+                packages: {
+                    essential: { name: "Essential Presence", price: 10000 },
+                    growth: { name: "Business Growth", price: 15000 },
+                    automation: { name: "Business Automation", price: 20000 }
+                },
+                addons: {
+                    seo: { name: "SEO Setup", price: 2000, term: "" },
+                    gbp: { name: "Google Business Profile", price: 1500, term: "" },
+                    maintenance: { name: "Monthly Maintenance", price: 1000, term: "/mo" },
+                    content: { name: "Copywriting Setup", price: 0, label: "Quote Separately", term: "" },
+                    domain: { name: "Domain Registration Assistance", price: 0, label: "FREE", term: "" },
+                    hosting: { name: "Web Hosting Setup Assistance", price: 0, label: "FREE", term: "" }
+                }
+            },
+            workstations: {
+                packages: {
+                    windows: { name: "Windows OS Setup", price: 4000 },
+                    linux: { name: "Linux OS Setup", price: 6000 },
+                    emulation: { name: "Retro & PS2 Emulation Setup", price: 4000 }
+                },
+                addons: {
+                    vpn: { name: "Cloudflare Zero Trust VPN Setup", price: 1500, term: "" }
+                }
+            },
+            consulting: {
+                packages: {
+                    mentorship: { name: "Career & Tech Mentorship", price: 999 },
+                    audit: { name: "Software Stack & Cost Audit", price: 7500 },
+                    advisory: { name: "Custom Tech Advisory", price: 0, label: "Quote Separately" }
+                },
+                addons: {}
+            }
         };
 
         // Page counter state
         let extraPagesVal = 0;
+        let activeCategory = 'websites'; // 'websites', 'workstations', 'consulting'
 
         function decrementPages() {
             if (extraPagesVal > 0) {
@@ -538,15 +909,57 @@
             updateCalc();
         }
 
+        // Tab selection logic
+        function switchCategory(catId) {
+            activeCategory = catId;
+            
+            // Update tab buttons active classes
+            document.querySelectorAll('.pricing-tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            document.getElementById(`tab-${catId}`).classList.add('active');
+            document.getElementById(`tab-${catId}`).setAttribute('aria-selected', 'true');
+            
+            // Update package panels
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            document.getElementById(`panel-${catId}`).classList.add('active');
+            
+            // Update calculator controls panels
+            document.querySelectorAll('.calc-controls-panel').forEach(panel => {
+                panel.style.display = 'none';
+            });
+            document.getElementById(`calc-controls-${catId}`).style.display = 'block';
+            
+            // Reset state
+            extraPagesVal = 0;
+            document.querySelectorAll('.addons-list input[type="checkbox"]').forEach(cb => cb.checked = false);
+            
+            // Run calculator updates
+            updateCalc();
+        }
+
         // Select Preset Plan from Cards
         function selectPresetPlan(planId) {
+            let category = 'websites';
+            if (['windows', 'linux', 'emulation'].includes(planId)) {
+                category = 'workstations';
+            } else if (['mentorship', 'audit', 'advisory'].includes(planId)) {
+                category = 'consulting';
+            }
+            
+            // Switch category tab first
+            switchCategory(category);
+            
             // Find the radio button for this plan in the calculator
-            const radio = document.querySelector(`input[name="calc-package"][value="${planId}"]`);
+            const radio = document.querySelector(`input[name="calc-package-${category}"][value="${planId}"]`);
             if (radio) {
                 radio.checked = true;
                 
-                // Clear all addon checkboxes when choosing a preset package directly
-                document.querySelectorAll('.addons-list input[type="checkbox"]').forEach(cb => cb.checked = false);
+                // Clear all addon checkboxes in this category when choosing preset directly
+                document.querySelectorAll(`#calc-controls-${category} .addons-list input[type="checkbox"]`).forEach(cb => cb.checked = false);
                 extraPagesVal = 0;
                 
                 // Trigger calculator update
@@ -580,26 +993,33 @@
 
         // Live calculator calculation
         function updateCalc() {
+            const catData = serviceCategories[activeCategory];
+            
             // Get selected package
-            const selectedPackageRadio = document.querySelector('input[name="calc-package"]:checked');
+            const selectedPackageRadio = document.querySelector(`input[name="calc-package-${activeCategory}"]:checked`);
+            if (!selectedPackageRadio) return;
             const pkgId = selectedPackageRadio.value;
-            const pkg = packages[pkgId];
+            const pkg = catData.packages[pkgId];
 
             // Update UI class selection for styling
-            document.querySelectorAll('.package-option').forEach(el => el.classList.remove('selected'));
-            document.getElementById(`opt-${pkgId}`).classList.add('selected');
+            document.querySelectorAll(`.package-option`).forEach(el => el.classList.remove('selected'));
+            const optContainer = document.getElementById(`opt-${pkgId}`);
+            if (optContainer) optContainer.classList.add('selected');
 
             let total = pkg.price;
+            let isQuoteSeparately = (pkg.label === "Quote Separately");
+            
             let summaryHtml = `<div class="summary-line package-line">
                 <span>Base: ${pkg.name}</span>
-                <span>₹${pkg.price.toLocaleString()}</span>
+                <span>${isQuoteSeparately ? pkg.label : '₹' + pkg.price.toLocaleString()}</span>
             </div>`;
 
             // Calculate active addons
-            document.querySelectorAll('.addon-item').forEach(el => {
+            document.querySelectorAll(`#calc-controls-${activeCategory} .addon-item`).forEach(el => {
                 const checkbox = el.querySelector('input[type="checkbox"]');
+                if (!checkbox) return;
                 const addonId = checkbox.value;
-                const addon = addons[addonId];
+                const addon = catData.addons[addonId];
                 
                 if (checkbox.checked) {
                     el.classList.add('selected');
@@ -607,6 +1027,9 @@
                     let priceText = "";
                     if (addon.label) {
                         priceText = addon.label;
+                        if (addon.label === "Quote Separately") {
+                            isQuoteSeparately = true;
+                        }
                     } else {
                         priceText = `+ ₹${addon.price.toLocaleString()}${addon.term}`;
                         total += addon.price;
@@ -624,47 +1047,79 @@
                 }
             });
 
-            // Calculate extra pages
-            const extraPagesCost = extraPagesVal * 750;
-            
-            // Update display
-            document.getElementById('pages-badge').textContent = `${extraPagesVal} Page${extraPagesVal !== 1 ? 's' : ''}`;
-            
-            if (extraPagesVal > 0) {
-                total += extraPagesCost;
-                document.getElementById('pages-cost-display').textContent = `+ ₹${extraPagesCost.toLocaleString()}`;
+            // Calculate extra pages if on websites tab
+            if (activeCategory === 'websites') {
+                const extraPagesCost = extraPagesVal * 750;
+                document.getElementById('pages-badge').textContent = `${extraPagesVal} Page${extraPagesVal !== 1 ? 's' : ''}`;
                 
-                summaryHtml += `<div class="summary-line addon-line">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                        Additional Pages (${extraPagesVal})
-                    </span>
-                    <span>+ ₹${extraPagesCost.toLocaleString()}</span>
-                </div>`;
-            } else {
-                document.getElementById('pages-cost-display').textContent = `₹0`;
+                if (extraPagesVal > 0) {
+                    total += extraPagesCost;
+                    document.getElementById('pages-cost-display').textContent = `+ ₹${extraPagesCost.toLocaleString()}`;
+                    
+                    summaryHtml += `<div class="summary-line addon-line">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            Additional Pages (${extraPagesVal})
+                        </span>
+                        <span>+ ₹${extraPagesCost.toLocaleString()}</span>
+                    </div>`;
+                } else {
+                    document.getElementById('pages-cost-display').textContent = `₹0`;
+                }
             }
 
-            // Update Total
-            document.getElementById('calc-total').textContent = total.toLocaleString();
+            // Update Total display
+            const totalEl = document.getElementById('calc-total');
+            if (isQuoteSeparately) {
+                totalEl.innerHTML = `<span style="font-size: 1.5rem;">Quote Separately</span>`;
+            } else {
+                totalEl.innerHTML = `<span>₹</span>${total.toLocaleString()}`;
+            }
             document.getElementById('summary-lines-box').innerHTML = summaryHtml;
+
+            // Dynamically update notes & checkout CTA button text for Mentorship session
+            const notesEl = document.querySelector('.calculator-summary-sticky .calc-notes');
+            const ctaBtn = document.querySelector('.calculator-summary-sticky .calc-cta-btn');
+            
+            if (activeCategory === 'consulting' && pkgId === 'mentorship') {
+                notesEl.innerHTML = `<strong>Payment Policy:</strong> No upfront payment required. Your first 5 minutes are completely free. If you extend the call, it is ₹999 billed post-session.`;
+                ctaBtn.innerHTML = `Book Free Intro Call (Pay Later) <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`;
+            } else {
+                notesEl.innerHTML = `No immediate payment required. This estimates your development setup. Standard domain name and hosting registry charges are handled directly via provider billings.`;
+                ctaBtn.innerHTML = `Request Quote for this Setup <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`;
+            }
         }
 
         // Redirect to homepage contact form with encoded message query parameter
         function submitCustomInquiry() {
-            const selectedPackageRadio = document.querySelector('input[name="calc-package"]:checked');
+            const catData = serviceCategories[activeCategory];
+            const selectedPackageRadio = document.querySelector(`input[name="calc-package-${activeCategory}"]:checked`);
+            if (!selectedPackageRadio) return;
             const pkgId = selectedPackageRadio.value;
-            const pkg = packages[pkgId];
+            const pkg = catData.packages[pkgId];
 
             let total = pkg.price;
-            let message = `Hi SaigoBits!\n\nI am interested in requesting a website package configuration:\n\n- Base Package: ${pkg.name} (₹${pkg.price.toLocaleString()})`;
+            let isQuoteSeparately = (pkg.label === "Quote Separately");
+            
+            let categoryLabel = activeCategory === 'websites' ? 'Website Development' : 
+                               activeCategory === 'workstations' ? 'Workstation & OS Support' : 'Consulting';
+
+            let message = `Hi SaigoBits!\n\nI am interested in requesting a ${categoryLabel} configuration:\n\n- Base Service: ${pkg.name}`;
+            if (!isQuoteSeparately) {
+                message += ` (₹${pkg.price.toLocaleString()})`;
+            } else {
+                message += ` (${pkg.label})`;
+            }
 
             // Checkboxes
             let selectedAddons = [];
-            document.querySelectorAll('.addon-item input[type="checkbox"]:checked').forEach(cb => {
-                const addon = addons[cb.value];
-                selectedAddons.push(addon.name + (addon.label ? ` (${addon.label})` : ` (+ ₹${addon.price.toLocaleString()}${addon.term})`));
-                if (!addon.label) {
+            document.querySelectorAll(`#calc-controls-${activeCategory} .addon-item input[type="checkbox"]:checked`).forEach(cb => {
+                const addon = catData.addons[cb.value];
+                if (addon.label) {
+                    selectedAddons.push(addon.name + ` (${addon.label})`);
+                    if (addon.label === "Quote Separately") isQuoteSeparately = true;
+                } else {
+                    selectedAddons.push(addon.name + ` (+ ₹${addon.price.toLocaleString()}${addon.term})`);
                     total += addon.price;
                 }
             });
@@ -673,18 +1128,23 @@
                 message += `\n- Selected Add-ons:\n  * ` + selectedAddons.join('\n  * ');
             }
 
-            // Pages count
-            if (extraPagesVal > 0) {
+            // Pages (Website specific)
+            if (activeCategory === 'websites' && extraPagesVal > 0) {
                 const extraPagesCost = extraPagesVal * 750;
                 total += extraPagesCost;
                 message += `\n- Additional Pages: ${extraPagesVal} page(s) (+ ₹${extraPagesCost.toLocaleString()})`;
             }
 
-            message += `\n\nEstimated Total: ₹${total.toLocaleString()}`;
+            if (isQuoteSeparately) {
+                message += `\n\nEstimated Price: Quote Separately`;
+            } else {
+                message += `\n\nEstimated Total: ₹${total.toLocaleString()}`;
+            }
             
-            // Check if copywriting is selected for additional quotes
-            const isCopywritingChecked = document.querySelector('.addon-item input[type="checkbox"][value="content"]').checked;
-            if (isCopywritingChecked) {
+            // Check if copywriting is selected
+            const copywritingCb = document.querySelector(`#calc-controls-websites .addon-item input[type="checkbox"][value="content"]`);
+            const isCopywritingChecked = copywritingCb ? copywritingCb.checked : false;
+            if (isCopywritingChecked && activeCategory === 'websites') {
                 message += ` (Subject to final content details)`;
             }
 
